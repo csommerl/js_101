@@ -23,6 +23,10 @@
 | | Algorithm | Steps for converting input to output |
 | Code with Intent | Code | Implementation of Algorithm |
 
-# Notes on Individual Exercises
+# Easy 1
+https://launchschool.com/exercise_sets/e4d53458
 
-## Easy 1: https://launchschool.com/exercises/2abe5b37
+## Isn't it odd?
+https://launchschool.com/exercises/2abe5b37
+
+PEDAC
