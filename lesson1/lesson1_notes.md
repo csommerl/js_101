@@ -1,27 +1,27 @@
-# Lesson 1: Preparations
+[Lesson 1: Preparations](https://launchschool.com/lessons/c5707865/assignments)
 
-## Welcome
-- Use Gist or Pastebin to share code snippets
+# Welcome
+- Use Gist or Pastebin to share code snippets with a link
 
-## Set Up Your Profile Image
+# Set Up Your Profile Image
 
-## Using Markdown
+# Using Markdown
 - [Github Flavored Markdown Spec](https://github.github.com/gfm/)
 
-## Finish Prep Course
+# Finish Prep Course
 
-## System Check
+# System Check
 - `node -v`
 
-## Differences Between JavaScript Versions
+# Differences Between JavaScript Versions
 - arity: (logic) the number of arguments that a function can take; js101
 
-## Git and Github
+# Git and Github
 - public repositories?
 
-## Active Learning
+# Active Learning
 
-## Good vs Bad Questions
+# Good vs Bad Questions
 - Bad questions include:
   - those that are easily testable
 - Good questions include:
@@ -30,12 +30,12 @@
 - Why does passing a variable as an argument to a function not change that variable?
   - Because the variable within the function shadows the original variable: a new, separate, independent variable is created with the same name, and this new shadow variable's scope is limited to the function.
 
-## Lesson Discussion Forums
+# Lesson Discussion Forums
 Take the time to read all of the pinned threads in the discussion forum for each lesson.
 
 [Code Review Guidelines](https://launchschool.com/gists/8bbb0e2a)
 
-## Study Sessions
+# Study Sessions
 Ideas:
 - Topic Presentation
 - Code Example Presentation
@@ -47,10 +47,10 @@ Share live code:
 - https://coderpad.io/sandbox
 - https://repl.it/
 
-## Exercises: Small Problems
+# Exercises: Small Problems
 You should try to do around 20 exercises (or 2 sets) after each lesson.
 
-### [PEDAC](https://medium.com/launch-school/solving-coding-problems-with-pedac-29141331f93f)
+## [PEDAC](https://medium.com/launch-school/solving-coding-problems-with-pedac-29141331f93f)
 
 PEDAC stands for:
   1. Understand the Problem
@@ -59,7 +59,7 @@ PEDAC stands for:
   4. Algorithm
   5. Code
 
-#### PEDAC
+### PEDAC
 | Objective | Step | Description|
 | :--- | :---  | :-----      |
 | Process the Problem | Understand the Problem | <ul><li>Identify expected input and output</li><li>Make the requirements explicit</li><li>Identify rules</li><li>Mental model of the problem (optional)</li></ul> |
@@ -68,7 +68,8 @@ PEDAC stands for:
 | | Algorithm | Steps for converting input to output |
 | Code with Intent | Code | Implementation of Algorithm |
 
-## Summary
+# Summary
 
-## Lesson 1 Quiz 1
-https://launchschool.com/lessons/c5707865/assignments/289bfa86
+# Lesson 1 Quiz 1
+- Test for whether something is an expression or statement; if it can be logged to the console, it is an expression; if it can't be logged it is a statement; js101
+- NaN is a number in JavaScript, so it is a primitive value.

@@ -25,5 +25,4 @@
 
 # Notes on Individual Exercises
 
-## Easy 1
-https://launchschool.com/exercises/2abe5b37
+## Easy 1: https://launchschool.com/exercises/2abe5b37
