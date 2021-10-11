@@ -7,9 +7,34 @@
 ** You may assume that the argument is a valid integer value.
 */
 
-function isOdd(integer) {
+// function isOdd(integer) {
+//   let absoluteValue;
   
+//   if (integer < 0) {
+//     absoluteValue = integer * -1;
+//   } else {
+//     absoluteValue = integer;
+//   }
+
+//   if (absoluteValue % 2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// // Attempt 2
+// function isOdd(integer) {
+//   let absoluteValue = integer;
+//   if (integer < 0) absoluteValue *= -1;
+//   return absoluteValue % 2 === 1;
+// }
+
+// Theirs
+function isOdd(integer) {
+  return Math.abs(integer) % 2 === 1;
 }
+
 
 console.log(isOdd(2)); // => false
 console.log(isOdd(5)); // => true

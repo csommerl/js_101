@@ -5,3 +5,6 @@ Why does passing a variable as an argument to a function not change that variabl
 Problem Domain; the area of expertise or application that needs to be examined to solve a problem. It limits the scope of the problem.; js101
 mental model; an explanation of someone's thought process about how something works in the real world; js101
 Test for whether something is an expression or statement; if it can be logged to the console, it is an expression; if it can't be logged it is a statement; js101
+
+# Small Problems
+Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
