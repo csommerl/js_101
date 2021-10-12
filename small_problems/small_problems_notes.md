@@ -91,3 +91,29 @@ Log all even numbers from 1 to 99, inclusive, to the console, with each number o
 
 ## How big is the room?
 https://launchschool.com/exercises/91eb6f09
+
+P
+Inputs: user input of number of length in meters; user input of number of width in meters
+Outputs: number of square meters + number of square feet
+
+no unclear terms
+no special requirements
+
+Given user input of height & width in meters, return area in both sqaure meters and square feet.
+
+E
+Input: 3 length, 4 width
+Output: 12 square meters, 129.1668
+
+D: stay with numbers
+
+A
+1. Import readline sync.
+2. Use `readlineSync.prompt` to ask user for length of room in meters and store in variable `lengthInMeters`.
+3. Use `readlineSync.prompt` to ask user for width of room in meters and store in variable `widthInMeters`.
+4. Multiply `lengthInMeters` and `widthInMeters` and store in variable `squareMeters`.
+5. Multiple `squareMeters` by `10.7639` and store in variable `squareFeet`.
+6. Log statement including `squareMeters` and `squareFeet`.
+
+## Tip Calculator
+https://launchschool.com/exercises/824a7ad1
