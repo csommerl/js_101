@@ -9,18 +9,20 @@
 
 ### Simply Put
 
-1. Understand the Problem
-  - identify expected inputs & outputs
-  - make requirements explicit
-  - identify rules
-  - mental model of the problem (optional)
-2. Write Examples/Test Cases
+my modified language
+
+1. Understand the **Problem**
+  1. identify expected inputs & outputs
+  2. clarify key terms
+  3. identify implicit requirements/rules
+  4. mental model of the problem (optional)
+2. Write **Examples**/Test Cases
   - validate understanding of the problem
-3. Data Structure
+3. **Data Structure**
   - how will the data be represented in converting input to output?
-4. Algorithm
+4. **Algorithm**
   - what steps are needed to convert input to output?
-5. Code
+5. **Code**
   - implement the algorithm
 
 # Easy 1
@@ -81,6 +83,9 @@ Algorithm
 
 ## Odd Numbers
 https://launchschool.com/exercises/e95e7a7d
-Odd Numbers
 Log all odd numbers from 1 to 99, inclusive, to the console, with each number on a separate line.
+
+## Even Numbers
+https://launchschool.com/exercises/29cee426
+Log all even numbers from 1 to 99, inclusive, to the console, with each number on a separate line.
 
