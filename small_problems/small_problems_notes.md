@@ -89,3 +89,5 @@ Log all odd numbers from 1 to 99, inclusive, to the console, with each number on
 https://launchschool.com/exercises/29cee426
 Log all even numbers from 1 to 99, inclusive, to the console, with each number on a separate line.
 
+## How big is the room?
+https://launchschool.com/exercises/91eb6f09
