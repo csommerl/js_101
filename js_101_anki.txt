@@ -11,3 +11,4 @@ Math.abs(); function that returns the absolute value of a number. That is, it re
 how to create package.json; npm init -y; js101
 readlineSync.prompt([options]); basic way to have JS command line prompt for user input; js101
 what to do each time a user enters numberical input; always make sure to convert/parse to string/float; js101
+The difference between parseFloat and Number; So as long as you have standard numeric input, there's no difference. However, if your input starts with a number and then contains other characters, parseFloat truncates the number out of the string, while Number gives NaN; js101

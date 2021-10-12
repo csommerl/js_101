@@ -4,7 +4,13 @@
 ** You can ignore input validation and assume that the user will enter numbers.
 */
 
-
+let readlineSync = require('readline-sync');
+let billAmount = Number(readlineSync.question('What is the bill? '));
+let tipPercentage = Number(readlineSync.question('What is the tip percentage? ')) / 100;
+let tipAmount = billAmount * tipPercentage;
+let total = billAmount + tipAmount;
+console.log(`The tip is $${tipAmount.toFixed(2)}`);
+console.log(`The total is $${total.toFixed(2)}`);
 
 /*
 What is the bill? 200

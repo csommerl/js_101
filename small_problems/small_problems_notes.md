@@ -2,9 +2,6 @@
 
 # Resources
 
-## [Primer](https://launchschool.com/gists/0791ee5c)
-  - Keep track of which exercises give you difficulty or that you have trouble understanding.
-
 ## [PEDAC](https://medium.com/launch-school/solving-coding-problems-with-pedac-29141331f93f)
 
 ### Simply Put
@@ -24,6 +21,9 @@ my modified language
   - what steps are needed to convert input to output?
 5. **Code**
   - implement the algorithm
+
+## [Primer](https://launchschool.com/gists/0791ee5c)
+  - Keep track of which exercises give you difficulty or that you have trouble understanding.
 
 # Easy 1
 https://launchschool.com/exercise_sets/e4d53458
@@ -117,3 +117,9 @@ A
 
 ## Tip Calculator
 https://launchschool.com/exercises/824a7ad1
+
+## Sum or Product of Consecutive Integers
+https://launchschool.com/exercises/64d67f89
+
+## Short Long Short
+https://launchschool.com/exercises/c55f9982
