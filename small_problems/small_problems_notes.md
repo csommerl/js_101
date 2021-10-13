@@ -134,3 +134,29 @@ https://launchschool.com/exercises/bd767ad6
 
 ## Multiples of 3 and 5
 https://launchschool.com/exercises/847823f7
+
+Problem
+I/O
+  - inputs: integer greater than 1
+  - outputs: integer that sums all multiples of 3 & 5
+Terms
+  - multiple = remainder of 0 when dividing by the number
+Requirements
+  - no duplicates: if a number is a multiple of both 3 & 5, it should not be counted twice in summing
+
+Examples
+
+Data Structures
+- array collecting all the multiples
+
+Algorithm
+1. Create an empty array `multiples`.
+2. Create a for loop that iterates over all numbers between 1 and the input, and then
+  - if `i % 3 === 0`, add to multiples (`push()`) and `continue` to the next iteration to avoid duplicates.
+  - if `i % 5 === 0`, add to multiples
+3. Create a variable `sum` that begins with the value `0`.
+4. Iterate over the array and add each value to `sum`. (`reduce`?).
+5. Return sum.
+
+## UTF-16 String Value
+https://launchschool.com/exercises/b5c52850
