@@ -4,9 +4,7 @@
 
 ## [PEDAC](https://medium.com/launch-school/solving-coding-problems-with-pedac-29141331f93f)
 
-### Simply Put
-
-my modified language
+### My Version
 
 1. Understand the **Problem**
   1. identify expected inputs & outputs
@@ -14,7 +12,8 @@ my modified language
   3. identify implicit requirements/rules
   4. mental model of the problem (optional)
 2. Write **Examples**/Test Cases
-  - validate understanding of the problem
+  1. validate understanding of the problem
+  2. figure out edge cases
 3. **Data Structure**
   - how will the data be represented in converting input to output?
 4. **Algorithm**
@@ -24,6 +23,9 @@ my modified language
 
 ## [Primer](https://launchschool.com/gists/0791ee5c)
   - Keep track of which exercises give you difficulty or that you have trouble understanding.
+
+# Exercises to return to
+- unclear explanation: https://launchschool.com/exercises/c55f9982
 
 # Easy 1
 https://launchschool.com/exercise_sets/e4d53458
@@ -123,3 +125,6 @@ https://launchschool.com/exercises/64d67f89
 
 ## Short Long Short
 https://launchschool.com/exercises/c55f9982
+
+## Leap Years (Part 1)
+https://launchschool.com/exercises/3a4df048
