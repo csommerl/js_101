@@ -128,3 +128,6 @@ https://launchschool.com/exercises/c55f9982
 
 ## Leap Years (Part 1)
 https://launchschool.com/exercises/3a4df048
+
+## Leap Years (Part 2)
+https://launchschool.com/exercises/bd767ad6
