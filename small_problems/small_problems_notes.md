@@ -131,3 +131,6 @@ https://launchschool.com/exercises/3a4df048
 
 ## Leap Years (Part 2)
 https://launchschool.com/exercises/bd767ad6
+
+## Multiples of 3 and 5
+https://launchschool.com/exercises/847823f7

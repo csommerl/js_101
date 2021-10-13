@@ -31,40 +31,40 @@ A
 */
 
 // // mine
-// function isLeapYear(year) {
-//   if (year % 400 === 0) return true;
-//   if (year % 100 === 0) return false;
-//   if (year % 4 === 0) return true;
-//   return false;
-// }
+function isLeapYear(year) {
+  if (year % 400 === 0) return true;
+  if (year % 100 === 0) return false;
+  if (year % 4 === 0) return true;
+  return false;
+}
 
 // // theirs
-// function isLeapYear(year) {
-//   if (year % 400 === 0) {
-//     return true;
-//   } else if (year % 100 === 0) {
-//     return false;
-//   } else {
-//     return year % 4 === 0;
-//   }
-// }
-
-// further exploration
 function isLeapYear(year) {
-  if (year % 4 === 0) {
-    if (year % 100 === 0) {
-      if (year % 400 === 0) {
-        return true;
-      } else {
-        return false;
-      }
-    } else {
-      return true;
-    }
-  } else {
+  if (year % 400 === 0) {
+    return true;
+  } else if (year % 100 === 0) {
     return false;
+  } else {
+    return year % 4 === 0;
   }
 }
+
+// // further exploration
+// function isLeapYear(year) {
+//   if (year % 4 === 0) {
+//     if (year % 100 === 0) {
+//       if (year % 400 === 0) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     } else {
+//       return true;
+//     }
+//   } else {
+//     return false;
+//   }
+// }
 
 isLeapYear(2016);      // true
 isLeapYear(2015);      // false
