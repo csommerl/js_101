@@ -169,3 +169,6 @@ https://launchschool.com/exercises/1bd6be82
 
 ## Greeting a user
 https://launchschool.com/exercises/ca8ee74b
+
+## Multiplying Two Numbers
+https://launchschool.com/exercises/8532d178
