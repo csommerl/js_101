@@ -174,3 +174,7 @@ https://launchschool.com/exercises/ca8ee74b
 https://launchschool.com/exercises/8532d178
 
 ## Squaring an Argument
+https://launchschool.com/exercises/5a165802
+
+## Arithmetic Integer
+https://launchschool.com/exercises/ca8e844b
