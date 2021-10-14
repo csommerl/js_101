@@ -6,6 +6,19 @@
 ** Do not worry about validating the input.
 */
 
+let readlineSync = require('readline-sync');
+// let num1 = parseInt(readlineSync.question('Enter the first number:\n'));
+// let num2 = parseInt(readlineSync.question('Enter the second number:\n'));
+console.log('Enter the first number:');
+let num1 = parseInt(readlineSync.prompt());
+let num2 = parseInt(readlineSync.prompt());
+console.log(`${num1} + ${num2} = ${num1 + num2}`);
+console.log(`${num1} - ${num2} = ${num1 - num2}`);
+console.log(`${num1} * ${num2} = ${num1 * num2}`);
+console.log(`${num1} / ${num2} = ${Math.floor(num1 / num2)}`);
+console.log(`${num1} % ${num2} = ${num1 % num2}`);
+// console.log(`${num1} ** ${num2} = ${num1 ** num2}`);
+console.log(`${num1} ** ${num2} = ${Math.pow(num1, num2)}`);
 
 
 /*

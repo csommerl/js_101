@@ -178,3 +178,6 @@ https://launchschool.com/exercises/5a165802
 
 ## Arithmetic Integer
 https://launchschool.com/exercises/ca8e844b
+
+## The End Is Near But Not Here
+https://launchschool.com/exercises/e05e5eee
