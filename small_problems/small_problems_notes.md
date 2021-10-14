@@ -18,6 +18,7 @@
   - how will the data be represented in converting input to output?
 4. **Algorithm**
   - what steps are needed to convert input to output?
+  - given the data structures (input, output, conversion), are there special methods for these steps? For example, help to avoid conditions & loops?
 5. **Code**
   - implement the algorithm
 
@@ -165,3 +166,6 @@ https://launchschool.com/exercises/b5c52850
 
 ## Welcome Stranger
 https://launchschool.com/exercises/1bd6be82
+
+## Greeting a user
+https://launchschool.com/exercises/ca8ee74b
