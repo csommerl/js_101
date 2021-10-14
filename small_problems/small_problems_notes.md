@@ -160,3 +160,8 @@ Algorithm
 
 ## UTF-16 String Value
 https://launchschool.com/exercises/b5c52850
+
+# Easy 2
+
+## Welcome Stranger
+https://launchschool.com/exercises/1bd6be82
