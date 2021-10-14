@@ -184,3 +184,6 @@ https://launchschool.com/exercises/e05e5eee
 
 ## Exclusive Or
 https://launchschool.com/exercises/5fbc59a5
+
+## Odd Lists
+https://launchschool.com/exercises/23b67c04
