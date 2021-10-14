@@ -187,3 +187,6 @@ https://launchschool.com/exercises/5fbc59a5
 
 ## Odd Lists
 https://launchschool.com/exercises/23b67c04
+
+## Convert a String to a Number!
+https://launchschool.com/exercises/a5d2d50f
