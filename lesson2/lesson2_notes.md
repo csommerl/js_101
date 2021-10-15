@@ -83,3 +83,13 @@ Check for version
 
 How to call ESLint
 `npx eslint test.js`
+
+What i did
+- create package.json to main folder
+- install npm to main folder
+- install readline sync to main folder
+- create default yaml file for LS style
+- create vs code settings for this project to default to lf endings
+
+# Refactoring Calculator
+https://launchschool.com/lessons/64655364/assignments/bfb3a9f2
