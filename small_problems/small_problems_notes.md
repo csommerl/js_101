@@ -214,4 +214,5 @@ Algorithm
   3. Add all the numerals in the array
   4. Return
 
-hexadecimalToInteger
+## Convert a String to a Signed Number!
+https://launchschool.com/exercises/6974d7f2
