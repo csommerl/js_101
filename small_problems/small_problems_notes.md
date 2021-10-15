@@ -28,6 +28,9 @@
 # Exercises to return to
 - unclear explanation: https://launchschool.com/exercises/c55f9982
 
+# Lessons/Insights
+- This technique of using objects to perform conversions is a common idiom that you can use in a wide variety of situations, often resulting in code that is easier to read, understand, and maintain.
+
 # Easy 1
 https://launchschool.com/exercise_sets/e4d53458
 
@@ -190,3 +193,25 @@ https://launchschool.com/exercises/23b67c04
 
 ## Convert a String to a Number!
 https://launchschool.com/exercises/a5d2d50f
+
+Lesson: "This technique of using objects to perform conversions is a common idiom that you can use in a wide variety of situations, often resulting in code that is easier to read, understand, and maintain.:
+
+Problem
+  - inputs: string
+  - outputs: integer
+  - rule: no special characters or invalid characters
+Examples
+Data Structures
+  - an array, storing the numeric value multiplied by ten for each item
+  - then the array's elements will be summed
+Algorithm
+  1. Create an empty array `numerals` to store a numeric equivalent for each character.
+  2. Loop over each character in the string
+    1. First, create a variable `num` to store the numeric equivalent.
+    2. Second, identify the character with an `if` statement: if `'0'`, then store `0` in `num`.
+    3. Third, set `num` equal to the numeric value `num` multiplied by `10` to the power of `str.length - 1 - i`
+    4. Push `num` to `numerals`
+  3. Add all the numerals in the array
+  4. Return
+
+hexadecimalToInteger
