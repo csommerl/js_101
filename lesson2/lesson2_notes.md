@@ -23,3 +23,17 @@ https://launchschool.com/lessons/64655364/assignments/e16c1f23
 
 # Walk-through: Calculator
 https://launchschool.com/lessons/64655364/assignments/e3733b97
+
+# Pseudocode
+https://launchschool.com/lessons/64655364/assignments/fea216fc
+
+Keyword = Meaning
+START	= start of the program
+SET	= set a variable that we can use for later
+GET	= retrieve input from user
+PRINT	= display output to user
+READ	= retrieve a value from a variable
+IF/ELSE = IF/ELSE	show conditional branches in logic
+WHILE	= show looping logic
+END	= end of the program
+
