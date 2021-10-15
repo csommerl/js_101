@@ -1,0 +1,4 @@
+{
+  // for making all files in this folder default to lf
+  "files.eol": "\n",
+}

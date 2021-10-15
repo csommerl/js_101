@@ -1,4 +1,4 @@
-/* 
+/*
 ** Greeting a user: https://launchschool.com/exercises/ca8ee74b
 ** Write a program that will ask for user's name.
 ** The program will then greet the user.
