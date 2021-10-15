@@ -35,6 +35,7 @@ PRINT	= display output to user
 READ	= retrieve a value from a variable
 IF/ELSE = IF/ELSE	show conditional branches in logic
 WHILE	= show looping logic
+SUBPROCESS = show that some other thing will perform a task
 END	= end of the program
 
 Pseudocode Practice 1: a function that returns the sum of two numbers
@@ -64,3 +65,21 @@ RETURN everyOther
 END
 
 # Flowchart
+https://launchschool.com/lessons/64655364/assignments/998c996d
+the imperative or procedural way to solve a problem; to map out the step-by-step logic our program would need to solve a problem; js101
+the declarative way to solve a problem; to use (for example) a method that lets us iterate, instead of looping manually; js101
+
+Interestingly, when we move logic to sub-processes, we use a declarative type of syntax, rather than imperative
+
+# ESLint
+https://launchschool.com/lessons/64655364/assignments/825d809e
+https://launchschool.com/gists/9ad96eed
+
+How to install ESLint:
+`npm install eslint@7.12.1 eslint-cli babel-eslint --save-dev`
+
+Check for version
+`npx eslint -v`
+
+How to call ESLint
+`npx eslint test.js`

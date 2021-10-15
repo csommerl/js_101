@@ -15,3 +15,6 @@ The difference between parseFloat and Number; So as long as you have standard nu
 When to use String.prototype.slice() instead of String.prototype.substring()?; What to use when you get a portion of a string using negative numbers, e.g., to cut off and exclude the end of the string; js101
 Math.pow(); function that returns the base to the exponent power, as in base^exponent; js101
 Bitwise XOR (^); returns a 1 in each bit position for which the corresponding bits of either but not both operands are 1s.; js101
+the imperative or procedural way to solve a problem; to map out the step-by-step logic our program would need to solve a problem; js101
+the declarative way to solve a problem; to use (for example) a method that lets us iterate, instead of looping manually; js101
+linter; program/tool that inspects your code for potential errors and "code smells," and for adherence to the best practice determined by developers over the years.; js101
