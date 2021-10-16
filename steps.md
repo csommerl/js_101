@@ -31,3 +31,8 @@
 3. Walking Away
 4. Inspecting with a Debugger
 5. Advanced Debugging
+
+# Try/Catch
+Only use try/catch/finally blocks when the following conditions are both true:
+  1. A built-in JavaScript function or method can throw an exception and you need to handle or prevent that exception.
+  2. A simple guard clause is impossible or impractical to prevent the exception.

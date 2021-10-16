@@ -134,3 +134,19 @@ https://launchschool.com/lessons/64655364/assignments/4d082822
 
 # Catching Errors
 https://launchschool.com/lessons/64655364/assignments/70c23b55
+
+When avoiding errors isn't realistic, use try/catch/finally block
+
+```javascript
+try {
+  // Do something that might fail here and throw an exception.
+} catch (error) {
+  // This code only runs if something in the try clause throws an exception.
+  // "error" contains the exception object.
+} finally {
+  // This code always runs even if the above code throws an exception.
+}
+```
+
+# Precedence
+https://launchschool.com/lessons/64655364/assignments/08ba7fc1
