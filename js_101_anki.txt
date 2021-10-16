@@ -6,6 +6,25 @@ Problem Domain; the area of expertise or application that needs to be examined t
 mental model; an explanation of someone's thought process about how something works in the real world; js101
 Test for whether something is an expression or statement; if it can be logged to the console, it is an expression; if it can't be logged it is a statement; js101
 
+# Lesson 2
+the imperative or procedural way to solve a problem; to map out the step-by-step logic our program would need to solve a problem; js101
+the declarative way to solve a problem; to use (for example) a method that lets us iterate, instead of looping manually; js101
+linter; program/tool that inspects your code for potential errors and "code smells," and for adherence to the best practice determined by developers over the years.; js101
+Number.isNaN(); method that determines whether the passed value is NaN and its type is Number.; js101
+String.prototype.trimStart(); method that removes whitespace from the beginning of a string. trimLeft() is an alias of this method.; js101
+stack trace; a report of the active stack frames at a certain point in time during the execution of a program; js101
+trapping the error; Identifying the area where an error originates; js101
+> node inspect file.js; how to run node's debugger; js101
+> npx eslint file.js; how to run eslint; js101
+> exec variableName; in node's debugger, how to access the value of any variables that are in scope at that point in execution; js101
+> n/next in node debugger; how to move to the next expression in node's debugger; js101
+> c/cont in node debugger; how to continue execution in node's debugger until the end or an error; js101
+> debugger; invokes any available debugging functionality, such as setting a breakpoint. If no debugging functionality is available, this statement has no effect.; js101
+> .exit; how to exit node's debugger; js101
+> run/restart; how to start program execution again in node's debugger; js101
+breakpoint; an intentional stopping or pausing place in a program, put in place for debugging purposes. It is also sometimes simply referred to as a pause.; js101
+
+
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
 how to create package.json; npm init -y; js101
@@ -15,8 +34,3 @@ The difference between parseFloat and Number; So as long as you have standard nu
 When to use String.prototype.slice() instead of String.prototype.substring()?; What to use when you get a portion of a string using negative numbers, e.g., to cut off and exclude the end of the string; js101
 Math.pow(); function that returns the base to the exponent power, as in base^exponent; js101
 Bitwise XOR (^); returns a 1 in each bit position for which the corresponding bits of either but not both operands are 1s.; js101
-the imperative or procedural way to solve a problem; to map out the step-by-step logic our program would need to solve a problem; js101
-the declarative way to solve a problem; to use (for example) a method that lets us iterate, instead of looping manually; js101
-linter; program/tool that inspects your code for potential errors and "code smells," and for adherence to the best practice determined by developers over the years.; js101
-Number.isNaN(); method that determines whether the passed value is NaN and its type is Number.; js101
-String.prototype.trimStart(); method that removes whitespace from the beginning of a string. trimLeft() is an alias of this method.; js101

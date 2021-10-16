@@ -95,3 +95,33 @@ What i did
 https://launchschool.com/lessons/64655364/assignments/bfb3a9f2
 
 Lesson: use [].includes() to test for valid input
+
+# ESLint Calculator
+
+# Debugging
+https://launchschool.com/lessons/64655364/assignments/3b953f14
+
+## Online Resources
+1. Search Engine
+2. Stack Overflow
+3. Documentation (MDN)
+
+## Steps to Debugging
+1. Reproduce the Error
+2. Determine the Boundaries of the Error
+3. Trace the Code
+4. Understand the Problem Well
+5. Implement a Fix
+  - Fix one problem at a time
+  - Merely make a note of other problems
+6. Test the Fix
+
+## Techniques for Debugging
+1. Line by line
+2. Rubber Duck
+3. Walking Away
+4. Inspecting with a Debugger
+5. Advanced Debugging
+
+# Errors
+https://launchschool.com/lessons/64655364/assignments/1dfdd3ff
