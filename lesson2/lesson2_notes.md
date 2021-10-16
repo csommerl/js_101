@@ -93,3 +93,5 @@ What i did
 
 # Refactoring Calculator
 https://launchschool.com/lessons/64655364/assignments/bfb3a9f2
+
+Lesson: use [].includes() to test for valid input

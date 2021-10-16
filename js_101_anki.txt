@@ -18,3 +18,5 @@ Bitwise XOR (^); returns a 1 in each bit position for which the corresponding bi
 the imperative or procedural way to solve a problem; to map out the step-by-step logic our program would need to solve a problem; js101
 the declarative way to solve a problem; to use (for example) a method that lets us iterate, instead of looping manually; js101
 linter; program/tool that inspects your code for potential errors and "code smells," and for adherence to the best practice determined by developers over the years.; js101
+Number.isNaN(); method that determines whether the passed value is NaN and its type is Number.; js101
+String.prototype.trimStart(); method that removes whitespace from the beginning of a string. trimLeft() is an alias of this method.; js101
