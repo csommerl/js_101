@@ -37,6 +37,12 @@ When to use try/catch; Only use when the following conditions are both true: 1) 
 what it emeans for an operator to bind more tightly to its operands; another way of saying that the operator has higher precedence than another; js101
 require('./file.json'); how to import a file; js101
 difference between JSON and JS dictionary; everything must be put in double quotation marks; js101
+Number(''), Number('   '), Number([]), Number(undefined), Number(null); what gets returned as using Number(); js101
+Differences between parseInt() and Number(); 1) parseInt() converts strings to numbers even when the string contains non-numeric characters, 2) accepts a second argument called the radix, specifying the base of the number contained in the string; js101
+unary + operator; attempts to coerce a value to a number. works like the Number function, but is more succinct; js101
+Why toString() cannot be called directly on a number literal; this and all methods don't work because that JavaScript interprets the . as part of a floating point number: can use () or ..; js101
+Array.prototype.toString(); converts every element of an array to a string, then concatenates them all with a , between each string: treats null and undefined elements as empty values; js101
+Advantage of String() over toString(); can coerce values to strings, including null and undefined; js101
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
