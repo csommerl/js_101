@@ -159,3 +159,9 @@ Lesson:
 
 # Explicit Type Coercion
 https://launchschool.com/lessons/64655364/assignments/d25ab156
+
+# Implicit Type Coercion
+https://launchschool.com/lessons/64655364/assignments/63b6e5e4
+
+# Assignment: Mortgage / Car Loan Calculator
+https://launchschool.com/lessons/64655364/assignments/fb1e377c

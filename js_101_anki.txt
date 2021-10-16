@@ -43,6 +43,8 @@ unary + operator; attempts to coerce a value to a number. works like the Number 
 Why toString() cannot be called directly on a number literal; this and all methods don't work because that JavaScript interprets the . as part of a floating point number: can use () or ..; js101
 Array.prototype.toString(); converts every element of an array to a string, then concatenates them all with a , between each string: treats null and undefined elements as empty values; js101
 Advantage of String() over toString(); can coerce values to strings, including null and undefined; js101
+Implicit type coercion; what happens when you perform an operation involving values of two different types and JavaScript coerces the values to have the same type. That type varies based on the specific combination of types involved in the original expression; js101
+
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
