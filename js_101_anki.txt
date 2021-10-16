@@ -23,7 +23,10 @@ trapping the error; Identifying the area where an error originates; js101
 > .exit; how to exit node's debugger; js101
 > run/restart; how to start program execution again in node's debugger; js101
 breakpoint; an intentional stopping or pausing place in a program, put in place for debugging purposes. It is also sometimes simply referred to as a pause.; js101
-
+throw an error, raise an exception; ways errors are described as occurring; js101
+ReferenceError; error that occurs when you attempt to use a variable or function that doesn't exist; js101
+TypeError; error that occurs, for example, by 1) accessing a property on a value that does not have properties (e.g., null), 2) trying to call something that isn't a function, 3) tr;ying to reassign a const variable; js101
+SyntaxError; error that occurs imeediately after loading a JS program but before it begins to run; js101
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
