@@ -153,3 +153,6 @@ https://launchschool.com/lessons/64655364/assignments/08ba7fc1
 
 # Assignment: Calculator Bonus Features
 https://launchschool.com/lessons/64655364/assignments/a6efeb33
+
+Lesson:
+- use `while (true)` to have an infinite loop, which can be broken by specified events within the loop
