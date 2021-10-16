@@ -150,3 +150,6 @@ try {
 
 # Precedence
 https://launchschool.com/lessons/64655364/assignments/08ba7fc1
+
+# Assignment: Calculator Bonus Features
+https://launchschool.com/lessons/64655364/assignments/a6efeb33

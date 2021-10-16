@@ -34,6 +34,8 @@ try/catch (error)/finally block; 1) Do something that might fail here and throw 
 Error.prototype.name; represents a name for the type of error. The initial value is "Error".; js101
 Error.prototype.message; a human-readable description of the error.; js101
 When to use try/catch; Only use when the following conditions are both true: 1) A built-in JavaScript function or method can throw an exception and you need to handle or prevent that exception, 2) A simple guard clause is impossible or impractical to prevent the exception.; js101
+what it emeans for an operator to bind more tightly to its operands; another way of saying that the operator has higher precedence than another; js101
+
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
