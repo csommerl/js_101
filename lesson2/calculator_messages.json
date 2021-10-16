@@ -1,9 +1,22 @@
 {
-  "welcome": "Welcome to Calculator!",
-  "num1Prompt": "What's the first number?",
-  "invalidNum": "Hmm... that doesn't look like a valid number.",
-  "num2Prompt": "What's the second number?",
-  "operationPrompt": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
-  "operationError": "Must choose 1, 2, 3 or 4",
-  "anotherCalculation": "Would you like to perform another calculation? (y/n)"
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "num1Prompt": "What's the first number?",
+    "invalidNum": "Hmm... that doesn't look like a valid number.",
+    "num2Prompt": "What's the second number?",
+    "operationPrompt": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+    "operationError": "Must choose 1, 2, 3 or 4",
+    "result": "The result is:",
+    "anotherCalculation": "Would you like to perform another calculation? (y/n)"
+  },
+  "de": {
+    "welcome": "Wilkommen!",
+    "num1Prompt": "Was ist Ihre erstes Nummer?",
+    "invalidNum": "Hmm... das ist nicht gültig.",
+    "num2Prompt": "Was ist Ihre zweites Nummer?",
+    "operationPrompt": "Was für eine Operation würden Sie mögen?\n1) Hinzufügen 2) Abziehen 3) Multiplizieren 4) Dividieren",
+    "operationError": "Sie müssen 1, 2, 3 or 4 auswählen.",
+    "result": "Das Ergebnis ist:",
+    "anotherCalculation": "Würden Sie eine andere Operation machen? (y/n)"
+  }
 }
