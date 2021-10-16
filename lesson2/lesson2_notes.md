@@ -125,3 +125,12 @@ https://launchschool.com/lessons/64655364/assignments/3b953f14
 
 # Errors
 https://launchschool.com/lessons/64655364/assignments/1dfdd3ff
+
+# Preventing Errors
+https://launchschool.com/lessons/64655364/assignments/4d082822
+- Errors typically occur where assumptions are made in code
+- guard clause
+- edge cases: write out the common use cases of a new function, and check how your function handles them
+
+# Catching Errors
+https://launchschool.com/lessons/64655364/assignments/70c23b55

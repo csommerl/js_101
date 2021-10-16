@@ -27,6 +27,9 @@ throw an error, raise an exception; ways errors are described as occurring; js10
 ReferenceError; error that occurs when you attempt to use a variable or function that doesn't exist; js101
 TypeError; error that occurs, for example, by 1) accessing a property on a value that does not have properties (e.g., null), 2) trying to call something that isn't a function, 3) tr;ying to reassign a const variable; js101
 SyntaxError; error that occurs imeediately after loading a JS program but before it begins to run; js101
+guard clause; code that guarantees data meets certain preconditions before it gets used; js101
+edge case; a problem or situation that occurs only at an extreme (maximum or minimum) operating parameter; js101
+
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
