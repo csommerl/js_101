@@ -48,6 +48,9 @@ idiomatic name; a name that follows naming conventions; js101
 when non-idiomatic names make sense to use; names are commonly used by external libraries to provide names that are easy to type yet unlikely to conflict with names in other libraries; js101
 magic number; a number (or other simple value) that appears in your program without any information that describes what that number represents. should be made into a constant!; js101
 why have a space after if, for, while, etc.; to prevent confusion between statements and function calls; js101
+what two things determine variable scope; what is determined by taking together the keyword you use to declare a variable and the location where you declare it; js101
+what parameters technically are; they are local variables that are initialized from the argument passed to the function; js101
+only names that don't get involved in shadowing; property names of objects are exempt from this rule for names; js101
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101

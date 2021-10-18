@@ -196,3 +196,13 @@ Side effects aren't bad:
 
 # Variable Scope
 https://launchschool.com/lessons/64655364/assignments/7c0087dd
+
+## Rules for function/block scope
+1. Outer scope variables can be accessed in the inner scope.
+2. Inner scope variables cannot be accessed in the outer scope.
+3. Peer scopes do not conflict.
+4. Nested functions have their own variable scope.
+5. Inner scope variables can shadow outer scope variables.
+
+## Re-read Objects vs. Primitive Values
+https://launchschool.com/lessons/64655364/assignments/8d2ccaee
