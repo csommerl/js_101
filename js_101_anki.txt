@@ -44,7 +44,10 @@ Why toString() cannot be called directly on a number literal; this and all metho
 Array.prototype.toString(); converts every element of an array to a string, then concatenates them all with a , between each string: treats null and undefined elements as empty values; js101
 Advantage of String() over toString(); can coerce values to strings, including null and undefined; js101
 Implicit type coercion; what happens when you perform an operation involving values of two different types and JavaScript coerces the values to have the same type. That type varies based on the specific combination of types involved in the original expression; js101
-
+idiomatic name; a name that follows naming conventions; js101
+when non-idiomatic names make sense to use; names are commonly used by external libraries to provide names that are easy to type yet unlikely to conflict with names in other libraries; js101
+magic number; a number (or other simple value) that appears in your program without any information that describes what that number represents. should be made into a constant!; js101
+why have a space after if, for, while, etc.; to prevent confusion between statements and function calls; js101
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101

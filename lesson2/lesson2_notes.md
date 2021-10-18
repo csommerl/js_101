@@ -166,4 +166,33 @@ https://launchschool.com/lessons/64655364/assignments/63b6e5e4
 # Assignment: Mortgage / Car Loan Calculator
 https://launchschool.com/lessons/64655364/assignments/fb1e377c
 
-Edge Cases
+# Coding Tips
+https://launchschool.com/lessons/64655364/assignments/1f79ea39
+1. hours debugging imparts lasting lessons
+2. use descriptive names
+3. use idiomatic names
+4. avoid magic numbers
+5. when declaring constants, make sure that the meaning is clear
+6. don't mutate objects that are declared as constants, even though it is allowed / use freeze()
+7. Be careful with side effects
+8. Functions should be at the same level of abstraction
+9. Function names should tell you what they do (e.g., side effects)
+10. Use names with `print`, `say`, or `display` for those that log
+
+
+
+Functions have side effects when:
+1. changes non-local variables:
+  1. reassigns a non-local variable
+  2. mutates objects referenced by non-local variables
+2. Reads from or writers to a file, network connection, browser, or the system hardware (includes logging)
+3. Raises an exception without handling it
+4. Calls another function that has side effects
+
+Side effects aren't bad:
+- **Most** functions should return a useful value **or** they should have a side effect, but **not both**.
+- Exceptions to this rule: relate to #2 above
+- use names that indicate side effects
+
+# Variable Scope
+https://launchschool.com/lessons/64655364/assignments/7c0087dd
