@@ -84,7 +84,7 @@ Check for version
 How to call ESLint
 `npx eslint test.js`
 
-What i did
+**What I did**
 - create package.json to main folder
 - install npm to main folder
 - install readline sync to main folder
@@ -179,8 +179,6 @@ https://launchschool.com/lessons/64655364/assignments/1f79ea39
 9. Function names should tell you what they do (e.g., side effects)
 10. Use names with `print`, `say`, or `display` for those that log
 
-
-
 Functions have side effects when:
 1. changes non-local variables:
   1. reassigns a non-local variable
@@ -206,3 +204,9 @@ https://launchschool.com/lessons/64655364/assignments/7c0087dd
 
 ## Re-read Objects vs. Primitive Values
 https://launchschool.com/lessons/64655364/assignments/8d2ccaee
+
+## Pass by Reference vs Pass by Value
+https://launchschool.com/lessons/64655364/assignments/33123902
+
+## Walk-through: Rock Paper Scissors
+https://launchschool.com/lessons/64655364/assignments/2ecb7012

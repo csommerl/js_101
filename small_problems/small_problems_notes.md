@@ -32,7 +32,7 @@
 - Use constants for conversions (https://launchschool.com/exercises/91eb6f09)
 - write a separate function when using reduce
 - use truthy/falsy values in conditionals, without a need for an equality operator
-- This technique of using objects to perform conversions is a common idiom that you can use in a wide variety of situations, often resulting in code that is easier to read, understand, and maintain.
+- The technique of using objects to perform conversions is a common idiom that you can use in a wide variety of situations, often resulting in code that is easier to read, understand, and maintain.
 - Use slice (rather than substring) to use negative numbers to cut off the end of a string
 
 # Easy 1
