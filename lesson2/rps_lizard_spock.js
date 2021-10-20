@@ -13,11 +13,11 @@ const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const VALID_LETTER_CHOICES = VALID_CHOICES.map(choice => choice[0]);
 
 const WINNING_COMBOS = {
-  rock:     ['scissors',  'lizard'],
-  paper:    ['rock',      'spock'],
-  scissors: ['paper',     'lizard'],
-  lizard:   ['paper',     'spock'],
-  spock:    ['rock',     'scissors'],
+  rock: ['scissors', 'lizard'],
+  paper: ['rock', 'spock'],
+  scissors: ['paper', 'lizard'],
+  lizard: ['paper', 'spock'],
+  spock: ['rock', 'scissors'],
 };
 
 function prompt(message) {
@@ -37,17 +37,16 @@ function displayWinner(choice, computerChoice) {
 }
 
 function getFullChoice(choice) {
-  possibleMatches = [];
-  
-  for (let i = 0; i < VALID_CHOICES.length; i += 1) {
-    if (VALID_CHOICES[i][0] === choice) possibleMatches.push(VALID_CHOICES[i]);
-  }
-  
+  let possibleMatches = [];
+
+  VALID_CHOICES.forEach(option => {
+    if (option[0] === choice) possibleMatches.push(option);
+  });
+
   if (possibleMatches.length === 1) {
     return possibleMatches[0];
   } else {
-    prompt('More than one possible choice begins with that letter.');
-    prompt('Type the full word.');
+    prompt('More than one possible choice begins with that letter. Type the full word.');
     choice = readline.question();
     choice = validateFullWordChoice(choice);
     return choice;
@@ -63,7 +62,8 @@ function validateFullWordChoice(choice) {
 }
 
 function validateChoice(choice) {
-  while (!VALID_CHOICES.includes(choice) && !VALID_LETTER_CHOICES.includes(choice)) {
+  while (!VALID_CHOICES.includes(choice) &&
+    !VALID_LETTER_CHOICES.includes(choice)) {
     prompt('That\'s not a valid choice');
     choice = readline.question();
   }
