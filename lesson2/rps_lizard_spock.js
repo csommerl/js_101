@@ -10,6 +10,13 @@
 const readline = require('readline-sync');
 
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+const WINNING_COMBOS = {
+  rock:     ['scissors',  'lizard'],
+  paper:    ['rock',      'spock'],
+  scissors: ['paper',     'lizard'],
+  lizard:   ['paper',     'spock'],
+  spock:    ['rock',     'scissors'],
+};
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -18,34 +25,12 @@ function prompt(message) {
 function displayWinner(choice, computerChoice) {
   prompt(`You chose ${choice}, computer chose ${computerChoice}`);
 
-  if (
-    (choice === 'rock' && computerChoice === 'scissors') ||
-    (choice === 'rock' && computerChoice === 'lizard') ||
-    (choice === 'paper' && computerChoice === 'rock') ||
-    (choice === 'paper' && computerChoice === 'spock') ||
-    (choice === 'scissors' && computerChoice === 'paper') ||
-    (choice === 'scissors' && computerChoice === 'lizard') ||
-    (choice === 'lizard' && computerChoice === 'spock') ||
-    (choice === 'lizard' && computerChoice === 'paper') ||
-    (choice === 'spock' && computerChoice === 'scissors') ||
-    (choice === 'spock' && computerChoice === 'rock')
-  ) {
+  if (WINNING_COMBOS[choice].includes(computerChoice)) {
     prompt('You win!');
-  } else if (
-    (choice === 'rock' && computerChoice === 'paper') ||
-    (choice === 'rock' && computerChoice === 'spock') ||
-    (choice === 'paper' && computerChoice === 'scissors') ||
-    (choice === 'paper' && computerChoice === 'lizard') ||
-    (choice === 'scissors' && computerChoice === 'rock') ||
-    (choice === 'scissors' && computerChoice === 'spock') ||
-    (choice === 'lizard' && computerChoice === 'rock') ||
-    (choice === 'lizard' && computerChoice === 'scissors') ||
-    (choice === 'spock' && computerChoice === 'lizard') ||
-    (choice === 'spock' && computerChoice === 'paper')
-  ) {
+  } else if (WINNING_COMBOS[computerChoice].includes(choice)) {
     prompt('Computer wins!');
   } else {
-    prompt('It\'s a tie');
+    prompt('It\'s a tie.');
   }
 }
 
