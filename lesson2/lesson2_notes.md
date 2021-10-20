@@ -202,11 +202,30 @@ https://launchschool.com/lessons/64655364/assignments/7c0087dd
 4. Nested functions have their own variable scope.
 5. Inner scope variables can shadow outer scope variables.
 
-## Re-read Objects vs. Primitive Values
+# Re-read Objects vs. Primitive Values
 https://launchschool.com/lessons/64655364/assignments/8d2ccaee
 
-## Pass by Reference vs Pass by Value
+# Pass by Reference vs Pass by Value
 https://launchschool.com/lessons/64655364/assignments/33123902
 
-## Walk-through: Rock Paper Scissors
+# Walk-through: Rock Paper Scissors
 https://launchschool.com/lessons/64655364/assignments/2ecb7012
+
+# Coding Tips 2
+https://launchschool.com/lessons/64655364/assignments/1c561f23
+1. Using blank lines to organize code
+2. Name functions appropriately
+  - Don't write a function that does more than one of these things:
+    - mutate a value
+    - output something
+    - return a meaningful value
+3. Don't mutate the caller during iteration
+  - The behavior may not be what you expect.
+4. Try to avoid variable shadowing
+5. Don't use assignment in a conditional
+  - if you must do this, wrap the assignment in parentheses
+6. Use underscore for unused callback paramters
+7. Gain experience through struggling
+
+# RPS Bonus Features
+https://launchschool.com/lessons/64655364/assignments/9a13e511

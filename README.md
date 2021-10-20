@@ -62,6 +62,53 @@ END	= end of the program
 4. Inspecting with a Debugger
 5. Advanced Debugging
 
+# Coding Tips
+1. hours debugging imparts lasting lessons
+2. use descriptive names
+3. use idiomatic names
+4. avoid magic numbers
+5. when declaring constants, make sure that the meaning is clear
+6. don't mutate objects that are declared as constants, even though it is allowed / use freeze()
+7. Be careful with side effects
+8. Functions should be at the same level of abstraction
+9. Function names should tell you what they do (e.g., side effects)
+10. Use names with `print`, `say`, or `display` for those that log
+
+Functions have side effects when:
+1. changes non-local variables:
+  1. reassigns a non-local variable
+  2. mutates objects referenced by non-local variables
+2. Reads from or writers to a file, network connection, browser, or the system hardware (includes logging)
+3. Raises an exception without handling it
+4. Calls another function that has side effects
+
+Side effects aren't bad:
+- **Most** functions should return a useful value **or** they should have a side effect, but **not both**.
+- Exceptions to this rule: relate to #2 above
+- use names that indicate side effects
+
+# Variable Scope Rules
+1. Outer scope variables can be accessed in the inner scope.
+2. Inner scope variables cannot be accessed in the outer scope.
+3. Peer scopes do not conflict.
+4. Nested functions have their own variable scope.
+5. Inner scope variables can shadow outer scope variables.
+
+# Coding Tips 2
+1. Using blank lines to organize code
+2. Name functions appropriately
+  - Don't write a function that does more than one of these things:
+    - mutate a value
+    - output something
+    - return a meaningful value
+3. Don't mutate the caller during iteration
+  - The behavior may not be what you expect.
+4. Try to avoid variable shadowing
+5. Don't use assignment in a conditional
+  - if you must do this, wrap the assignment in parentheses
+6. Use underscore for unused callback paramters
+7. Gain experience through struggling
+
 # How to set up npm
 https://launchschool.com/books/javascript/read/input_output#commandlineinput
 1. Use the ls command to see if there is a `package.json` file in the current directory.
