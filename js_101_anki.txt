@@ -54,7 +54,7 @@ only names that don't get involved in shadowing; property names of objects are e
 what the concept of "pass-by-value" traditionally means; when you use a variable to pass an argument to a function, the function can't do anything that sets the original variable to a different value; js101
 pass-by-value-of-the-reference or call-by-sharing; When an operation within the function mutates its argument, it affects the original object.; js101
 destructive functions or methods; Functions and methods that mutate their callers; js101
-
+where to put global constants; put near the top of the program file, usually just after any require calls; js101
 
 # Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
