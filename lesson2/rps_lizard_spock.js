@@ -17,6 +17,7 @@ const WINNING_COMBOS = {
   lizard: ['paper', 'spock'],
   spock: ['rock', 'scissors'],
 };
+const playerScore = {wins: 0, losses: 0, ties: 0};
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -81,26 +82,63 @@ function displayWinner(winner) {
   }
 }
 
+function updateScore(winner) {
+  if (winner === 'player') {
+    playerScore.wins += 1;
+  } else if (winner === 'computer') {
+    playerScore.losses += 1;
+  } else if (winner === 'tie') {
+    playerScore.ties += 1;
+  }
+}
+
+function resetPlayerScore() {
+  playerScore.wins = 0;
+  playerScore.losses = 0;
+  playerScore.ties = 0;
+}
+
+prompt('Welcome to Rock, Paper, Scissors, Lizard, Spock! Each match against the computer is best out of 5.');
 while (true) {
-  let playerScore = {wins: 0, losses: 0};
-  prompt(`Choose one: ${VALID_CHOICES.join(', ')} (alternatively: ${VALID_LETTER_CHOICES.join(', ')})`);
-  let choice = readline.question();
+  playMatch();
 
-  choice = validateChoice(choice);
+  resetPlayerScore();
 
-  let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
-  let computerChoice = VALID_CHOICES[randomIndex];
-
-  prompt(`You chose ${choice}, computer chose ${computerChoice}`);
-
-  let winner = getWinner(choice, computerChoice);
-  displayWinner(winner);
-
-  prompt('Do you want to play again (y/n)?');
+  prompt('----------');
+  prompt('Do you want to play another match (y/n)?');
   let answer = readline.question().toLowerCase();
   while (answer[0] !== 'n' && answer[0] !== 'y') {
     prompt('Please enter "y" or "n".');
     answer = readline.question().toLowerCase();
   }
   if (answer[0] !== 'y') break;
+}
+
+function playMatch() {
+  while (true) {
+    prompt(`Choose one: ${VALID_CHOICES.join(', ')} (alternatively: ${VALID_LETTER_CHOICES.join(', ')})`);
+    let choice = readline.question();
+
+    choice = validateChoice(choice);
+
+    let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
+    let computerChoice = VALID_CHOICES[randomIndex];
+
+    prompt(`You chose ${choice}, computer chose ${computerChoice}`);
+
+    let winner = getWinner(choice, computerChoice);
+    displayWinner(winner);
+
+    updateScore(winner);
+
+    prompt(`So far, you have won ${playerScore.wins} times, lost ${playerScore.losses} times, and tied ${playerScore.ties} times.`);
+
+    if (playerScore.wins === 3) {
+      prompt('You win the match!');
+      break;
+    } else if (playerScore.losses === 3) {
+      prompt('The computer wins the match!');
+      break;
+    }
+  }
 }
