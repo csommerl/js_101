@@ -23,7 +23,8 @@ function prompt(message) {
   console.log(`=> ${message}`);
 }
 
-function validateChoice(choice) {
+function getChoice() {
+  let choice = readline.question();
   while (!VALID_CHOICES.includes(choice) &&
     !VALID_LETTER_CHOICES.includes(choice)) {
     prompt('That\'s not a valid choice');
@@ -99,10 +100,13 @@ function resetPlayerScore() {
 }
 
 prompt('Welcome to Rock, Paper, Scissors, Lizard, Spock! Each match against the computer is best out of 5.');
+prompt('----------');
+let matchNumber = 0;
 while (true) {
-  playMatch();
-
   resetPlayerScore();
+  matchNumber += 1;
+  prompt(`Match #${matchNumber}`);
+  playMatch();
 
   prompt('----------');
   prompt('Do you want to play another match (y/n)?');
@@ -117,9 +121,8 @@ while (true) {
 function playMatch() {
   while (true) {
     prompt(`Choose one: ${VALID_CHOICES.join(', ')} (alternatively: ${VALID_LETTER_CHOICES.join(', ')})`);
-    let choice = readline.question();
 
-    choice = validateChoice(choice);
+    let choice = getChoice();
 
     let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
     let computerChoice = VALID_CHOICES[randomIndex];
