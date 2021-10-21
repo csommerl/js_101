@@ -229,3 +229,5 @@ https://launchschool.com/lessons/64655364/assignments/1c561f23
 
 # RPS Bonus Features
 https://launchschool.com/lessons/64655364/assignments/9a13e511
+
+Lesson: extract most of a function's logic to a data structure, e.g., RPS winning conditions

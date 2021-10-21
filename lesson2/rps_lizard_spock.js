@@ -8,10 +8,8 @@
 */
 
 const readline = require('readline-sync');
-
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const VALID_LETTER_CHOICES = VALID_CHOICES.map(choice => choice[0]);
-
 const WINNING_COMBOS = {
   rock: ['scissors', 'lizard'],
   paper: ['rock', 'spock'],
@@ -24,19 +22,21 @@ function prompt(message) {
   console.log(`=> ${message}`);
 }
 
-function displayWinner(choice, computerChoice) {
-  prompt(`You chose ${choice}, computer chose ${computerChoice}`);
-
-  if (WINNING_COMBOS[choice].includes(computerChoice)) {
-    prompt('You win!');
-  } else if (WINNING_COMBOS[computerChoice].includes(choice)) {
-    prompt('Computer wins!');
-  } else {
-    prompt('It\'s a tie.');
+function validateChoice(choice) {
+  while (!VALID_CHOICES.includes(choice) &&
+    !VALID_LETTER_CHOICES.includes(choice)) {
+    prompt('That\'s not a valid choice');
+    choice = readline.question();
   }
+
+  if (choice.length === 1) {
+    choice = getFullWordChoice(choice);
+  }
+
+  return choice;
 }
 
-function getFullChoice(choice) {
+function getFullWordChoice(choice) {
   let possibleMatches = [];
 
   VALID_CHOICES.forEach(option => {
@@ -61,29 +61,40 @@ function validateFullWordChoice(choice) {
   return choice;
 }
 
-function validateChoice(choice) {
-  while (!VALID_CHOICES.includes(choice) &&
-    !VALID_LETTER_CHOICES.includes(choice)) {
-    prompt('That\'s not a valid choice');
-    choice = readline.question();
+function getWinner(choice, computerChoice) {
+  if (WINNING_COMBOS[choice].includes(computerChoice)) {
+    return 'player';
+  } else if (WINNING_COMBOS[computerChoice].includes(choice)) {
+    return 'computer';
+  } else {
+    return 'tie';
   }
-  return choice;
+}
+
+function displayWinner(winner) {
+  if (winner === 'player') {
+    prompt('You win!');
+  } else if (winner === 'computer') {
+    prompt('Computer wins!');
+  } else if (winner === 'tie') {
+    prompt('It\'s a tie.');
+  }
 }
 
 while (true) {
+  let playerScore = {wins: 0, losses: 0};
   prompt(`Choose one: ${VALID_CHOICES.join(', ')} (alternatively: ${VALID_LETTER_CHOICES.join(', ')})`);
   let choice = readline.question();
 
   choice = validateChoice(choice);
 
-  if (choice.length === 1) {
-    choice = getFullChoice(choice);
-  }
-
   let randomIndex = Math.floor(Math.random() * VALID_CHOICES.length);
   let computerChoice = VALID_CHOICES[randomIndex];
 
-  displayWinner(choice, computerChoice);
+  prompt(`You chose ${choice}, computer chose ${computerChoice}`);
+
+  let winner = getWinner(choice, computerChoice);
+  displayWinner(winner);
 
   prompt('Do you want to play again (y/n)?');
   let answer = readline.question().toLowerCase();

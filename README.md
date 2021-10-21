@@ -44,6 +44,7 @@ END	= end of the program
 - Use slice (rather than substring) to use negative numbers to cut off the end of a string
 - When avoiding errors isn't realistic, use try/catch/finally block
 - **Most** functions should return a useful value **or** they should have a side effect, but **not both**.
+- extract most of a function's logic to a data structure, e.g., RPS winning conditions
 
 # Steps to Debugging
 1. Reproduce the Error
