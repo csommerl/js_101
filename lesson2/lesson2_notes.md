@@ -240,3 +240,6 @@ https://launchschool.com/lessons/64655364/assignments/1c561f23
 https://launchschool.com/lessons/64655364/assignments/9a13e511
 
 Lesson: extract most of a function's logic to a data structure, e.g., RPS winning conditions
+
+# Lesson 2 Quiz 1
+https://launchschool.com/lessons/64655364/assignments/358c288b

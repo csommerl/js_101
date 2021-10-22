@@ -45,6 +45,7 @@ END	= end of the program
 - When avoiding errors isn't realistic, use try/catch/finally block
 - **Most** functions should return a useful value **or** they should have a side effect, but **not both**.
 - extract most of a function's logic to a data structure, e.g., RPS winning conditions
+- avoid hard-coding numbers, and instead move them to constants
 
 # Steps to Debugging
 1. Reproduce the Error
