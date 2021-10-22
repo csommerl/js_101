@@ -1,0 +1,7 @@
+# Lesson 1
+arity: (logic) the number of arguments that a function can take; js101
+PEDAC; 1. Understand the Problem, 2. Write Examples/Test Cases, 3. Data Structure, 4. Algorithm, 5. Code; js101
+Why does passing a variable as an argument to a function not change that variable?; Because the variable within the function shadows the original variable: a new, separate, independent variable is created with the same name, and this new shadow variable's scope is limited to the function.; js101
+Problem Domain; the area of expertise or application that needs to be examined to solve a problem. It limits the scope of the problem.; js101
+mental model; an explanation of someone's thought process about how something works in the real world; js101
+Test for whether something is an expression or statement; if it can be logged to the console, it is an expression; if it can't be logged it is a statement; js101

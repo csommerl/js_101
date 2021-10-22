@@ -6,20 +6,21 @@ https://launchschool.com/lessons/64655364/assignments/53fc0a20
 # Style Guide
 https://launchschool.com/lessons/64655364/assignments/728c3574
 
-In real code, you wouldn't usually use the true or false values directly in a conditional expression like value === true.
-
-Use case for short-circuit evaluation:
-- use a conjunction to test whether something exists && test whether it is not null
-
-Important distinction:
-  - returns true or false
-  - returns a truthy value or falsy value === evaluates to true or evaluates to false
-
 # Set up a new directory for this lesson
 https://launchschool.com/lessons/64655364/assignments/94def649
 
 # Truthiness
 https://launchschool.com/lessons/64655364/assignments/e16c1f23
+
+Use `value` instead of `value === true`.
+
+Use case for short-circuit evaluation:
+- use a conjunction to test whether something exists && test whether it is not null
+- especially useful in conditionals
+
+Important distinction:
+  - returns true or false
+  - returns a truthy value or falsy value === evaluates to true or evaluates to false
 
 # Walk-through: Calculator
 https://launchschool.com/lessons/64655364/assignments/e3733b97
@@ -59,15 +60,23 @@ START
 SET everyOther = []
 SET iterator = 1
 WHILE iterator < length of integerArray
-  add integer at space 'iterator in integerArray to everyOther
+  add integer at space iterator in integerArray to everyOther
   iterator = iterator + 2
 RETURN everyOther
 END
 
 # Flowchart
 https://launchschool.com/lessons/64655364/assignments/998c996d
-the imperative or procedural way to solve a problem; to map out the step-by-step logic our program would need to solve a problem; js101
-the declarative way to solve a problem; to use (for example) a method that lets us iterate, instead of looping manually; js101
+
+Shape         =   Meaning
+Oval          =   Start/Stop
+Rectangle     =   Processing Step
+Parallelogram =   Input/Output
+Diamond       =   Decision
+Circle        =   Connector
+
+the **imperative or procedural way** to solve a problem; to map out the step-by-step logic our program would need to solve a problem; js101
+the **declarative way** to solve a problem; to use (for example) a method that lets us iterate, instead of looping manually; js101
 
 Interestingly, when we move logic to sub-processes, we use a declarative type of syntax, rather than imperative
 

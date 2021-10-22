@@ -18,6 +18,9 @@ const WINNING_COMBOS = {
   spock: ['rock', 'scissors'],
 };
 const playerScore = {wins: 0, losses: 0, ties: 0};
+const SHORT_INPUT_LENGTH = 1;
+const WIN_SCORE = 3;
+
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -31,7 +34,7 @@ function getChoice() {
     choice = readline.question();
   }
 
-  if (choice.length === 1) {
+  if (choice.length === SHORT_INPUT_LENGTH) {
     choice = getFullWordChoice(choice);
   }
 
@@ -99,25 +102,6 @@ function resetPlayerScore() {
   playerScore.ties = 0;
 }
 
-prompt('Welcome to Rock, Paper, Scissors, Lizard, Spock! Each match against the computer is best out of 5.');
-prompt('----------');
-let matchNumber = 0;
-while (true) {
-  resetPlayerScore();
-  matchNumber += 1;
-  prompt(`Match #${matchNumber}`);
-  playMatch();
-
-  prompt('----------');
-  prompt('Do you want to play another match (y/n)?');
-  let answer = readline.question().toLowerCase();
-  while (answer[0] !== 'n' && answer[0] !== 'y') {
-    prompt('Please enter "y" or "n".');
-    answer = readline.question().toLowerCase();
-  }
-  if (answer[0] !== 'y') break;
-}
-
 function playMatch() {
   while (true) {
     prompt(`Choose one: ${VALID_CHOICES.join(', ')} (alternatively: ${VALID_LETTER_CHOICES.join(', ')})`);
@@ -136,12 +120,31 @@ function playMatch() {
 
     prompt(`So far, you have won ${playerScore.wins} times, lost ${playerScore.losses} times, and tied ${playerScore.ties} times.`);
 
-    if (playerScore.wins === 3) {
+    if (playerScore.wins === WIN_SCORE) {
       prompt('You win the match!');
       break;
-    } else if (playerScore.losses === 3) {
+    } else if (playerScore.losses === WIN_SCORE) {
       prompt('The computer wins the match!');
       break;
     }
   }
+}
+
+prompt('Welcome to Rock, Paper, Scissors, Lizard, Spock! Each match against the computer is best out of 5.');
+prompt('----------');
+let matchNumber = 0;
+while (true) {
+  resetPlayerScore();
+  matchNumber += 1;
+  prompt(`Match #${matchNumber}`);
+  playMatch();
+
+  prompt('----------');
+  prompt('Do you want to play another match (y/n)?');
+  let answer = readline.question().toLowerCase();
+  while (answer !== 'n' && answer !== 'y') {
+    prompt('Please enter "y" or "n".');
+    answer = readline.question().toLowerCase();
+  }
+  if (answer[0] !== 'y') break;
 }
