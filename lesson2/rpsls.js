@@ -147,4 +147,5 @@ while (true) {
     answer = readline.question().toLowerCase();
   }
   if (answer[0] !== 'y') break;
+  console.clear();
 }
