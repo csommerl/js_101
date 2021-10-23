@@ -17,7 +17,7 @@ trapping the error; Identifying the area where an error originates; js101
 breakpoint; an intentional stopping or pausing place in a program, put in place for debugging purposes. It is also sometimes simply referred to as a pause.; js101
 throw an error, raise an exception; ways errors are described as occurring; js101
 ReferenceError; error that occurs when you attempt to use a variable or function that doesn't exist; js101
-TypeError; error that occurs, for example, by 1) accessing a property on a value that does not have properties (e.g., null), 2) trying to call something that isn't a function, 3) tr;ying to reassign a const variable; js101
+TypeError; error that occurs, for example, by 1) accessing a property on a value that does not have properties (e.g., null), 2) trying to call something that isn't a function, 3) trying to reassign a const variable; js101
 SyntaxError; error that occurs imeediately after loading a JS program but before it begins to run; js101
 guard clause; code that guarantees data meets certain preconditions before it gets used; js101
 when to use guard clauses; best used when a function can't trust that its arguments are valid; js101
@@ -49,3 +49,5 @@ pass-by-value-of-the-reference or call-by-sharing; When an operation within the 
 destructive functions or methods; Functions and methods that mutate their callers; js101
 where to put global constants; put near the top of the program file, usually just after any require calls; js101
 console.clear(); method that clears the console if the environment allows it; js101
+return value of a variable declaration + initialization; when does a variable return undefined; js101
+return value of a variable reassignment; returns the new value of the variable; js101
