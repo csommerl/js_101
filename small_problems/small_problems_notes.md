@@ -226,3 +226,7 @@ https://launchschool.com/exercises/6974d7f2
 
 ## Convert a Number to a String!
 https://launchschool.com/exercises/ad60d5e2
+
+## Convert a Signed Number to a String!
+https://launchschool.com/exercises/5fb347bd
+
