@@ -35,7 +35,7 @@ END	= end of the program
 
 # Key Lessons/Tips
 - Test for whether something is an expression or statement; if it can be logged to the console, it is an expression; if it can't be logged it is a statement; js101
-- Use [].includes() to test for valid input
+- Use [].includes() to test for valid input (or just make a constant)
 - use `while (true)` to have an infinite loop, which can be broken by specified events within the loop
 - Use constants for conversions (https://launchschool.com/exercises/91eb6f09)
 - write a separate function when using reduce
