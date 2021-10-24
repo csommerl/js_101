@@ -230,3 +230,8 @@ https://launchschool.com/exercises/ad60d5e2
 ## Convert a Signed Number to a String!
 https://launchschool.com/exercises/5fb347bd
 
+# Easy 3
+https://launchschool.com/exercise_sets/f30c1447
+
+## ddaaiillyy ddoouubbllee
+https://launchschool.com/exercises/31e4c035

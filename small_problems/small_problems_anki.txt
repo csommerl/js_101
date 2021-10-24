@@ -8,3 +8,4 @@ When to use String.prototype.slice() instead of String.prototype.substring()?; W
 Math.pow(); function that returns the base to the exponent power, as in base^exponent; js101
 Bitwise XOR (^); returns a 1 in each bit position for which the corresponding bits of either but not both operands are 1s.; js101
 Reasons to use String() in preference to toString(); String() works with all types, including null and undefined, while toString() raises an exception in those cases. String() is guaranteed to return a string. This is not the case with toString() — individual objects can override toString() and they don't have to return a string.; js101
+Math.sign(); function that returns either a positive or negative +/- 1, indicating the sign of a number passed into the argument. If the number passed into Math.sign() is 0, it will return a +/- 0. Note that if the number is positive, an explicit (+) will not be returned.; js101
