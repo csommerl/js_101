@@ -26,7 +26,13 @@
   - Keep track of which exercises give you difficulty or that you have trouble understanding.
 
 # Exercises to return to
-- unclear explanation: https://launchschool.com/exercises/c55f9982
+- Short Long Short
+- Convert a String to a Number!
+- Convert a String to a Signed Number!
+- Convert a String to a Signed Number!
+- Convert a Number to a String!
+- Convert a Signed Number to a String!
+- Fibonacci Number Location By Length
 
 # Lessons/Insights
 - Use constants for conversions (https://launchschool.com/exercises/91eb6f09)
@@ -244,3 +250,8 @@ https://launchschool.com/exercises/db532919
 
 ## Fibonacci Number Location By Length
 https://launchschool.com/exercises/6ec7341d
+- Lesson: don't store an array if you don't have to
+- Lesson: you can't get the length of a number (the number of digits) by converting to a string and getting the string's length
+
+## Right Triangles
+https://launchschool.com/exercises/ff51259d
