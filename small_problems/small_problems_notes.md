@@ -25,15 +25,6 @@
 ## [Primer](https://launchschool.com/gists/0791ee5c)
   - Keep track of which exercises give you difficulty or that you have trouble understanding.
 
-# Exercises to return to
-- Short Long Short
-- Convert a String to a Number!
-- Convert a String to a Signed Number!
-- Convert a String to a Signed Number!
-- Convert a Number to a String!
-- Convert a Signed Number to a String!
-- Fibonacci Number Location By Length
-
 # Lessons/Insights
 - Use constants for conversions (https://launchschool.com/exercises/91eb6f09)
 - write a separate function when using reduce
