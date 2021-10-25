@@ -241,3 +241,6 @@ https://launchschool.com/exercises/09fda3fd
 
 ## Stringy Strings
 https://launchschool.com/exercises/db532919
+
+## Fibonacci Number Location By Length
+https://launchschool.com/exercises/6ec7341d
