@@ -60,21 +60,35 @@ logInBox('', 10);
 
 // further exploration
 function logInBoxWordWrap(str, maxWidth) {
-  let horizontalLine = `+${'-'.repeat(str.length + 2)}+`;
-  let emptyLine = `|${' '.repeat(str.length + 2)}|`;
-
   if (str.length + 4 > maxWidth) {
-    horizontalLine = `+${'-'.repeat(maxWidth - 2)}+`;
-    emptyLine = `|${' '.repeat(maxWidth - 2)}|`;
-    str = str.slice(0, maxWidth - 4);
-  }
+    let horizontalLine = `+${'-'.repeat(maxWidth - 2)}+`;
+    let emptyLine = `|${' '.repeat(maxWidth - 2)}|`;
+    
+    console.log(horizontalLine);
+    console.log(emptyLine);
+    
+    let numberOfStrLines = Math.ceil(str.length / maxWidth);
+    let lengthOfStrLines = maxWidth - 4;
+    let numOfExtraSpaces = (numberOfStrLines * lengthOfStrLines) - str.length;
+    str = str + ' '.repeat(numOfExtraSpaces);
 
-  console.log(horizontalLine);
-  console.log(emptyLine);
-  console.log(`| ${str} |`);
-  console.log(emptyLine);
-  console.log(horizontalLine);
+    for (let i = 0; i < numberOfStrLines; i++) {
+      console.log(`| ${str.slice(0, lengthOfStrLines)} |`);
+      str = str.slice(lengthOfStrLines);
+    }
+
+    console.log(emptyLine);
+    console.log(horizontalLine);
+  } else {
+    let horizontalLine = `+${'-'.repeat(str.length + 2)}+`;
+    let emptyLine = `|${' '.repeat(str.length + 2)}|`;
+
+    console.log(horizontalLine);
+    console.log(emptyLine);
+    console.log(`| ${str} |`);
+    console.log(emptyLine);
+    console.log(horizontalLine);
+  }
 }
 
-logInBoxWordWrap('To boldly go where no one has gone before.', 10);
-logInBoxWordWrap('', 10);
+logInBoxWordWrap('To boldly go where no one has gone before.', 20);

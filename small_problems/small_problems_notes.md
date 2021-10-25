@@ -238,3 +238,6 @@ https://launchschool.com/exercises/31e4c035
 
 ## Bannerizer
 https://launchschool.com/exercises/09fda3fd
+
+## Stringy Strings
+https://launchschool.com/exercises/db532919
