@@ -4,9 +4,12 @@
 */
 
 function cleanUp(str) {
-  let strArr = str.split(' ');
-  let replacedCharsArr = strArr.map(word => word.replace(/\W/g, ' '));
-  return replacedCharsArr.join(' ');
+  let charArr = str.split('');
+  let replacedCharsArr = charArr.map(char => char.replace(/\W/g, ' '));
+  let noExtraSpacesArr = replacedCharsArr.filter((char, idx) => {
+    return !(replacedCharsArr[idx - 1] === ' ' && char === ' ');
+  });
+  return noExtraSpacesArr.join('');
 }
 
 cleanUp("---what's my +*& line?");    // " what s my line "
