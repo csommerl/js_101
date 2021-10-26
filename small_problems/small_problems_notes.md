@@ -258,3 +258,6 @@ If not equal, return number * 2
 
 ## Grade Book
 https://launchschool.com/exercises/257a77fb
+
+## Clean up the words
+https://launchschool.com/exercises/6ccbdf07
