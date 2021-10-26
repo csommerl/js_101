@@ -218,9 +218,6 @@ Algorithm
 ## Convert a String to a Signed Number!
 https://launchschool.com/exercises/6974d7f2
 
-## Convert a String to a Signed Number!
-https://launchschool.com/exercises/6974d7f2
-
 ## Convert a Number to a String!
 https://launchschool.com/exercises/ad60d5e2
 
@@ -252,3 +249,12 @@ https://launchschool.com/exercises/fedd1cd6
 
 ## Double Doubles
 https://launchschool.com/exercises/583b8edb
+
+Create a string representation of the number
+Create new strings for each half of the number.
+Check whether they are equal.
+If equal, return original number
+If not equal, return number * 2
+
+## Grade Book
+https://launchschool.com/exercises/257a77fb

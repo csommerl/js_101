@@ -4,7 +4,11 @@
 */
 
 function twice(int) {
-
+  let str = String(int);
+  let midpoint = str.length / 2;
+  let firstHalf = str.slice(0, midpoint);
+  let secondHalf = str.slice(midpoint);
+  return firstHalf === secondHalf ? int : int * 2;
 }
 
 twice(37);          // 74
