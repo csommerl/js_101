@@ -262,5 +262,19 @@ https://launchschool.com/exercises/257a77fb
 ## Clean up the words
 https://launchschool.com/exercises/6ccbdf07
 
+Lessons:
+- don't convert data type unnecessarily, e.g., from string to array and then back again
+- Instead of using methods, it can sometimes make sense to build a str/arr/obj from an empty one using a loop
+
+
 ## What Century is That?
 https://launchschool.com/exercises/394e1c53
+
+1. First get `centuryNumber` by dividing `year` by 100 and rounding up to the nearest integer.
+2. Compare to special endings an
+
+# Easy 4
+https://launchschool.com/exercise_sets/22ce90b5
+
+## How old is Teddy?
+https://launchschool.com/exercises/3043a86a
