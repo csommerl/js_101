@@ -278,3 +278,6 @@ https://launchschool.com/exercise_sets/22ce90b5
 
 ## How old is Teddy?
 https://launchschool.com/exercises/3043a86a
+
+## Searching 101
+https://launchschool.com/exercises/5062a16f
