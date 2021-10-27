@@ -21,6 +21,7 @@
 - [ ] [Convert a Number to a String!](https://launchschool.com/exercises/ad60d5e2)
 - [ ] [Convert a Signed Number to a String!](https://launchschool.com/exercises/5fb347bd)
 - [ ] [Fibonacci Number Location By Length](https://launchschool.com/exercises/6ec7341d)
+- [ ] [Clean up the words](https://launchschool.com/exercises/6ccbdf07)
 
 # Cheatsheet
 - [x] string methods

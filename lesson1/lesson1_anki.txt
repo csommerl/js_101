@@ -5,3 +5,7 @@ Why does passing a variable as an argument to a function not change that variabl
 Problem Domain; the area of expertise or application that needs to be examined to solve a problem. It limits the scope of the problem.; js101
 mental model; an explanation of someone's thought process about how something works in the real world; js101
 Test for whether something is an expression or statement; if it can be logged to the console, it is an expression. If it can't be logged it is a statement; js101
+/i for RegEx; to make a regular expression case insensitive; js101
+The meaning of ^ in [^xyz] or [^a-c] for RegEx; A negated or complemented character class. That is, it matches anything that is not enclosed in the brackets. (not the only use of ^ in RegEX); js101
+RegEx quantifier + in x+; Matches the preceding item "x" 1 or more times. Equivalent to {1,}. For example, /a+/ matches the "a" in "candy" and all the "a"'s in "caaaaaaandy".; js101
+RegEx \s; Matches a single white space character, including space, tab, form feed, line feed, and other Unicode spaces.; js101
