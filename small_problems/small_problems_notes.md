@@ -281,3 +281,9 @@ https://launchschool.com/exercises/3043a86a
 
 ## Searching 101
 https://launchschool.com/exercises/5062a16f
+
+Lesson
+- don't store data in a format you don't need
+
+## When will I retire?
+https://launchschool.com/exercises/6898c049
