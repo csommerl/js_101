@@ -302,3 +302,9 @@ https://launchschool.com/exercises/69839f2f
 
 ## Letter Counter (Part 1)
 https://launchschool.com/exercises/7e28695d
+
+## Letter Counter (Part 2)
+https://launchschool.com/exercises/b6496eb8
+
+## Letter Swap
+https://launchschool.com/exercises/0d838471
