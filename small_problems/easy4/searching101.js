@@ -46,12 +46,12 @@
 // redo
 let readline = require('readline-sync');
 
+const ORDINALS = ['1st', '2nd', '3rd', '4th', '5th']
 let numbers = [];
-numbers.push(Number(readline.question('Enter the 1st number: ')));
-numbers.push(Number(readline.question('Enter the 2nd number: ')));
-numbers.push(Number(readline.question('Enter the 3rd number: ')));
-numbers.push(Number(readline.question('Enter the 4th number: ')));
-numbers.push(Number(readline.question('Enter the 5th number: ')));
+
+for (let ordinal of ORDINALS) {
+  numbers.push(Number(readline.question(`Enter the ${ordinal} number: `)));  
+}
 
 let testNumber = Number(readline.question('Enter the last number: '));
 
