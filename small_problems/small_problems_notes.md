@@ -308,3 +308,6 @@ https://launchschool.com/exercises/b6496eb8
 
 ## Letter Swap
 https://launchschool.com/exercises/0d838471
+
+# Easy 5
+https://launchschool.com/exercise_sets/14a3a764
