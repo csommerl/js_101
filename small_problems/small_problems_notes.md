@@ -290,3 +290,15 @@ https://launchschool.com/exercises/6898c049
 
 ## Palindromic Strings (Part 1)
 https://launchschool.com/exercises/a0491d16
+
+## Palindromic Strings (Part 2)
+https://launchschool.com/exercises/5de57318
+
+## Palindromic Numbers
+https://launchschool.com/exercises/c16de937
+
+## Running Totals
+https://launchschool.com/exercises/69839f2f
+
+## Letter Counter (Part 1)
+https://launchschool.com/exercises/7e28695d
