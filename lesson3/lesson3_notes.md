@@ -22,3 +22,27 @@ String.prototype.charAt()
 `false == '0'` evaluates to `true`
 
 ## Question 6
+The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
+
+## Question 7
+Ways to tell if str1 includes str2:
+1. str1.includes(str2)
+2. str1.match(str2) !== null
+3. str1.indexOf(str2) > -1
+4. /str2/.test(str1)
+
+## Question 8
+Ways to add a value to an array:
+1. arr.push(value) // (returns new length of array)
+2. arr[arr.length] = value // (returns value)
+3. arr = arr.concat(value) // (returns new array)
+
+## Question 9
+How to add multiple items to an array; arr.push(item1, item2); js101
+
+## Question 10
+How to get a part of str1 before str2?; str1.slice(0, str1.indexOf(str2)); js101
+
+# Practice Problems: Easy 2
+
+## Question 1
