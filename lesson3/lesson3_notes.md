@@ -44,5 +44,10 @@ How to add multiple items to an array; arr.push(item1, item2); js101
 How to get a part of str1 before str2?; str1.slice(0, str1.indexOf(str2)); js101
 
 # Practice Problems: Easy 2
+https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7
 
 ## Question 1
+how to replace first instance of strPart1 of str with strPart2?; str.replace(strPart1, strPart2); js101
+how to replace all instances of strPart1 of str with strPart2?; str.replace(/strPart1/g, strPart2); js101
+
+## Question 2
