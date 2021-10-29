@@ -13,3 +13,12 @@ what happens when an array indices are skipped and an item is added to the array
 String.prototype.endsWith(); method that determines whether a string ends with the characters of a specified string, returning true or false as appropriate; js101
 
 ## Question 3
+Object.prototype.hasOwnProperty()
+
+## Question 4
+String.prototype.charAt()
+
+## Question 5
+`false == '0'` evaluates to `true`
+
+## Question 6

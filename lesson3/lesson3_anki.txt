@@ -1,2 +1,4 @@
 what happens when an array indices are skipped and an item is added to the array; skipped array indices are empty (different from simply undefined) but will return undefined when accessed, they'll be skipped (e.g., map); js101
 String.prototype.endsWith(); method that determines whether a string ends with the characters of a specified string, returning true or false as appropriate; js101
+String.prototype.charAt(); method that returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.; js101
+false == '0' evaluates to?; when a non-empty string evaluates to true; js101
