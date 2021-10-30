@@ -25,9 +25,12 @@
 
 # JS101 Exercises to Redo
 - [ ] [Lesson 3.3, Question 2](https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7)
+- [ ] [Lesson 3.3, Question 5](https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7)
+- [ ] [Lesson 3.3, Question 6](https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7)
+- [ ] [Lesson 3.3, Question 7](https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7)
 
 # Cheatsheet
-- [x] string methods
+- [ ] string methods
 - [x] loops
 - [ ] array methods
 - [ ] object methods

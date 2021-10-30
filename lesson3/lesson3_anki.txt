@@ -13,3 +13,10 @@ how to use slice to create a new array from invoking a mutating method on an ori
 what happens when Array.prototype.sort's compareFunction(a, b) returns value > 0; b is sorted before a; js101
 what happens when Array.prototype.sort's compareFunction(a, b) returns value < 0; a is sorted before b; js101
 what happens when Array.prototype.sort's compareFunction(a, b) returns value === 0; keeps original order of a and b; js101
+How to delete an element in an array at a particular index?; Use Array.prototype.splice(idx, 1); js101
+How to add an element in an array at a particular index?; Use Array.prototype.splice(idx, 0, elem); js101
+What is the result of [].concat(1, [2, 3]); If concat is given multiple argument, then it unnests any arrays within those arguments: so the result is [1, 2, 3]; js101
+How to get only the values of an array, regardless of whether they are nested?; newArr = [].concat(...originalArr); js101
+Array.prototype.flat(); method that creates a new array with all sub-array elements concatenated into it recursively up to the specified depth; js101
+Array.prototype.every(); method that tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value; js101
+String.prototype.endsWith(); method that determines whether a string ends with the characters of a specified string, returning true or false as appropriate; js101

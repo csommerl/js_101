@@ -67,3 +67,30 @@ what happens when Array.prototype.sort's compareFunction(a, b) returns value < 0
 what happens when Array.prototype.sort's compareFunction(a, b) returns value === 0; keeps original order of a and b; js101
 
 ## Question 3
+Array.prototype.includes()
+
+## Question 4
+
+## Question 5
+How to delete an element in an array at a particular index?; Use Array.prototype.splice(idx, 1); js101
+How to add an element in an array at a particular index?; Use Array.prototype.splice(idx, 0, elem); js101
+
+## Question 6
+
+How to create a new array that contains all values of an array with nested arrays, but in an un-nested format:
+1. `flintstones = [].concat(...flintstones)`
+2. `flintstones = flintstones.reduce((accum, element) => accum.concat(element), []);`
+3. `let newFlintstones = []; flintstones.forEach(element => newFlintstones = newFlintstones.concat(element)});`
+4. `let newFlintstones = flintstones.flat();`
+
+What is the result of [].concat(1, [2, 3]); If concat is given multiple argument, then it unnests any arrays within those arguments: so the result is [1, 2, 3]; js101
+How to get only the values of an array, regardless of whether they are nested?; newArr = [].concat(...originalArr); js101
+Array.prototype.flat(); method that creates a new array with all sub-array elements concatenated into it recursively up to the specified depth; js101
+
+Lesson
+- Notice that reduce is basically a forEach with an implicit variable reassignment for accum.
+
+## Question 7
+
+## Question 8
+https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7
