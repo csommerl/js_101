@@ -8,3 +8,8 @@ How to add multiple items to an array; arr.push(item1, item2); js101
 How to get a part of str1 before str2?; str1.slice(0, str1.indexOf(str2)); js101
 how to replace first instance of strPart1 of str with strPart2?; str.replace(strPart1, strPart2); js101
 how to replace all instances of strPart1 of str with strPart2?; str.replace(/strPart1/g, strPart2); js101
+how to use spread syntax to create a new array from invoking a mutating method on an original array, without changing the original array; let newArr = [...originalArr].mutatingMethod(); js101
+how to use slice to create a new array from invoking a mutating method on an original array, without changing the original array; let newArr = originalArr.slice().mutatingMethod; js101
+what happens when Array.prototype.sort's compareFunction(a, b) returns value > 0; b is sorted before a; js101
+what happens when Array.prototype.sort's compareFunction(a, b) returns value < 0; a is sorted before b; js101
+what happens when Array.prototype.sort's compareFunction(a, b) returns value === 0; keeps original order of a and b; js101

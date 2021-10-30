@@ -51,3 +51,19 @@ how to replace first instance of strPart1 of str with strPart2?; str.replace(str
 how to replace all instances of strPart1 of str with strPart2?; str.replace(/strPart1/g, strPart2); js101
 
 ## Question 2
+how to use spread syntax to create a new array from invoking a mutating method on an original array, without changing the original array; let newArr = [...originalArr].mutatingMethod(); js101
+how to use slice to create a new array from invoking a mutating method on an original array, without changing the original array; let newArr = originalArr.slice().mutatingMethod; js101
+
+https://pythontutor.com/javascript.html
+
+Ways to reverse an array without changing the original array:
+1. Array.from(numbers).reverse()
+2. numbers.slice().reverse()
+3. [...numbers].sort((num1, num2) => num2 - num1)
+
+
+what happens when Array.prototype.sort's compareFunction(a, b) returns value > 0; b is sorted before a; js101
+what happens when Array.prototype.sort's compareFunction(a, b) returns value < 0; a is sorted before b; js101
+what happens when Array.prototype.sort's compareFunction(a, b) returns value === 0; keeps original order of a and b; js101
+
+## Question 3

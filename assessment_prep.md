@@ -23,6 +23,9 @@
 - [ ] [Fibonacci Number Location By Length](https://launchschool.com/exercises/6ec7341d)
 - [ ] [Clean up the words](https://launchschool.com/exercises/6ccbdf07)
 
+# JS101 Exercises to Redo
+- [ ] [Lesson 3.3, Question 2](https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7)
+
 # Cheatsheet
 - [x] string methods
 - [x] loops
