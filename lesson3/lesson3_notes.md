@@ -93,4 +93,14 @@ Lesson
 ## Question 7
 
 ## Question 8
-https://launchschool.com/lessons/0206c7f9/assignments/bb21fab7
+
+## Question 9
+
+## Question 10
+Lesson
+- if the right method is not available for strings, it might be that converting to an array with split() will help, if there is an array method that works
+
+# Practice Problems: Easy 3
+https://launchschool.com/lessons/0206c7f9/assignments/da7ec933
+
+## Question 1

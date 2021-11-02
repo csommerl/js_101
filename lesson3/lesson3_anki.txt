@@ -20,3 +20,4 @@ How to get only the values of an array, regardless of whether they are nested?; 
 Array.prototype.flat(); method that creates a new array with all sub-array elements concatenated into it recursively up to the specified depth; js101
 Array.prototype.every(); method that tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value; js101
 String.prototype.endsWith(); method that determines whether a string ends with the characters of a specified string, returning true or false as appropriate; js101
+String.prototype.padStart(targetLength, padString); method that pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string: default padString is ' '; js101
