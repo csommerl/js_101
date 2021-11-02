@@ -104,3 +104,8 @@ Lesson
 https://launchschool.com/lessons/0206c7f9/assignments/da7ec933
 
 ## Question 1
+1. numbers.length = 0
+2. while (numbers.length > 0) numbers.shift()
+3. numbers.slice(0, 0)
+
+## Question 2
