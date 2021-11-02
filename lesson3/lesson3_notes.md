@@ -128,3 +128,9 @@ const isColorValid = color => ['blue', 'green'].includes(color);
 
 # Practice Problems: Medium 1
 https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf
+
+## Question 1
+
+## Question 2
+
+## Question 3
