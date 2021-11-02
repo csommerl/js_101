@@ -109,3 +109,22 @@ https://launchschool.com/lessons/0206c7f9/assignments/da7ec933
 3. numbers.slice(0, 0)
 
 ## Question 2
+In some languages you can use + to concatenate two arrays, but not in JavaScript.
+
+## Question 3
+
+## Question 4
+deep copy of an array or object; makes a duplicate of every item in an existing array or object. In particular, it creates completely new instances of any subarrays or subobjects in the source object.; js101
+shallow copy of an array or object; only makes a duplicate of the outermost values in an array or object, i.e., any elements that are themselves arrays or objects will be the same arrays/objects; js101
+
+## Question 5
+function isColorValid(color) {
+  return color === "blue" || color === "green";
+}
+
+const isColorValid = color => color === "blue" || color === "green";
+
+const isColorValid = color => ['blue', 'green'].includes(color);
+
+# Practice Problems: Medium 1
+https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf
