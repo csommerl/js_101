@@ -151,3 +151,11 @@ https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf
 
 # Practice Problems: Hard 1
 https://launchschool.com/lessons/0206c7f9/assignments/59c055ee
+
+## Question 1
+
+## Question 2
+
+## Question 3
+
+## Question 4

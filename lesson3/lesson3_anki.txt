@@ -3,7 +3,7 @@ String.prototype.endsWith(); method that determines whether a string ends with t
 String.prototype.charAt(); method that returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.; js101
 false == '0' evaluates to?; when a non-empty string evaluates to true; js101
 Ways to tell if str1 includes str2; 1. str1.includes(str2), 2. str1.match(str2) !== null, 3. str1.indexOf(str2) > -1, 4. /str2/.test(str1); js101
-Ways to add a value to an array: 1. arr.push(value) // (returns new length of array), 2. arr[arr.length] = value // (returns value), 3. arr = arr.concat(value) // (returns new array); js101
+Ways to add a value to an array?; 1. arr.push(value) // (returns new length of array), 2. arr[arr.length] = value // (returns value), 3. arr = arr.concat(value) // (returns new array); js101
 How to add multiple items to an array; arr.push(item1, item2); js101
 How to get a part of str1 before str2?; str1.slice(0, str1.indexOf(str2)); js101
 how to replace first instance of strPart1 of str with strPart2?; str.replace(strPart1, strPart2); js101
@@ -19,10 +19,11 @@ What is the result of [].concat(1, [2, 3]); If concat is given multiple argument
 How to get only the values of an array, regardless of whether they are nested?; newArr = [].concat(...originalArr); js101
 Array.prototype.flat(); method that creates a new array with all sub-array elements concatenated into it recursively up to the specified depth; js101
 Array.prototype.every(); method that tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value; js101
-String.prototype.endsWith(); method that determines whether a string ends with the characters of a specified string, returning true or false as appropriate; js101
 String.prototype.padStart(targetLength, padString); method that pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string: default padString is ' '; js101
 What happens when you use + with arrays as operands?; JavaScript doesn't let you concatenate arrays with +. Instead, the + operator first converts the arrays to strings, and then concatenates the strings; js101
 deep copy of an array or object; makes a duplicate of every item in an existing array or object. In particular, it creates completely new instances of any subarrays or subobjects in the source object.; js101
 shallow copy of an array or object; only makes a duplicate of the outermost values in an array or object, i.e., any elements that are themselves arrays or objects will be the same arrays/objects; js101
 Output of NaN === NaN; The output is false. NaN is a special numeric value that indicates that an operation that was intended to return a number failed. Use Number.isNaN() instead; js101
-
+####
+return statements and Automatic Semicolon Insertion; If a return statement is followed by the return value *on the next line*, then what will be returned is *undefined*, since JS inserts a semicolon after the word return; js101
+Simplest way to create a copy of an array?; use slice or concat to not modify the original; js101
