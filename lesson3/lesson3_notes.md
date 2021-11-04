@@ -163,3 +163,14 @@ https://launchschool.com/lessons/0206c7f9/assignments/59c055ee
 ^\d = the first character of str is a digit
 \d+ = there are one or more digits in str
 \d$ = the last character of str is a digit
+
+When you create a RegExp in this way, every character has to appear in the order and amount that you specify.
+
+For example, let's say that you want to match a string that only includes 3 digits. You could write a regexp like this: /^\d\d\d$/. What ^ and $ do is that they make sure that there is nothing else before or after the three consecutive digits. There can also be nothing else in between since each \d is directly followed by another \d and then the string ends with $.
+
+In your example, /^\d$/, there can only be one digit (one \d) included in the tested string for test to return true.
+
+Our initial example is the same, except instead of hard-coding the number of consecutive digits we use + to indicate that there can be one or more, as you said.
+
+Let me know if that helps or if you have further questions.
+

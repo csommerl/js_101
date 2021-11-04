@@ -311,3 +311,9 @@ https://launchschool.com/exercises/0d838471
 
 # Easy 5
 https://launchschool.com/exercise_sets/14a3a764
+
+## Cute Angles
+https://launchschool.com/exercises/45794622
+
+## Combining Arrays
+https://launchschool.com/exercises/fc3e7e81
