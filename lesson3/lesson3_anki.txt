@@ -24,3 +24,5 @@ String.prototype.padStart(targetLength, padString); method that pads the current
 What happens when you use + with arrays as operands?; JavaScript doesn't let you concatenate arrays with +. Instead, the + operator first converts the arrays to strings, and then concatenates the strings; js101
 deep copy of an array or object; makes a duplicate of every item in an existing array or object. In particular, it creates completely new instances of any subarrays or subobjects in the source object.; js101
 shallow copy of an array or object; only makes a duplicate of the outermost values in an array or object, i.e., any elements that are themselves arrays or objects will be the same arrays/objects; js101
+Output of NaN === NaN; The output is false. NaN is a special numeric value that indicates that an operation that was intended to return a number failed. Use Number.isNaN() instead; js101
+

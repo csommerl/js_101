@@ -134,3 +134,20 @@ https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf
 ## Question 2
 
 ## Question 3
+
+## Question 4
+
+## Question 5
+
+## Question 6
+
+## Question 7
+
+## Question 8
+
+## Question 9
+
+## Question 10
+
+# Practice Problems: Hard 1
+https://launchschool.com/lessons/0206c7f9/assignments/59c055ee

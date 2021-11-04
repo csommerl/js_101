@@ -33,6 +33,10 @@
 - [ ] [Lesson 3.4, Question 2](https://launchschool.com/lessons/0206c7f9/assignments/da7ec933)
 - [ ] [Lesson 3.4, Question 4](https://launchschool.com/lessons/0206c7f9/assignments/da7ec933)
 - [ ] [Lesson 3.4, Question 5](https://launchschool.com/lessons/0206c7f9/assignments/da7ec933)
+- [ ] [Lesson 3.5, Question 3](https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf)
+- [ ] [Lesson 3.5, Question 5](https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf)
+- [ ] [Lesson 3.5, Question 6](https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf)
+- [ ] [Lesson 3.5, Question 8](https://launchschool.com/lessons/0206c7f9/assignments/e4fb9aaf)
 
 # Cheatsheet
 - [ ] string methods
