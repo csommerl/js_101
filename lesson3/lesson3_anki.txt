@@ -27,3 +27,7 @@ Output of NaN === NaN; The output is false. NaN is a special numeric value that 
 ####
 return statements and Automatic Semicolon Insertion; If a return statement is followed by the return value *on the next line*, then what will be returned is *undefined*, since JS inserts a semicolon after the word return; js101
 Simplest way to create a copy of an array?; use slice or concat to not modify the original; js101
+RegEx ^; Matches the beginning of input. If the multiline flag is set to true, also matches immediately after a line break character. For example, /^A/ does not match the "A" in "an A", but does match the first "A" in "An A". (This character has a different meaning when it appears at the start of a group.); js101
+RegEx \d; Matches any digit (Arabic numeral). Equivalent to [0-9]. For example, /\d/ or /[0-9]/ matches "2" in "B2 is the suite number".; js101
+RegEx x+; Matches the preceding item "x" 1 or more times. Equivalent to {1,}. For example, /a+/ matches the "a" in "candy" and all the "a"'s in "caaaaaaandy".; js101
+RegEx $; Matches the end of input. If the multiline flag is set to true, also matches immediately before a line break character. For example, /t$/ does not match the "t" in "eater", but does match it in "eat".; js101

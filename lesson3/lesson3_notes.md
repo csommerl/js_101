@@ -159,3 +159,7 @@ https://launchschool.com/lessons/0206c7f9/assignments/59c055ee
 ## Question 3
 
 ## Question 4
+/^\d+$/.test(str);
+^\d = the first character of str is a digit
+\d+ = there are one or more digits in str
+\d$ = the last character of str is a digit
