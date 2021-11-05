@@ -320,3 +320,6 @@ https://launchschool.com/exercises/fc3e7e81
 
 ## Halvsies
 https://launchschool.com/exercises/c335bef4
+
+## Find the Duplicate
+https://launchschool.com/exercises/655086d4

@@ -1,1 +1,13 @@
 // Halvsies https://launchschool.com/exercises/c335bef4
+
+function halvsies(arr) {
+  let halfwayPoint = Math.ceil(arr.length / 2);
+  let arr1 = arr.slice(0, halfwayPoint);
+  let arr2 = arr.slice(halfwayPoint);
+  return [arr1, arr2];
+}
+
+halvsies([1, 2, 3, 4]);       // [[1, 2], [3, 4]]
+halvsies([1, 5, 2, 4, 3]);    // [[1, 5, 2], [4, 3]]
+halvsies([5]);                // [[5], []]
+halvsies([]);                 // [[], []]
