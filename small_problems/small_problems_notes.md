@@ -322,4 +322,6 @@ https://launchschool.com/exercises/fc3e7e81
 https://launchschool.com/exercises/c335bef4
 
 ## Find the Duplicate
-https://launchschool.com/exercises/655086d4
+
+## Combine Two Lists
+https://launchschool.com/exercises/5e3b1da6
