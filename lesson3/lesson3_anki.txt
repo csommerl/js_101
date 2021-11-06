@@ -1,7 +1,7 @@
 what happens when an array indices are skipped and an item is added to the array; skipped array indices are empty (different from simply undefined) but will return undefined when accessed, they'll be skipped (e.g., map); js101
 String.prototype.endsWith(); method that determines whether a string ends with the characters of a specified string, returning true or false as appropriate; js101
 String.prototype.charAt(); method that returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.; js101
-false == '0' evaluates to?; when a non-empty string evaluates to true; js101
+false == '0' evaluates to?; when a non-empty string evaluates to false; js101
 Ways to tell if str1 includes str2; 1. str1.includes(str2), 2. str1.match(str2) !== null, 3. str1.indexOf(str2) > -1, 4. /str2/.test(str1); js101
 Ways to add a value to an array?; 1. arr.push(value) // (returns new length of array), 2. arr[arr.length] = value // (returns value), 3. arr = arr.concat(value) // (returns new array); js101
 How to add multiple items to an array; arr.push(item1, item2); js101
@@ -31,3 +31,5 @@ RegEx ^; Matches the beginning of input. If the multiline flag is set to true, a
 RegEx \d; Matches any digit (Arabic numeral). Equivalent to [0-9]. For example, /\d/ or /[0-9]/ matches "2" in "B2 is the suite number".; js101
 RegEx x+; Matches the preceding item "x" 1 or more times. Equivalent to {1,}. For example, /a+/ matches the "a" in "candy" and all the "a"'s in "caaaaaaandy".; js101
 RegEx $; Matches the end of input. If the multiline flag is set to true, also matches immediately before a line break character. For example, /t$/ does not match the "t" in "eater", but does match it in "eat".; js101
+#####
+Difference between Array.prototype.join() and Object.prototype.toString(); toString() works with any objects, join() lets you specify a separator; js101

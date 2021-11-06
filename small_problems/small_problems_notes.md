@@ -325,3 +325,6 @@ https://launchschool.com/exercises/c335bef4
 
 ## Combine Two Lists
 https://launchschool.com/exercises/5e3b1da6
+
+## Multiplicative Average
+https://launchschool.com/exercises/e8b2e578
