@@ -331,3 +331,9 @@ https://launchschool.com/exercises/e8b2e578
 
 ## Multiply Lists
 https://launchschool.com/exercises/f2543bd4
+
+## List of Digits
+https://launchschool.com/exercises/6eb89adf
+
+## How Many?
+https://launchschool.com/exercises/705ea21f
