@@ -328,3 +328,6 @@ https://launchschool.com/exercises/5e3b1da6
 
 ## Multiplicative Average
 https://launchschool.com/exercises/e8b2e578
+
+## Multiply Lists
+https://launchschool.com/exercises/f2543bd4
