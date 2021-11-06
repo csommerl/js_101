@@ -337,3 +337,6 @@ https://launchschool.com/exercises/6eb89adf
 
 ## How Many?
 https://launchschool.com/exercises/705ea21f
+
+## Array Average
+https://launchschool.com/exercises/23864b58
