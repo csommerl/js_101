@@ -340,3 +340,6 @@ https://launchschool.com/exercises/705ea21f
 
 ## Array Average
 https://launchschool.com/exercises/23864b58
+
+## After Midnight (Part 1)
+https://launchschool.com/exercises/a8ee10fc
