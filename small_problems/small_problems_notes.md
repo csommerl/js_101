@@ -343,3 +343,12 @@ https://launchschool.com/exercises/23864b58
 
 ## After Midnight (Part 1)
 https://launchschool.com/exercises/a8ee10fc
+
+## After Midnight (Part 2)
+https://launchschool.com/exercises/4533932c
+
+# Easy 6
+https://launchschool.com/exercises/b04f40e2
+
+## Double Char (Part 1)
+https://launchschool.com/exercises/b04f40e2

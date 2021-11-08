@@ -24,3 +24,7 @@ Array.prototype.findIndex(); The findIndex() method returns the index of the fir
 Difference between indexOf() and findIndex() methods for arrays; indexOf() returns the first index at which a given element can be found in the array, whereas findIndex() returns the index of the first element in the array that satisfies the provided testing function.; js101
 Array.prototype.find(); The find() method returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.; js101
 When to write an explicit return of undefined; although an implicit return of undefined will occur, ESLint will complain and more importantly expliciting returning undefined makes clear the intent; js101
+Date.prototype.setMinutes(); method that sets the minutes for a specified date according to local time.; js101
+Date.prototype.setHours(); method that sets the hours for a specified date according to local time, and returns the number of milliseconds since January 1, 1970 00:00:00 UTC until the time represented by the updated Date instance.; j2101
+Date.prototype.getHours(); method that returns the hour for the specified date, according to local time.; js101
+Date.prototype.getMinutes(); method that returns the minutes in the specified date according to local time.; js101

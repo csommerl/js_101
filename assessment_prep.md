@@ -22,6 +22,7 @@
 - [ ] [Convert a Signed Number to a String!](https://launchschool.com/exercises/5fb347bd)
 - [ ] [Fibonacci Number Location By Length](https://launchschool.com/exercises/6ec7341d)
 - [ ] [Clean up the words](https://launchschool.com/exercises/6ccbdf07)
+- [ ] [After Midnight (Part 1) **further exploration**](https://launchschool.com/exercises/a8ee10fc)
 
 # JS101 Exercises to Redo
 
