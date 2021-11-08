@@ -358,3 +358,12 @@ https://launchschool.com/exercises/560de7d6
 
 ## Reverse Number
 https://launchschool.com/exercises/285f9dd6
+
+## Get The Middle Character
+https://launchschool.com/exercises/3d371708
+
+## Always Return Negative
+https://launchschool.com/exercises/b41e98f9
+
+## Counting Up
+https://launchschool.com/exercises/ac8ee7ae
