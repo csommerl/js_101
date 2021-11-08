@@ -352,3 +352,9 @@ https://launchschool.com/exercises/b04f40e2
 
 ## Double Char (Part 1)
 https://launchschool.com/exercises/b04f40e2
+
+## Double Char (Part 2)
+https://launchschool.com/exercises/560de7d6
+
+## Reverse Number
+https://launchschool.com/exercises/285f9dd6
