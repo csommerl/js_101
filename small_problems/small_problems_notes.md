@@ -367,3 +367,9 @@ https://launchschool.com/exercises/b41e98f9
 
 ## Counting Up
 https://launchschool.com/exercises/ac8ee7ae
+
+## Name Swapping
+https://launchschool.com/exercises/815cc58f
+
+## Sequence Count
+https://launchschool.com/exercises/cad01bcb
