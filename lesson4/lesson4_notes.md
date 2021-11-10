@@ -46,3 +46,11 @@ String.prototype.startsWith(); mehtod determines whether a string begins with th
 
 # Iterating with for and while Loops
 https://launchschool.com/lessons/60e10aa5/assignments/64a45839
+How to iterate with for & while loops over an object?; Use Object.keys() or for/in loop; js101
+Difference between iterating over an object using Object.keys or for/in loop?; Object.keys will only iterate over the objects own properties, whereas for/in loop will iterate over the prototype properties as well; js101
+How to use for/in loop without iterating over prototype properties?; use hasOwnProperty; js101
+How ES6+ guarantee the iteration order for an object's property keys. The order is based on: 1) the types of the property keys (strings come before symbols), 2) the values of the keys (non-negative integers come first), and 3) the order in which the keys were added to the object.; js101
+Why use continue as a guard clause in a loop?; Do this in order to: 1) show clearly that the loop has no interest in a particular case and 2) unnest the logic of the loop; js101
+
+# Introduction to the PEDAC Process
+https://launchschool.com/lessons/60e10aa5/assignments/73c01de6

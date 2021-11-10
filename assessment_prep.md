@@ -58,3 +58,5 @@
 - [ ] Math
 - [ ] Number
 
+# Other practice
+- [ ] Fizzbuzz
