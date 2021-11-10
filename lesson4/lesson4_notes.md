@@ -25,3 +25,15 @@ How to differentiate between a non-existent property vs. a property that has und
 How are non-element properties handled with arrays?; 1. length property does not change, 2. these properties are ignored by array methods like forEach, map, and filter, 3. these properties are included by object methods like Object.keys; js101
 
 ## Conversion
+
+## Element Assignment
+
+### Array Element Assignment
+
+### Object Key Assignment
+
+### String Character Assignment
+What happens when you try to reassign a string element?string element reassignment, even though it's syntactically permitted, doesn't affect the string. The reassignment value is returned; js101
+
+# String Methods
+https://launchschool.com/lessons/60e10aa5/assignments/13c9f3f6
