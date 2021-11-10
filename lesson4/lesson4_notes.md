@@ -37,3 +37,12 @@ What happens when you try to reassign a string element?string element reassignme
 
 # String Methods
 https://launchschool.com/lessons/60e10aa5/assignments/13c9f3f6
+Difference between str.charAt() and str.[]; when using indices for characters that don't exist, charAt returns an empty string (''), while [] returns undefined; js101
+String.prototype.charCodeAt(); method that returns the Unicode code point or character code of the character at that index. A Unicode code point is the number that represents a given character at the machine level. If you don't provide an index, it assumes the index 0.; js101
+String.fromCharCode(); method that does the opposite of String.prototype.charCodeAt. It takes a character code (Unicode code point) and returns the character represented by that character code.; js101
+What it means to be a static method?; It is a method that operates directly on the class/constructor for the particular data type; js101
+String.prototype.trimEnd(); method that removes whitespace from the end of a string. trimRight() is an alias of this method.; js101
+String.prototype.startsWith(); mehtod determines whether a string begins with the characters of a specified string, returning true or false as appropriate.; js101
+
+# Iterating with for and while Loops
+https://launchschool.com/lessons/60e10aa5/assignments/64a45839
