@@ -74,3 +74,65 @@ Very important question:
 https://launchschool.com/lessons/60e10aa5/assignments/d70a34e0
 
 ## Understanding the Problem
+- Assess available information (description & test cases)
+- Identify inputs & outputs
+- Define the boundaries
+- Establish explicit & implicit requirements
+- To identify implicit requirements ask 'what does x mean'?
+
+Example
+- Sequence of integers
+- Sequence begins with two
+- Integers are even
+- Integers are consecutive
+- Sequences are grouped into rows
+- Each row incrementally larger than the last
+- Row number equals number of elements in the row
+  - Row 1 has 1 element
+  - Row 2 has 2 elements
+  - etc.
+- Input: single integer
+  - which identifies a row, which is a subset of a sequence of integers
+- Output: a single integer
+  - sum of integers in the row identified
+
+2
+4, 6
+8, 10, 12
+14, 16, 18, 20
+
+## Examples and Test Cases
+- Can confirm/refute assumptions
+- Help to answer questions about implicit requirements
+- Act as assertions which help to codify the rules and boundaries
+
+Example:
+- row num 1 => 2
+- row num 2 => 10
+- row num 3 => 30
+- row num 4 => 68
+
+## Data Structures
+- Help to reason with data logically
+- Help to interact with data at an implementation level
+- Contributes to problem-solving process
+- Help think through what algorithms to use
+
+Example
+- Overall structure represents sequence as a whole
+- Individual rows within overall structure
+  - Individual rows in a set order in context of sequence as a whole
+  - Individual rows contain integers
+  - Can assume that integers are in a set order in the context of the sequence
+=> nested array is the best choice
+
+[
+  [2],
+  [4, 6],
+  [8, 10, 12],
+  [14, 16, 18, 20],
+  ...
+]
+
+## Algorithms
+algorithm; set of steps from input to output, which involves structuring data in a certain way; js101
