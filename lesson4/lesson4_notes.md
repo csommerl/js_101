@@ -54,3 +54,23 @@ Why use continue as a guard clause in a loop?; Do this in order to: 1) show clea
 
 # Introduction to the PEDAC Process
 https://launchschool.com/lessons/60e10aa5/assignments/73c01de6
+
+## P - [Understand the] Problem
+Three steps
+1. Read the problem description.
+2. Check the test cases, if any.
+3. If any part of the problem is unclear, ask the interviewer or problem requester to clarify the matter.
+
+Very important question:
+- Do I need to return the same object or an entirely new one?
+
+4. Write down inputs & outputs
+
+## Data Structure / Algorithm
+
+## Testing Frequently
+
+# The PEDAC Problem Solving Process
+https://launchschool.com/lessons/60e10aa5/assignments/d70a34e0
+
+## Understanding the Problem
