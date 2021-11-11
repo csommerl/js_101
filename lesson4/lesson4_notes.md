@@ -135,4 +135,43 @@ Example
 ]
 
 ## Algorithms
-algorithm; set of steps from input to output, which involves structuring data in a certain way; js101
+algorithm; a logical sequence of steps from input to output to accomplish a task or objective, or a series of steps to structure the data in a way that produces the required output; js101
+
+Stay abstract, high-level
+  - avoid implementation detail, since doing so might trap you into thinking about only one approach
+  - for now, don't think about efficiency
+
+Example: general level
+1. Create an empty 'rows' array to contain all the rows.
+2. Create a row array and add it to the rows array.
+3. Repeat step 2 until all the required rows have been created.
+  - i.e., until the `rows` array's length = input
+4. Sum the final row.
+5. Return the sum of the final row.
+
+Step 2:
+- Problem: create a row
+  - row is an array
+  - array contains integers
+  - integers are consecutive even numbers
+  - integers in each row are part of the larger overall sequence
+  - rows are of differing lengths
+  - input:
+    - row number/length
+    - last integer of the sequence/first integer of the new row
+  - output:
+    - row itself
+- Examples
+  - start = 2, length = 1 --> [2]
+  - start = 4, length = 2 --> [4, 6]
+  - start = 8, length = 3 --> [8, 10, 12]
+- Data structures:
+  - array of integers
+- Algorithm
+  1. Create an empty row to contain the integers
+  2. Add the starting integer
+  3. Increment the starting integer by two to get the next integer
+  4. Repeat Steps 2-3 until the array has reached the correct length
+  5. Return the array
+
+## Implementing a Solution in Code
