@@ -1,7 +1,17 @@
 // https://launchschool.com/lessons/60e10aa5/assignments/d70a34e0
 
 function sumEvenNumberRow(rowNumber) {
+  const rows = [];
+  let startInteger = 2;
   
+  for (let currentRowNum = 1; currentRowNum <= rowNumber; currentRowNum += 1) {
+    let row = createRow(startInteger, currentRowNum);
+    rows.push(row);
+    startInteger = row[row.length - 1] + 2;
+  }
+  
+  let finalRow = rows.pop();
+  return finalRowSum = finalRow.reduce((a, b) => a + b);
 }
 
 function createRow(startInteger, rowLength) {
@@ -20,6 +30,6 @@ console.log(sumEvenNumberRow(1));   // 2
 console.log(sumEvenNumberRow(2));   // 10
 console.log(sumEvenNumberRow(4));   // 68
 
-console.log(createRow(2, 1));   // [2]
-console.log(createRow(4, 2));   // [4, 6]
-console.log(createRow(8, 3));   // [8, 10, 12]
+// console.log(createRow(2, 1));   // [2]
+// console.log(createRow(4, 2));   // [4, 6]
+// console.log(createRow(8, 3));   // [8, 10, 12]

@@ -184,4 +184,8 @@ Step 2:
 - Create test cases
 - Code with intent
 
-Pick up at 17:39 / -35:09
+General notes
+- not a completely linear process: can move back & forth
+
+# Selection and Transformation
+https://launchschool.com/lessons/60e10aa5/assignments/159da1eb
