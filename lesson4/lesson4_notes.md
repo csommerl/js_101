@@ -175,3 +175,13 @@ Step 2:
   5. Return the array
 
 ## Implementing a Solution in Code
+- Translating solution algorithm to code
+- Think about the algorithm in the context of the programming language you're using
+  - Language features & constraints
+  - Characteristics of data structures
+  - Built-in functions / methods
+  - Syntax / coding patterns
+- Create test cases
+- Code with intent
+
+Pick up at 17:39 / -35:09
