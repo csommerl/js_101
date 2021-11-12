@@ -15,3 +15,6 @@ How to use for/in loop without iterating over prototype properties?; use hasOwnP
 How ES6+ guarantee the iteration order for an object's property keys. The order is based on: 1) the types of the property keys (strings come before symbols), 2) the values of the keys (non-negative integers come first), and 3) the order in which the keys were added to the object.; js101
 Why use continue as a guard clause in a loop?; Do this in order to: 1) show clearly that the loop has no interest in a particular case and 2) unnest the logic of the loop; js101
 algorithm; a logical sequence of steps from input to output to accomplish a task or objective, or a series of steps to structure the data in a way that produces the required output; js101
+Selection; picking some elements out of a collection depending on one or more criteria; js101
+Transformation; refers to manipulating every element in the collection; js101
+identity transformation; a transformation that leaves the original elements unchanged; js101

@@ -189,3 +189,18 @@ General notes
 
 # Selection and Transformation
 https://launchschool.com/lessons/60e10aa5/assignments/159da1eb
+
+- Selection; picking some elements out of a collection depending on one or more criteria; js101
+- Transformation; refers to manipulating every element in the collection; js101
+
+## Using Loops to Select and Transform
+
+## Extracting to Functions
+identity transformation; a transformation that leaves the original elements unchanged; js101
+
+selection criterion
+transformation criterion
+Lesson: can avoid hard-coding by adding criterion as a parameter
+
+# Array Methods
+https://launchschool.com/lessons/60e10aa5/assignments/6f49a9c1
