@@ -205,6 +205,8 @@ Lesson: can avoid hard-coding by adding criterion as a parameter
 # Array Methods
 https://launchschool.com/lessons/60e10aa5/assignments/6f49a9c1
 
+Array methods for iteration, selection, and transformation; forEach, filter, and map, respectively; js101
+
 ## Array.prototype.forEach
 callback; a function expression provided to another function/method as an argument; js101
 second parameter of forEach; the function also takes a parameter of index; js101
@@ -214,3 +216,14 @@ how to call forEach on an object's keys/properties; use Object.keys(obj) to call
 how to call forEach on an object's key-value pairs; use Object.entries(obj), and then use array destructuring assignment to call this array method; js101
 
 ## Array.prototype.filter
+What to use to filter an object?; It is best to use forEach with a selection criterion, rather than a combination of filter and forEach; js101
+
+## Array.prototype.map
+
+### filter and map with Strings
+How to apply filter & map with strings for selection and transformation?; Use split & join to convert to an array and back again; js101
+
+# More Array Methods
+https://launchschool.com/lessons/60e10aa5/assignments/87d7e5d3
+
+## Array.prototype.some

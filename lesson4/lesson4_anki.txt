@@ -24,3 +24,6 @@ how to call forEach on a string; use String.prototype.split('') to call this arr
 how to call forEach on an object's values; use Object.values(obj) to call this array method; js101
 how to call forEach on an object's keys/properties; use Object.keys(obj) to call this array method; js101
 how to call forEach on an object's key-value pairs; use Object.entries(obj), and then use array destructuring assignment to call this array method; js101
+Array methods for iteration, selection, and transformation; forEach, filter, and map, respectively; js101
+What to use to filter an object?; It is best to use forEach with a selection criterion, rather than a combination of filter and forEach; js101
+How to apply filter & map with strings for selection and transformation?; Use split & join to convert to an array and back again; js101
