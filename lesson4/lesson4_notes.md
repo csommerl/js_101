@@ -244,3 +244,10 @@ Difference between find() and findIndex() methods on arrays; find returns the *v
 Ways to check whether an object contains a key; 1) Object.keys(obj).includes(keyName), 2) obj.hasOwnProperty(keyName); js101
 
 # Arrays: What is an Element?
+
+## Array Keys
+How do array methods deal with non-element values / array properties that are not non-negative integers?; All built-in Array methods ignore properties that are not elements; js101
+Two meanings of an array being empty; 1) arr.length === 0, 2) Object.keys(arr) returns []; js101
+
+## Sparse Arrays
+Ways that an array can be empty; 1) the array contains no elements with non-negative integer indices, 2) the array has no keys, whether non-negative integers or otherwise, 3) the array has no length (no elements at non-integer indices and no empty slots); js101

@@ -34,3 +34,6 @@ Array.prototype.findIndex(); The findIndex() method returns the index of the fir
 Difference between indexOf() and findIndex() methods for arrays; indexOf() returns the first index at which a given element can be found in the array, whereas findIndex() returns the index of the first element in the array that satisfies the provided testing function.; js101
 Difference between find() and findIndex() methods on arrays; find returns the *value* of the first element that meets the condition, whereas findIndex returns the *index* of the value of the first element that meets the condition; js101
 Ways to check whether an object contains a key; 1) Object.keys(obj).includes(keyName), 2) obj.hasOwnProperty(keyName); js101
+How do array methods deal with non-element values / array properties that are not non-negative integers?; All built-in Array methods ignore properties that are not elements; js101
+Two meanings of an array being empty; 1) arr.length === 0, 2) Object.keys(arr) returns []; js101
+Ways that an array can be empty; 1) the array contains no elements with non-negative integer indices, 2) the array has no keys, whether non-negative integers or otherwise, 3) the array has no length (no elements at non-integer indices and no empty slots); js101
