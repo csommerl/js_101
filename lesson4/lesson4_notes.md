@@ -251,3 +251,12 @@ Two meanings of an array being empty; 1) arr.length === 0, 2) Object.keys(arr) r
 
 ## Sparse Arrays
 Ways that an array can be empty; 1) the array contains no elements with non-negative integer indices, 2) the array has no keys, whether non-negative integers or otherwise, 3) the array has no length (no elements at non-integer indices and no empty slots); js101
+
+# Practice Problems
+Array.prototype.fill(); destructive method that changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.; js101
+Spread syntax (...); syntax that allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected; js101
+Math.min(); static function that returns the lowest-valued number passed into it, or NaN if any parameter isn't a number and can't be converted into one.; js101
+When to use short-circuiting?; For example, when you want to update the count of a value for an object key, but the object key might not already exist; js101
+
+# Lesson 4 Quiz 1
+https://launchschool.com/lessons/60e10aa5/assignments/cb4e0a29

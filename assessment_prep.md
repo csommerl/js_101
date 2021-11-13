@@ -48,6 +48,10 @@
 ## Lesson 3.6
 - [ ] [Lesson 3.6, Question 1](https://launchschool.com/lessons/0206c7f9/assignments/59c055ee)
 
+## Lesson 4.11
+- [ ] [Lesson 4.11, Practice Problem 7](https://launchschool.com/lessons/60e10aa5/assignments/d4f91ca2)
+- [ ] [Lesson 4.11, Practice Problem 10](https://launchschool.com/lessons/60e10aa5/assignments/d4f91ca2)
+
 # Cheatsheet
 - [ ] string methods
 - [x] loops
