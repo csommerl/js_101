@@ -227,3 +227,20 @@ How to apply filter & map with strings for selection and transformation?; Use sp
 https://launchschool.com/lessons/60e10aa5/assignments/87d7e5d3
 
 ## Array.prototype.some
+Array.prototype.some(); method that tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true. Otherwise it returns false. It doesn't modify the array.; js101
+
+## Array.prototype.every
+Array.prototype.find(); The find() method returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.; js101
+
+## Array.prototype.findIndex
+Array.prototype.findIndex(); The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.; js101
+
+Difference between indexOf() and findIndex() methods for arrays; indexOf() returns the first index at which a given element can be found in the array, whereas findIndex() returns the index of the first element in the array that satisfies the provided testing function.; js101
+Difference between find() and findIndex() methods on arrays; find returns the *value* of the first element that meets the condition, whereas findIndex returns the *index* of the value of the first element that meets the condition; js101
+
+## Array.prototype.reverse
+
+## Array.prototype.includes
+Ways to check whether an object contains a key; 1) Object.keys(obj).includes(keyName), 2) obj.hasOwnProperty(keyName); js101
+
+# Arrays: What is an Element?
