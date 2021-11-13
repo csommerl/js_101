@@ -18,3 +18,9 @@ algorithm; a logical sequence of steps from input to output to accomplish a task
 Selection; picking some elements out of a collection depending on one or more criteria; js101
 Transformation; refers to manipulating every element in the collection; js101
 identity transformation; a transformation that leaves the original elements unchanged; js101
+callback; a function expression provided to another function/method as an argument; js101
+second parameter of forEach; the function also takes a parameter of index; js101
+how to call forEach on a string; use String.prototype.split('') to call this array method; js101
+how to call forEach on an object's values; use Object.values(obj) to call this array method; js101
+how to call forEach on an object's keys/properties; use Object.keys(obj) to call this array method; js101
+how to call forEach on an object's key-value pairs; use Object.entries(obj), and then use array destructuring assignment to call this array method; js101
