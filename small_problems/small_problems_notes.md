@@ -452,3 +452,31 @@ Algorithm
 https://launchschool.com/exercises/541d0500
 
 Problem
+- input: string
+- output: boolean
+- explicit requirement:
+  - parentheses are properly balanced when
+    - each '(' has *its own* ')' that follows it
+    - each ')' has *its own* '(' that precedes it
+  - return true if parentheses are properly balanced
+  - otherwise return false
+- implicit requirements
+  - same number of ( and )
+  - at any point where there is a ), there are not more ( than )
+
+Example
+
+Data structure
+
+Algorithm
+1. first test: if number of ( and number of ) are not equal, return false
+2. second test: at each substring ending with ), if the number of ) exceeds the number of (, return false
+3. otherwise, return true
+
+note that allBalanced doesn't take into account whether they are nested correctly!
+
+# List Processing
+https://launchschool.com/exercise_sets/ea72ee67
+
+## Sum Of Digits
+https://launchschool.com/exercises/4a471ab8
