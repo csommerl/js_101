@@ -52,6 +52,11 @@
 - [ ] [Lesson 4.11, Practice Problem 7](https://launchschool.com/lessons/60e10aa5/assignments/d4f91ca2)
 - [ ] [Lesson 4.11, Practice Problem 10](https://launchschool.com/lessons/60e10aa5/assignments/d4f91ca2)
 
+## Lesson 4 Quiz
+- [ ] [Lesson 4 Quiz, Question 1](https://launchschool.com/quizzes/3548c910)
+- [ ] [Lesson 4 Quiz, Question 12](https://launchschool.com/quizzes/3548c910)
+- [ ] [Lesson 4 Quiz, Question 16](https://launchschool.com/quizzes/3548c910)
+
 # Cheatsheet
 - [ ] string methods
 - [x] loops

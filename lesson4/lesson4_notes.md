@@ -260,3 +260,5 @@ When to use short-circuiting?; For example, when you want to update the count of
 
 # Lesson 4 Quiz 1
 https://launchschool.com/lessons/60e10aa5/assignments/cb4e0a29
+
+How many times does forEach iterate?; Usually, this method iterates once per element in the array it is called on, but it will run fewer times if the callback function removes elements from the array; js101

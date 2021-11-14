@@ -373,3 +373,8 @@ https://launchschool.com/exercises/815cc58f
 
 ## Sequence Count
 https://launchschool.com/exercises/cad01bcb
+
+## Reverse It (Part 1)
+https://launchschool.com/exercises/866dd469
+
+Problem

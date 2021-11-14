@@ -41,3 +41,4 @@ Array.prototype.fill(); destructive method that changes all elements in an array
 Spread syntax (...); syntax that allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected; js101
 Math.min(); static function that returns the lowest-valued number passed into it, or NaN if any parameter isn't a number and can't be converted into one.; js101
 When to use short-circuiting?; For example, when you want to update the count of a value for an object key, but the object key might not already exist; js101
+How many times does forEach iterate?; Usually, this method iterates once per element in the array it is called on, but it will run fewer times if the callback function removes elements from the array; js101
