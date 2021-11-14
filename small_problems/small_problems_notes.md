@@ -397,3 +397,27 @@ Algorithm
 https://launchschool.com/exercises/2ecfaa4e
 
 Problem
+- input: string
+- output: string with five-or-more letter words reversed
+- explicit requirements:
+  - if a word has five or more letters, it should be reversed
+  - words are separated by a singel space
+
+Examples
+
+Data structure:
+- convert to array to process
+
+Algorithm
+1. create words array by splitting at spaces
+2. create new array to store the new string to output
+3. for each word in words array:
+  - test if it has five or more letters
+* - if so, reverse word
+  - add to new array
+4. create new string from new array and return it
+
+Reverse word
+1. create character array by splitting with ''
+2. reverse order of character array and save to new array
+3. join and return new array
