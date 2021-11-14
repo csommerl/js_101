@@ -421,3 +421,34 @@ Reverse word
 1. create character array by splitting with ''
 2. reverse order of character array and save to new array
 3. join and return new array
+
+## Reversed Arrays
+https://launchschool.com/exercises/9b855a60
+
+Problem
+- input: array
+- output: same array object, with elements reversed in place
+- Explicit requirements:
+  - no new array
+  - elements reversed
+
+Examples
+
+Data structures
+- preserve original array
+- create a new array, but only to store values to then be pushed.
+
+Algorithm
+1. Create new array to store reversed values
+2. Iterate through the original array, in reverse order
+  - Remove the last element of the original array
+  - Add last element to new array
+  - complete until original array is empty
+3. Iterate through new array in order:
+  - add each element to original array
+4. return original array
+
+## Matching Parentheses?
+https://launchschool.com/exercises/541d0500
+
+Problem
