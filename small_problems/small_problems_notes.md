@@ -378,3 +378,22 @@ https://launchschool.com/exercises/cad01bcb
 https://launchschool.com/exercises/866dd469
 
 Problem
+- input: string
+- output: string
+- explicit requirement: output reverses the order of words
+- implicit requiremnt: words are separated by ' '
+
+Examples
+
+Data Structure
+- collect words in an array
+
+Algorithm
+1. Create words array from string by splitting into words separated by ' '
+2. Reverse the order (method)
+3. Return the words array joined
+
+## Reverse It (Part 2)
+https://launchschool.com/exercises/2ecfaa4e
+
+Problem
