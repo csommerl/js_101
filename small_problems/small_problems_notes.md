@@ -509,3 +509,13 @@ Algorithm
 
 ## Multiply All Pairs
 https://launchschool.com/exercises/2c36b66c
+
+- input: two arrays, each containing a list of numbers
+- output: array with products of all combinations, sorted in ascending numberical order.
+
+Algo
+1. create result array
+2. Nested for loop
+
+## Leading Substrings
+https://launchschool.com/exercises/50f14ae3
