@@ -23,6 +23,7 @@
 - [ ] [Fibonacci Number Location By Length](https://launchschool.com/exercises/6ec7341d)
 - [ ] [Clean up the words](https://launchschool.com/exercises/6ccbdf07)
 - [ ] [After Midnight (Part 1) **further exploration**](https://launchschool.com/exercises/a8ee10fc)
+- [ ] [Alphabetical Numbers](https://launchschool.com/exercises/6a49d690)
 
 # JS101 Exercises to Redo
 

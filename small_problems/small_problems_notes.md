@@ -483,3 +483,29 @@ https://launchschool.com/exercises/4a471ab8
 
 ## Alphabetical Numbers
 https://launchschool.com/exercises/6a49d690
+
+Problem
+- input: array of integers between 0 and 19
+- output: array of integers, sorted
+- explicit requirement:
+  - sort integers alphabetically based on English word for each number
+
+Exampels
+
+Data Structure
+- array of number words
+- maybe object correlating
+
+Algorithm
+1. create number word array
+2. sort number word array alphabetically
+3. create dictionary with numbers as keys and number words as values
+4. create result array
+5. for each number:
+  - get word from dictionary
+  - lookup index number of word in sorted alphabetically array
+  - add number at that index number to the resulting arr
+6. return resulting array
+
+## Multiply All Pairs
+https://launchschool.com/exercises/2c36b66c

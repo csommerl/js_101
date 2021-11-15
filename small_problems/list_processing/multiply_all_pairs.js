@@ -1,0 +1,1 @@
+// Multiply All Pairs https://launchschool.com/exercises/2c36b66c
