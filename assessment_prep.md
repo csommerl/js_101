@@ -24,6 +24,7 @@
 - [ ] [Clean up the words](https://launchschool.com/exercises/6ccbdf07)
 - [ ] [After Midnight (Part 1) **further exploration**](https://launchschool.com/exercises/a8ee10fc)
 - [ ] [Alphabetical Numbers](https://launchschool.com/exercises/6a49d690)
+- [ ] [Leading Substrings, Further Exploration](https://launchschool.com/exercises/50f14ae3)
 
 # JS101 Exercises to Redo
 

@@ -13,16 +13,20 @@
 //   return substrings;
 // }
 
-// further exploration
+// // further exploration: map
+// function leadingSubstrings(str) {
+//   return str
+//     .split('')
+//     .map((char, idx) => {
+//       return str.slice(0, idx + 1);
+//     })
+// }
+
+// further exploration: reduce
 function leadingSubstrings(str) {
-  let chars = str.split('');
-  
-  let substrings = chars.map((char, idx, arr) => {
-    if (idx === 0) return char;
-    return arr[idx - 1] + char;
-  })
-  
-  return substrings;
+  return str.split('').reduce((acc, char, idx) => {
+    return idx > 0 ? [...acc].concat(acc[acc.length - 1] + char) : acc.concat(char);
+  }, []);
 }
 
 console.log(leadingSubstrings('abc'));      // ["a", "ab", "abc"]

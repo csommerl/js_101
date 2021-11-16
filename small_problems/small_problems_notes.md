@@ -519,3 +519,6 @@ Algo
 
 ## Leading Substrings
 https://launchschool.com/exercises/50f14ae3
+
+## All Substrings
+https://launchschool.com/exercises/381f7129
