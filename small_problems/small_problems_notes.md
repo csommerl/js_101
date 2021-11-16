@@ -528,4 +528,20 @@ https://launchschool.com/exercises/381f7129
 
 ## Palindromic Substrings
 https://launchschool.com/exercises/f75e9198
+- input: string
+- output: array of substrings
+- explicit requirements:
+  - each substring reads the same foreward and backwards
+  - case matters
+  - single characters are not palindromes
+- implicit requirements:
+  - do palindromes cross over between spaces?
+Algo
+1. create empty array of palindromes
+2. get list of substrings
+3. For each substring, test whether it is a palindrome
+4. If it is a palindrome, add to palindromes
+5. return palindromes
 
+## Sum of Sums
+https://launchschool.com/exercises/6187c3ec
