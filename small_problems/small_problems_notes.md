@@ -522,3 +522,10 @@ https://launchschool.com/exercises/50f14ae3
 
 ## All Substrings
 https://launchschool.com/exercises/381f7129
+
+- input: str
+- output: array of substrings
+
+## Palindromic Substrings
+https://launchschool.com/exercises/f75e9198
+
