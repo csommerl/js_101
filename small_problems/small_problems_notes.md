@@ -550,3 +550,8 @@ https://launchschool.com/exercises/6187c3ec
 
 ## Grocery List
 https://launchschool.com/exercises/a8fc112c
+- input: two-dimensional array
+- output: 
+
+## Inventory Item Transactions
+https://launchschool.com/exercises/1e53cc84
