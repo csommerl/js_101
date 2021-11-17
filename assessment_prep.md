@@ -25,6 +25,7 @@
 - [ ] [After Midnight (Part 1) **further exploration**](https://launchschool.com/exercises/a8ee10fc)
 - [ ] [Alphabetical Numbers](https://launchschool.com/exercises/6a49d690)
 - [ ] [Leading Substrings, Further Exploration](https://launchschool.com/exercises/50f14ae3)
+- [ ] [Sum of Sums, Further Exploration](https://launchschool.com/exercises/6187c3ec)
 
 # JS101 Exercises to Redo
 

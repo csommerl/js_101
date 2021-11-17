@@ -545,3 +545,8 @@ Algo
 
 ## Sum of Sums
 https://launchschool.com/exercises/6187c3ec
+- input: arr of numbers
+- output: sum of sums
+
+## Grocery List
+https://launchschool.com/exercises/a8fc112c
