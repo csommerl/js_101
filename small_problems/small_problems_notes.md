@@ -577,3 +577,15 @@ https://launchschool.com/exercises/6a9bb11e
 
 ## Capitalize Words
 https://launchschool.com/exercises/1fd9c225
+
+## Swap Case
+https://launchschool.com/exercises/7d7dbbbe
+
+## Staggered Caps (Part 1)
+https://launchschool.com/exercises/3b0a4549
+
+## Staggered Caps (Part 2)
+https://launchschool.com/exercises/f6b29024
+
+## How long are you?
+https://launchschool.com/exercises/82ac0837
