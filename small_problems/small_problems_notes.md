@@ -595,3 +595,18 @@ lesson:
 
 ## Search Word (Part 1)
 https://launchschool.com/exercises/5a7a40b6
+
+lesson
+- use ternary operator to deal with possibility of null result:
+  - if it's null, it's falsy, so return 0
+  - otherwise, can get a property / perform operation and return a different result
+- escape \\b to use regular expression in string
+
+## Search Word (Part 2)
+https://launchschool.com/exercises/c5f72b07
+
+# Medium 1
+https://launchschool.com/exercise_sets/e46f01e3
+
+## Rotation (Part 1)
+https://launchschool.com/exercises/d00dcc58
