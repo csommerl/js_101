@@ -565,3 +565,12 @@ https://launchschool.com/exercise_sets/f812bd47
 
 ## Uppercase Check
 https://launchschool.com/exercises/59cd044d
+
+## Delete Vowels
+https://launchschool.com/exercises/8249329a
+
+1. create new arr / map
+2. for each entry, return 
+
+## Lettercase Counter
+https://launchschool.com/exercises/6a9bb11e
