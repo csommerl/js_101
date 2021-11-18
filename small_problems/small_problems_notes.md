@@ -555,3 +555,13 @@ https://launchschool.com/exercises/a8fc112c
 
 ## Inventory Item Transactions
 https://launchschool.com/exercises/1e53cc84
+- input: num (inventory item ID), obj (list of transactions)
+
+## Inventory Item Availability
+https://launchschool.com/exercises/fa70703d
+
+# String and Text Processing
+https://launchschool.com/exercise_sets/f812bd47
+
+## Uppercase Check
+https://launchschool.com/exercises/59cd044d
