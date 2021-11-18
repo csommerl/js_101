@@ -25,3 +25,4 @@ Date.prototype.getMinutes(); method that returns the minutes in the specified da
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative; js101
 Difference in behavior between 0 & -0; the only main difference has to do with dealing with Infinity. Dividing a positive number by negative zero -0 or a negative number by positive zero +0 will both produce the result -Infinity; js101
 How to determine whether 0 and -0 are the same; use Object.is(), since you can't test with equality; js101
+Regex //i meaning; Tells the regex engine to ignore case.; js101

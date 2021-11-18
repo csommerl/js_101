@@ -574,3 +574,6 @@ https://launchschool.com/exercises/8249329a
 
 ## Lettercase Counter
 https://launchschool.com/exercises/6a9bb11e
+
+## Capitalize Words
+https://launchschool.com/exercises/1fd9c225
