@@ -3,3 +3,9 @@ default behavior of Array.prototype.sort(); it converts all the numbers to strin
 Is Array.prototype.sort() destructive or non-destructive?; This is a destructive method for sorting; js101
 how do the operators like <, >, and === work with strings?; string order is determined by a character's code point in the UTF-16 encoding; js101
 How to write a oneline sort for a coming before b; use arr.sort((a, b) => a - b); js101
+ways to make a shallow copy of an array; 1) arr.slice() with no arguments, 2) [...arr]; js101
+how to make a shallow copy of an obj; let copy = Object.assign({}, obj); js101
+JSON.stringify(); method that converts a JavaScript object or value (only having primitives, arrays, and plain objects as elements) to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.; js101
+indirect way to make a deep copy of an obj or arr; JSON.parse(JSON.stringify(obj)); js101
+limitation of indirect way to make a deep copy; only works with nested arrays and plain objects; js101
+Object.isFrozen(); method that determines if an object is frozen.; js101
