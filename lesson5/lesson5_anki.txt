@@ -1,0 +1,5 @@
+undefined values are a special case when it comes to sorting; They are always placed at the end of the array no matter what the other values are; js101
+default behavior of Array.prototype.sort(); it converts all the numbers to strings and compares them by their Unicode character codes; js101
+Is Array.prototype.sort() destructive or non-destructive?; This is a destructive method for sorting; js101
+how do the operators like <, >, and === work with strings?; string order is determined by a character's code point in the UTF-16 encoding; js101
+How to write a oneline sort for a coming before b; use arr.sort((a, b) => a - b); js101
