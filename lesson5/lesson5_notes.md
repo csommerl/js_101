@@ -388,3 +388,53 @@ arr = [4, [3, 8]]
 
 ## Practice Problem 8
 https://launchschool.com/lessons/778acada/assignments/8c5df017
+```javascript
+
+let obj = {
+  first: ['the', 'quick'],
+  second: ['brown', 'fox'],
+  third: ['jumped'],
+  fourth: ['over', 'the', 'lazy', 'dog'],
+};
+
+const VOWELS = 'aeiou';
+
+Object.values(obj).forEach(arr => {
+  arr.forEach(word => {
+    word.split('').forEach(char => {
+      if (VOWELS.includes(char.toLowerCase())) {
+        console.log(char);
+      }
+    })
+  })
+})
+
+```
+
+## Practice Problem 9
+```javascript
+
+let arr = [['b', 'c', 'a'], [2, 11, -3], ['blue', 'black', 'green']];
+
+arr.map(subarr => {
+  if (Number.isInteger(subarr[0])) {
+    return subarr.slice().sort((a, b) => {
+      return a - b;
+    });
+  } else {
+    return subarr.slice().sort();
+  }
+});
+
+arr.map(subarr => {
+  if (typeof subarr[0] === 'string') {
+    return subarr.slice().sort();
+  } else {
+    return subarr.slice().sort((a, b) => a - b);
+  }
+});
+
+```
+
+## Practice Problem 10
+https://launchschool.com/lessons/778acada/assignments/8c5df017
