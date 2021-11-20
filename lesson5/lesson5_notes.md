@@ -35,3 +35,66 @@ Object.isFrozen(); method that determines if an object is frozen.; js101
 
 # 5.4 Working with Callback Functions
 https://launchschool.com/lessons/778acada/assignments/a2ba7936
+
+term first-class value or first-class object
+1. They can be assigned to a variable or an element of a data structure (such as an array or object).
+2. They can be passed as an argument to a function.
+3. They can be returned as the return value of a function.
+
+What makes the declarative style of programming possible; this is made possible because we can treat functions as values; js101
+
+Higher Order Functions; Functions that take other functions as arguments, as well as functions that return other functions; js101
+
+## Example 1
+For each element of the array, do the following:
+1. assign it variable name `arr`.
+2. log to the console the value of arr[0]
+
+Questions to ask for interpreting / evaluating code:
+1. What type of action is being performed?
+  - Method call? Callback? Conditional? Something else?
+2. On what value is that action performed?
+3. What is the side-effect of that action (e.g., output or destructive action)?
+4. What is the return value of that action?
+5. Is the return value used by whatever instigated the action?
+
+five things to identify when interpreting code;
+1. type of action
+2. which value (& type of value) the action is performed on
+3. what side-effect results
+4. what value is returned
+5. whether & how the return value is used by what initiated the action
+
+## Example 3
+
+1. Action: method call (map)
+2. Performed on: outer arrary [[1, 2], [3, 4]]
+3. Side effect: none
+4. Return value: new array [1, 3]
+5. Is return value used: no, but shown on line 7
+
+1. Action: callback execution
+2. performed on: each inner array
+3. Side effect: none
+4. Return value: number at index 0 of each array
+5. Is return value used: yes, used by map for transformation
+
+1. action: element access [0]
+2. performed on: each inner array
+3. side effect: none
+4. return value: the first element of each array
+5. is used & how: used by console.log
+
+1. action: method call console.log()
+2. performed on: first element of each inner array
+3. side effect: logs string representation of integer
+4. return: undefined
+5. used: no
+
+1. action: element access
+2. performed on: each subarray
+3. side effect: none
+4. return value: element at index 0 of each sub array
+5. used & how: yes, for transformation with map
+
+## Example 4
