@@ -98,3 +98,49 @@ five things to identify when interpreting code;
 5. used & how: yes, for transformation with map
 
 ## Example 4
+https://launchschool.com/lessons/778acada/assignments/a2ba7936
+
+1. action: variable declaration & intialization (myArr)
+2. performed on: (return value of) method invocation on array
+3. side effect: none
+4. return value: undefined
+5. used: return value is not used
+
+1. action: method invocation (forEach)
+2. performed on: outer array [[18, 7], [3, 12]]
+3. side effect: none
+4. return value: undefined
+5. return value used: assigned to myArr
+
+1. action: callback function
+2. performed on: each subarray
+3. side effect: none
+4. return value: transformed version of the subarray **[undefined, undefined]**
+5. used: **no**
+
+1. action: method invocation: map
+2. performed on: each subarray
+3. side effect: none
+4. return value: transformed version of the subarray **[undefined, undefined]**
+5. used: yes, by callback function of forEach
+
+1. action: callback function for map
+2. performed on: each number in each subarray
+3. side effect: none
+4. return value: undefined (from console.log) or undefined if num is not greater than 5 since there is no return value
+5. used: yes, for map transformation
+
+1. action: **comparison**
+2. performed on: num of subarray
+3. side effect: none
+4. return value: **boolean**
+5. used by: **yes, evaluated by if**
+
+1. action: method invocation (console.log)
+2. performed on: number of each subarray
+3. side effect: logs string of num to console, when num > 5
+4. return value: undefined
+5. used: yes, given to callback function of map
+
+## Example 5
+https://launchschool.com/lessons/778acada/assignments/a2ba7936
