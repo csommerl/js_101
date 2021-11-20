@@ -313,5 +313,78 @@ let munsters = {
   Marilyn: { age: 23, gender: 'female'}
 };
 
+// Solution 1
+let totalAge = 0;
+let names = Object.keys(munsters);
+for (let idx = 0; idx < names.length; idx += 1) {
+  totalAge += munsters[names[idx]]['age'];
+}
+console.log(totalAge);  // 497
+
+// Solution 2
+let totalAge = 0;
+for (let name in munsters) {
+  totalAge += munsters[name]['age'];
+}
+console.log(totalAge) // 497
+
+// Solution 3
+let totalAge = 0;
+let members = Object.keys(munsters)
+members.forEach(member => {
+  totalAge += munsters[member]['age'];
+})
+
+// Solution 4
+let totalAge = 0;
+let memberData = Object.values(munsters)
+memberData.forEach(member => {
+  totalAge += member['age'];
+})
 
 ```
+
+## Practice Problem 6
+
+```javascript
+let munsters = {
+  herman: { age: 32, gender: 'male' },
+  lily: { age: 30, gender: 'female' },
+  grandpa: { age: 402, gender: 'male' },
+  eddie: { age: 10, gender: 'male' },
+  marilyn: { age: 23, gender: 'female'}
+};
+
+// solution 1
+for (let name in munsters) {
+  console.log(`${name[0].toUpperCase() + name.slice(1)} is a ${munsters[name]['age']}-year-old ${munsters[name]['gender']}.`);
+}
+
+// solution 2
+Object.entries(munsters).forEach(entry => {
+  let name = entry[0];
+  let age = entry[1]['age'];
+  let gender = entry[1]['gender'];
+  console.log(`${name} is a ${age}-year-old ${gender}.`)
+})
+
+```
+
+## Practice Problem 7
+```javascript
+a = 2
+b = [5, 8]
+arr = [2, [5, 8]]
+
+a = 2
+b = [5, 8]
+arr = [4, [5, 8]]
+
+a = 2
+b = [3, 8]
+arr = [4, [3, 8]]
+
+```
+
+## Practice Problem 8
+https://launchschool.com/lessons/778acada/assignments/8c5df017
