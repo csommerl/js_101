@@ -60,6 +60,11 @@
 - [ ] [Lesson 4 Quiz, Question 12](https://launchschool.com/quizzes/3548c910)
 - [ ] [Lesson 4 Quiz, Question 16](https://launchschool.com/quizzes/3548c910)
 
+# Lesson 5
+- [ ] [Lesson 5, 5.4, Example 7](https://launchschool.com/lessons/778acada/assignments/a2ba7936)
+- [ ] [Lesson 5, 5.4, Example 8](https://launchschool.com/lessons/778acada/assignments/a2ba7936)
+- [ ] [Lesson 5, 5.4, Example 9](https://launchschool.com/lessons/778acada/assignments/a2ba7936)
+
 # Cheatsheet
 - [ ] string methods
 - [x] loops

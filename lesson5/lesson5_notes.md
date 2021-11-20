@@ -144,3 +144,96 @@ https://launchschool.com/lessons/778acada/assignments/a2ba7936
 
 ## Example 5
 https://launchschool.com/lessons/778acada/assignments/a2ba7936
+
+1. action: method invocation (map)
+2. performed on: outer array [[1, 2], [3, 4]]
+3. side effect: none
+4. return value: [[2, 4], [6, 8]]
+5. return value used: no
+
+1. action: callback function passed to map
+2. perfromed on: each subarray
+3. side effect: none
+4. return value: [2, 4] and [6, 8]
+5. used: new value transformed
+
+1. action: method invocation (map)
+2. performed on: each number of each subarray
+3. side effect: none
+4. return value: 2, 4, 6, 8
+5. used: yes, for transforming each subarray
+
+1. inner callback function
+2. performed on: each num
+3. side effect: none
+4. return value: number
+5. yes, for map transformation
+
+1. action: multiplication
+2. each num
+3. side effect: none
+4. return value: 2, 4, 6, 8
+5. used: yes, **for inner callback**
+
+## Example 6
+1. action: method invocation (filter)
+2. performed on: on outer array
+3. side effect: none
+4. return value: array of selected elements
+5. used: no
+
+1. callback function of filter
+2. performed on: each object in array
+3. side effect: none
+4. return value: objects that meet the every condition
+5. used: yes, for filter
+
+1. action: method invocation (Object.keys)
+2. performed on: each object
+3. side effect: none
+4. return value: array of keys
+5. used: yes, by every method
+
+1. action: method invocation: every
+2. performed on: each object
+3. side effect: no
+4. return value: boolean
+5. used: yes, for filter to perform selection
+
+1. action: callback function
+2. performed on: each key of object
+3. side effect: no
+4. return value: boolean
+5. used: yes, by every for *****
+
+1. action: element selection (object[key][])
+...
+
+## Example 7
+Lesson:
+- when you have a nested array, performing an action on a subarray (e.g., selection), might require an outer transformation (e.g., map)
+
+## Example 8
+```javascript
+[[[1], [2], [3], [4]], [['a'], ['b'], ['c']]]
+```
+
+element1
+  - [[1], [2], [3], [4]]
+  - [['a'], ['b'], ['c']]
+
+element2
+  - [1]
+  - ...
+
+element 3
+  - 1
+  - ...
+
+
+## Example 9
+[[[2, 3], [4, 5]], [6, 7]]
+
+# 5.5 Practice Problems
+https://launchschool.com/lessons/778acada/assignments/8c5df017
+
