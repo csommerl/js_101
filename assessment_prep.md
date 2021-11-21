@@ -65,6 +65,8 @@
 - [ ] [Lesson 5, 5.4, Example 8](https://launchschool.com/lessons/778acada/assignments/a2ba7936)
 - [ ] [Lesson 5, 5.4, Example 9](https://launchschool.com/lessons/778acada/assignments/a2ba7936)
 - [ ] [Lesson 5.5, Practice Problem 11](https://launchschool.com/lessons/778acada/assignments/8c5df017)
+- [ ] [Lesson 5.5, Practice Problem 14](https://launchschool.com/lessons/778acada/assignments/8c5df017)
+- [ ] [Lesson 5.5, Practice Problem 17](https://launchschool.com/lessons/778acada/assignments/8c5df017)
 
 # Cheatsheet
 - [ ] string methods

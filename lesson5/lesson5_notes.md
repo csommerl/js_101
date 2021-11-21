@@ -509,3 +509,82 @@ function getSumOfOddInArray(arr) {
 ```
 
 ## Practice Problem 14
+```javascript
+
+let obj = {
+  grape: { type: 'fruit', colors: ['red', 'green'], size: 'small' },
+  carrot: { type: 'vegetable', colors: ['orange'], size: 'medium' },
+  apple: { type: 'fruit', colors: ['red', 'green'], size: 'medium' },
+  apricot: { type: 'fruit', colors: ['orange'], size: 'medium' },
+  marrow: { type: 'vegetable', colors: ['green'], size: 'large' },
+};
+
+let arr = [];
+for (let key in obj) {
+  if (obj[key]['type'] === 'fruit') {
+    let colors = obj[key]['colors'];
+    colors = colors.map(color => color[0].toUpperCase() + color.slice(1));
+    arr.push(colors);
+  } else if (obj[key]['type'] === 'vegetable') {
+    let size = obj[key]['size'];
+    size = size.toUpperCase();
+    arr.push(size);
+  }
+}
+console.log(arr);
+
+
+let capitalize = word => word[0].toUpperCase() + word.slice(1);
+
+Object.values(obj).map(attributes => {
+  if (attributes['type'] === 'fruit') {
+    return attributes['colors'].map(color => capitalize(color));
+  } else if (attributes['type'] === 'vegetable') {
+    return attributes['size'].toUpperCase();
+  }
+});
+
+```
+
+## Practice Problem 15
+```javascript
+
+let arr = [
+  { a: [1, 2, 3] },
+  { b: [2, 4, 6], c: [3, 6], d: [4] },
+  { e: [8], f: [6, 10] },
+];
+
+arr.filter(obj => {
+  return Object.values(obj).every(numArray => {
+    return numArray.every(num => num % 2 === 0);
+  });
+});
+
+```
+
+## Practice Problem 16
+
+```javascript
+
+let arr = [['a', 1], ['b', 'two'], ['sea', {'c': 3}], ['D', ['a', 'b', 'c']]];
+
+Object.fromEntries(arr);
+
+let obj = {};
+
+arr.forEach(subarr => {
+  let key = subarr[0];
+  let val = subarr[1];
+  obj[key] = val;
+});
+
+```
+
+## Practice Problem 17
+
+# 5.6 Summary
+https://launchschool.com/lessons/778acada/assignments/b5397b47
+
+# Lesson 5 Quiz 1
+https://launchschool.com/lessons/778acada/assignments/96cdcf45

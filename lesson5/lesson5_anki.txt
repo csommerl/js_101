@@ -13,3 +13,4 @@ term first-class value or first-class object; 1. They can be assigned to a varia
 What makes the declarative style of programming possible; this is made possible because we can treat functions as values; js101
 Higher Order Functions; Functions that take other functions as arguments, as well as functions that return other functions; js101
 five things to identify when interpreting code; 1. type of action, 2. which value (& type of value) the action is performed on, 3. what side-effect results, 4. what value is returned, 5. whether the return value is used by what initiated the action; js101
+universally unique identifier (UUID); a 128-bit label used for information in computer systems, When generated according to the standard methods, UUIDs are, for practical purposes, unique.; js101
