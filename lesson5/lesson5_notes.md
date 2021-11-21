@@ -438,3 +438,45 @@ arr.map(subarr => {
 
 ## Practice Problem 10
 https://launchschool.com/lessons/778acada/assignments/8c5df017
+```javascript
+
+let arr = [['b', 'c', 'a'], [2, 11, -3], ['blue', 'black', 'green']];
+
+arr.map(subarr => {
+  if (typeof subarr[0] === 'string') {
+    return subarr.slice().sort().reverse();
+  } else {
+    return subarr.slice().sort((a, b) => b - a);
+  }
+})
+
+```
+
+## Practice Problem 11
+```javascript
+
+let arr = [{ a: 1 }, { b: 2, c: 3 }, { d: 4, e: 5, f: 6 }];
+
+arr.map(obj => {
+  let entries = Object.entries(obj);
+  entries = entries.map(entry => {
+    entry[1] += 1;
+    return entry;
+  });
+  return Object.fromEntries(entries);
+});
+
+// theirs
+arr.map(obj => {
+  let newObj = {};
+  for (let key in obj) {
+    newObj[key] = obj[key] + 1;
+  }
+  return newObj;
+})
+
+```
+
+## Practice Problem 12
+https://launchschool.com/lessons/778acada/assignments/8c5df017
+
