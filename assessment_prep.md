@@ -67,6 +67,7 @@
 - [ ] [Lesson 5.5, Practice Problem 11](https://launchschool.com/lessons/778acada/assignments/8c5df017)
 - [ ] [Lesson 5.5, Practice Problem 14](https://launchschool.com/lessons/778acada/assignments/8c5df017)
 - [ ] [Lesson 5.5, Practice Problem 17](https://launchschool.com/lessons/778acada/assignments/8c5df017)
+- [ ] [Lesson 5 Quiz, Question 4](https://launchschool.com/quizzes/cd3540bb)
 
 # Cheatsheet
 - [ ] string methods

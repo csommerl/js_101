@@ -36,7 +36,7 @@ Object.isFrozen(); method that determines if an object is frozen.; js101
 # 5.4 Working with Callback Functions
 https://launchschool.com/lessons/778acada/assignments/a2ba7936
 
-term first-class value or first-class object
+first-class value or first-class object
 1. They can be assigned to a variable or an element of a data structure (such as an array or object).
 2. They can be passed as an argument to a function.
 3. They can be returned as the return value of a function.

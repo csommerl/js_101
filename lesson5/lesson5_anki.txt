@@ -9,7 +9,7 @@ JSON.stringify(); method that converts a JavaScript object or value (only having
 indirect way to make a deep copy of an obj or arr; JSON.parse(JSON.stringify(obj)); js101
 limitation of indirect way to make a deep copy; only works with nested arrays and plain objects; js101
 Object.isFrozen(); method that determines if an object is frozen.; js101
-term first-class value or first-class object; 1. They can be assigned to a variable or an element of a data structure (such as an array or object). 2. They can be passed as an argument to a function. 3. They can be returned as the return value of a function.; js101
+first-class value or first-class object; 1. They can be assigned to a variable or an element of a data structure (such as an array or object). 2. They can be passed as an argument to a function. 3. They can be returned as the return value of a function.; js101
 What makes the declarative style of programming possible; this is made possible because we can treat functions as values; js101
 Higher Order Functions; Functions that take other functions as arguments, as well as functions that return other functions; js101
 five things to identify when interpreting code; 1. type of action, 2. which value (& type of value) the action is performed on, 3. what side-effect results, 4. what value is returned, 5. whether the return value is used by what initiated the action; js101
