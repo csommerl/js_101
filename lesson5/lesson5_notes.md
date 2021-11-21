@@ -480,3 +480,32 @@ arr.map(obj => {
 ## Practice Problem 12
 https://launchschool.com/lessons/778acada/assignments/8c5df017
 
+```javascript
+let arr = [[2], [3, 5, 7], [9], [11, 15, 18]];
+
+arr.map(subarr => {
+  return subarr.filter(num => (num % 3) === 0);
+});
+
+```
+
+## Practice Problem 13
+```javascript
+
+let arr = [[1, 6, 7], [1, 5, 3], [1, 8, 3]];
+
+[...arr].sort((a, b) => {
+  let sumOfOddInA = getSumOfOddInArray(a);
+  let sumOfOddinB = getSumOfOddInArray(b);
+  return sumOfOddInA - sumOfOddinB;
+});
+
+function getSumOfOddInArray(arr) {
+  return arr
+    .filter(num => (num % 2) === 1)
+    .reduce((accum, num) => accum + num, 0);
+}
+
+```
+
+## Practice Problem 14
