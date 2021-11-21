@@ -610,3 +610,34 @@ https://launchschool.com/exercise_sets/e46f01e3
 
 ## Rotation (Part 1)
 https://launchschool.com/exercises/d00dcc58
+
+## Rotation (Part 2)
+https://launchschool.com/exercises/38185d87
+
+Problem:
+- inputs:
+  - number to rotate
+  - count of digits to rotates
+- Output:
+  - rotated number
+
+The function returns the same number, except that for the number of digits at the end number (as specified by count), it performs a rotation, i.e., moves the first of those numbers to the end
+
+Data Structure
+- need to convert to string
+- then convert to array
+- then convert back to a number
+
+Algorithem
+1. Convert number to string and then to array.
+2. Split the array into two parts
+  - the first digits that will be unaffected
+  - the last digits that will be affected
+3. For the last digits to be affected, perform rotation
+4. Join the two arrays
+5. return
+
+## Rotation (Part 3)
+https://launchschool.com/exercises/3d704505
+
+Problem
