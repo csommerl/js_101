@@ -641,3 +641,33 @@ Algorithem
 https://launchschool.com/exercises/3d704505
 
 Problem
+735291
+0. 352917
+1. 329175
+2. 321759
+3. 321597
+4. 321579
+
+input: integer
+output: integer that is maximally rotated
+
+explicit rules
+1. on first (zero) iteration, rotate first digit to last digit
+2. on remaining iterations, keep the first digits in place
+
+Implicit:
+3. the number of digits to keep in place is equivalent to the iteration idx, if idx starts from 0
+
+Algo
+1. create string of num
+2. create a loop for rotating, to rotate a maximum of the times equivalent to the length of the string minus 1
+3. on each iteration, split the string in to two halves
+  1. first half is from 0 to 0 plus idx
+  2. second half is from 0 plus idx to end
+4. on each iteration, use rotateString on second hlaf
+5. combine both halves
+6. return new string
+
+## Stack Machine Interpretation
+https://launchschool.com/exercises/026e99f0
+
