@@ -671,3 +671,10 @@ Algo
 ## Stack Machine Interpretation
 https://launchschool.com/exercises/026e99f0
 
+Lesson
+  - can use conditionals within switch's default statement to cover various cases
+
+## Word to Digit
+https://launchschool.com/exercises/9010f84f
+
+Problem

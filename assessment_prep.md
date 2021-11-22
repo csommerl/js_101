@@ -13,7 +13,7 @@
 - [ ] https://launchschool.com/exercises/0d29694b
 - [ ] https://launchschool.com/exercises/f9dd9171
 
-# JS101 Small Problems to Redo
+# JS101 Easy Small Problems to Redo
 - [ ] [Short Long Short](https://launchschool.com/exercises/c55f9982)
 - [ ] [Convert a String to a Number!](https://launchschool.com/exercises/a5d2d50f)
 - [ ] [Convert a String to a Signed Number!](https://launchschool.com/exercises/6974d7f2)
@@ -26,6 +26,9 @@
 - [ ] [Alphabetical Numbers](https://launchschool.com/exercises/6a49d690)
 - [ ] [Leading Substrings, Further Exploration](https://launchschool.com/exercises/50f14ae3)
 - [ ] [Sum of Sums, Further Exploration](https://launchschool.com/exercises/6187c3ec)
+
+# JS101 Medium Small Problems to Redo
+- [ ] [Stack Machine Interpretation](https://launchschool.com/exercises/026e99f0)
 
 # JS101 Exercises to Redo
 

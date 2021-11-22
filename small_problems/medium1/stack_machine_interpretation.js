@@ -1,7 +1,101 @@
 // Stack Machine Interpretation https://launchschool.com/exercises/026e99f0
 
-function minilang(command) {
-  
+
+// // first
+// function minilang(command) {
+//   let stack = [];
+//   let register = 0;
+//   let words = command.split(' ');
+
+//   for (let idx = 0; idx < words.length; idx += 1) {
+//     if (parseInt(words[idx])) {
+//       // stack.push(register);
+//       register = parseInt(words[idx]);
+//       continue;
+//     }
+
+//     switch (words[idx]) {
+//       case 'ADD':
+//         register += stack.pop();
+//         break;
+//       case 'DIV':
+//         register = parseInt(register / stack.pop());
+//         break;
+//       case 'MULT':
+//         register *= stack.pop();
+//         break;
+//       case 'POP':
+//         register = stack.pop();
+//         break;
+//       case 'PRINT':
+//         console.log(register);
+//         break;
+//       case 'PUSH':
+//         stack.push(register);
+//         break;
+//       case 'REMAINDER':
+//         register = parseInt(register % stack.pop());
+//         break;
+//       case 'SUB':
+//         register -= stack.pop();
+//         break;
+//       default:
+//         console.log(`${words[idx]} is not a recognized command.`);
+//     }
+//   }
+// }
+
+// first
+function minilang(program) {
+  let stack = [];
+  let register = 0;
+
+  program.split(' ').forEach(cmd => {
+    switch (cmd) {
+      case 'ADD':
+        register += stack.pop();
+        break;
+      case 'DIV':
+        register = parseInt(register / stack.pop());
+        break;
+      case 'MULT':
+        register *= stack.pop();
+        break;
+      case 'POP':
+        if (stack.length === 0) {
+          stackEmptyError();
+          break;
+        }
+        register = stack.pop();
+        break;
+      case 'PRINT':
+        console.log(register);
+        break;
+      case 'PUSH':
+        stack.push(register);
+        break;
+      case 'REMAINDER':
+        register = parseInt(register % stack.pop());
+        break;
+      case 'SUB':
+        register -= stack.pop();
+        break;
+      default:
+        if (parseInt(cmd)) {
+          register = parseInt(cmd);
+        } else {
+          commandError(cmd);
+        }
+    }
+  });
+}
+
+function commandError(cmd) {
+  throw `\n\tCommandError: command ${cmd} not found.\n`;
+}
+
+function stackEmptyError() {
+  throw '\n\tStackEmptyError: attempted to POP from empty stack\n';
 }
 
 minilang('PRINT');
@@ -35,3 +129,7 @@ minilang('-3 PUSH 5 SUB PRINT');
 
 minilang('6 PUSH');
 // (nothing is printed because the `program` argument has no `PRINT` commands)
+
+minilang('POP');
+
+// minilang('BADCOMMAND');

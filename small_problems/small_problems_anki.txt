@@ -27,3 +27,6 @@ Difference in behavior between 0 & -0; the only main difference has to do with d
 How to determine whether 0 and -0 are the same; use Object.is(), since you can't test with equality; js101
 Regex //i meaning; Tells the regex engine to ignore case.; js101
 arguments reserved keyword; an Array-like object accessible inside functions that contains the values of the arguments passed to that function. Can be used, e.g., in guard clauses. Note that arrow functions do not have access to the arguments object.; js101
+stack; a list of values that grows and shrinks dynamically; js101
+stack-and-register programming language; a language that uses a stack of values; js101
+register; can be thought of as the current value, not part of the stack; js101
