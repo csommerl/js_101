@@ -702,3 +702,11 @@ Could also use replaceAll
 
 ## Fibonacci Numbers (Recursion)
 https://launchschool.com/exercises/2a0d956d
+
+Three qualities of a good recursive function
+1. calls itself at least once
+2. has an ending condition
+3. results of each recursion are used in each step
+
+## Fibonacci Numbers (Procedural)
+https://launchschool.com/exercises/13738ab2
