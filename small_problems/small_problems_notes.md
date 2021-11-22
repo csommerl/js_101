@@ -678,3 +678,27 @@ Lesson
 https://launchschool.com/exercises/9010f84f
 
 Problem
+input: string
+output: string
+rules: transform each instance of a number word to a digit character
+
+Data structure
+- use object as dictionary to compare to
+- convert string to array to loop over it (alternatively: could loop over object keys and use something like replace on string)
+
+Algo
+1. Create dictionary of number words to digits
+2. split string into an array of words
+3. create result string/array
+4. loop over array of words
+  1. if word is a dictionary key, replace
+  2. otherwise, keep original word
+  3. add to result string
+5. return result string
+
+Problem case: 'four.'
+
+Could also use replaceAll
+
+## Fibonacci Numbers (Recursion)
+https://launchschool.com/exercises/2a0d956d

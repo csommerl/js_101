@@ -29,6 +29,7 @@
 
 # JS101 Medium Small Problems to Redo
 - [ ] [Stack Machine Interpretation](https://launchschool.com/exercises/026e99f0)
+- [ ] [Word to Digit](https://launchschool.com/exercises/9010f84f)
 
 # JS101 Exercises to Redo
 

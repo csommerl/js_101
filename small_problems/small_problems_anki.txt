@@ -30,3 +30,6 @@ arguments reserved keyword; an Array-like object accessible inside functions tha
 stack; a list of values that grows and shrinks dynamically; js101
 stack-and-register programming language; a language that uses a stack of values; js101
 register; can be thought of as the current value, not part of the stack; js101
+How to create a regular expression with a variable; Use let re = new RegExp('ab+c', 'i'); js101
+regexp \b; anchors regex matches to word boundaries; js101
+When do word boundaries occur?; 1) between any pair of characters, one of which is a word character and one which is not. 2) at the beginning of a string if the first character is a word character. 3) at the end of a string if the last character is a word character.; js101
