@@ -710,3 +710,14 @@ Three qualities of a good recursive function
 
 ## Fibonacci Numbers (Procedural)
 https://launchschool.com/exercises/13738ab2
+
+## Fibonacci Numbers (Memoization)
+https://launchschool.com/exercises/f3bfa787
+
+memoization; approach that involves saving a computed answer for future reuse, instead of computing it from scratch every time it is needed; js101
+
+# Medium 2
+https://launchschool.com/exercise_sets/63373094
+
+## Lettercase Percentage Ratio
+https://launchschool.com/exercises/71983fb9

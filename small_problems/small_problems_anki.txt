@@ -34,3 +34,4 @@ How to create a regular expression with a variable; Use let re = new RegExp('ab+
 regexp \b; anchors regex matches to word boundaries; js101
 When do word boundaries occur?; 1) between any pair of characters, one of which is a word character and one which is not. 2) at the beginning of a string if the first character is a word character. 3) at the end of a string if the last character is a word character.; js101
 Three qualities of a good recursive function; 1. calls itself at least once, 2. has an ending condition, 3. results of each recursion are used in each step; js101
+memoization; approach that involves saving a computed answer for future reuse, instead of computing it from scratch every time it is needed; js101
