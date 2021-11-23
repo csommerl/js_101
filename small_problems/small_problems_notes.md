@@ -721,3 +721,6 @@ https://launchschool.com/exercise_sets/63373094
 
 ## Lettercase Percentage Ratio
 https://launchschool.com/exercises/71983fb9
+
+## Triangle Sides
+https://launchschool.com/exercises/b932118f
