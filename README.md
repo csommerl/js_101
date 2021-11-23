@@ -21,6 +21,13 @@
 5. **Code**
   - implement the algorithm
 
+# Node command line
+How to access a function in a file using node's terminal:
+1. in file:
+  - `module.exports = { functionName };`
+2. in node:
+  - `const functionName = require('./filename').functionName`
+
 # Pseudocode
 Keyword = Meaning
 START	= start of the program

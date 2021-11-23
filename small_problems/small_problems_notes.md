@@ -724,3 +724,31 @@ https://launchschool.com/exercises/71983fb9
 
 ## Triangle Sides
 https://launchschool.com/exercises/b932118f
+
+Problem
+- input: three numbers, for the lengths of three sides
+- output: string of the classification
+- Explicit rules
+  - to be a valid triangle, two conditions:
+    1. the sum of the length of the two shortest sides must be greater than the length of the longest side
+    2. every side must have a length greater than 0
+  - equilater = equal sides
+  - isosceles = two equal sides
+  - scalene = different lengths
+
+Data
+- maybe create array, in order to sort sides
+
+Algorithm
+1. create array from three side numbers
+2. sort array from smallest to largest
+3. if not every element is greater than 0, return invalid
+4. if sum of first two sides is not greater than third, return invalid
+5. if three sides are equal, return equilateral
+6. if two sides are equal, return isoceles
+7. else, return scalene
+
+How to access a function in a file using node's terminal; in file: module.exports = { functionName }, and in node: const functionName = require('./filename').functionName; js101
+
+## Tri-Angles
+https://launchschool.com/exercises/4a3e10a1
