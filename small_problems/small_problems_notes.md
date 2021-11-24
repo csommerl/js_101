@@ -804,3 +804,7 @@ Lesson:
 
 ## Bubble Sort
 https://launchschool.com/exercises/b648e695
+
+input: array
+output: same array, sorted
+
