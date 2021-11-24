@@ -755,3 +755,17 @@ https://launchschool.com/exercises/4a3e10a1
 
 ## Unlucky Days
 https://launchschool.com/exercises/071f5a1a
+
+input: year
+output: integer of the number of Friday the 13ths
+
+assumption: year greater than 1752
+
+1. create count variable and set to 0
+2. create date object for January 1
+3. for each day in the year, test whether it is both Friday and the 13th day of a month. If so, add to count
+4. return count
+
+## Next Featured Number Higher than a Given Value
+https://launchschool.com/exercises/135a426a
+
