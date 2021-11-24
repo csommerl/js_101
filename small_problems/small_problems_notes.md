@@ -798,3 +798,9 @@ Lesson
 
 ## Sum Square - Square Sum
 https://launchschool.com/exercises/68603298
+
+Lesson:
+- Don't create a more sophisticated data structure (e.g., array, obj) when you don't have to
+
+## Bubble Sort
+https://launchschool.com/exercises/b648e695
