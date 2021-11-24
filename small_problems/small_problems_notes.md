@@ -769,3 +769,32 @@ assumption: year greater than 1752
 ## Next Featured Number Higher than a Given Value
 https://launchschool.com/exercises/135a426a
 
+input: integer
+output: integer, which is the next largest number that is a featured integer
+
+featured number
+  1. an odd number
+  2. a multiple of 7
+  3. all of its digits occur exactly once each
+
+NOTE: The largest possible featured number is 9876543201.
+
+1. set variable nextFeatured
+2. set candidate = num
+2. loop until the next featured number is found
+  1. add one to candidate
+  1. if not odd, continue
+  2. if not multiple of 7, continue
+  3. if not all digits occur exactly once, continue *
+  4. else: set nextFeatured = candidate and break
+3. return nextFeatured
+
+*
+1. convert to String, and then to array
+2. test whether each array elem is not equal to the remaining elements
+
+Lesson
+- Use dictionary to keep track of whether a value already exists, and it will break with first instance
+
+## Sum Square - Square Sum
+https://launchschool.com/exercises/68603298
