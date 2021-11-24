@@ -1,21 +1,78 @@
 // Bubble Sort https://launchschool.com/exercises/b648e695
 
+// // first version
+// function bubbleSort(arr) {
+//   while (!arr.every((elem, idx) => {
+//     if (idx === arr.length - 1) return true;
+//     return arr[idx] < arr[idx + 1];
+//   })) {
+//     oneIterationOfBubbleSort(arr);
+//   }
+// }
+
+// function oneIterationOfBubbleSort(arr) {
+//   for (let idx = 0; idx < arr.length - 1; idx += 1) {
+//     if (arr[idx] > arr[idx + 1]) {
+//       arr.splice(idx, 2, arr[idx + 1], arr[idx]);
+//     }
+//   }
+// }
+
+// // second version
+// function bubbleSort(arr) {
+//   let swapped = true;
+//   while (swapped) {
+//     swapped = false;
+//     for (let idx = 0; idx < arr.length - 1; idx += 1) {
+//       if (arr[idx] > arr[idx + 1]) {
+//         swapped = true;
+//         arr.splice(idx, 2, arr[idx + 1], arr[idx]);
+//       }
+//     }
+//   }
+// }
+
+// // third version
+// function bubbleSort(arr) {
+//   while (true) {
+//     let swapped = false;
+//     for (let idx = 0; idx < arr.length - 1; idx += 1) {
+//       if (arr[idx] > arr[idx + 1]) {
+//         swapped = true;
+//         arr.splice(idx, 2, arr[idx + 1], arr[idx]);
+//       }
+//     }
+//     if (!swapped) break;
+//   }
+// }
+
+// // fourth version
+// function bubbleSort(arr) {
+//   while (true) {
+//     let swapped = false;
+//     for (let idx = 0; idx < arr.length - 1; idx += 1) {
+//       if (arr[idx] > arr[idx + 1]) {
+//         swapped = true;
+//         [arr[idx], arr[idx + 1]] = [arr[idx + 1], arr[idx]];
+//       }
+//     }
+//     if (!swapped) break;
+//   }
+// }
+
+// fifth version
 function bubbleSort(arr) {
-  while (!arr.every((elem, idx) => {
-    if (idx === arr.length - 1) return true;
-    return arr[idx] < arr[idx + 1];
-  })) {
-    oneIterationOfBubbleSort(arr);
+  while (true) {
+    let swapped = false;
+    for (let idx = 1; idx < arr.length; idx += 1) {
+      if (arr[idx] >= arr[idx - 1]) continue;
+      swapped = true;
+      [arr[idx - 1], arr[idx]] = [arr[idx], arr[idx - 1]];
+    }
+    if (!swapped) break;
   }
 }
 
-function oneIterationOfBubbleSort(arr) {
-  for (let idx = 0; idx < arr.length - 1; idx += 1) {
-    if (arr[idx] > arr[idx + 1]) {
-      arr.splice(idx, 2, arr[idx + 1], arr[idx]);
-    }
-  }
-}
 
 let array1 = [5, 3];
 bubbleSort(array1);

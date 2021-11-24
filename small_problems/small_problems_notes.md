@@ -808,3 +808,10 @@ https://launchschool.com/exercises/b648e695
 input: array
 output: same array, sorted
 
+Lesson:
+- keep a variable that tracks whether changes have been made
+
+## Longest Sentence
+https://launchschool.com/exercises/a89915a7
+
+What to do when there are two longest sentences?
