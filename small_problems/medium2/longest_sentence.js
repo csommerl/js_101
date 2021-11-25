@@ -16,21 +16,52 @@
 //   `\nThe longest sentence has ${longestSentence.split(' ').length} words.`);
 // }
 
+// // revised
+// function longestSentence(str) {
+//   const PUNCTUATION = '.!?';
+
+//   let words = str.split(' ');
+//   let current = [];
+//   let longest = [];
+
+//   words.forEach(word => {
+//     current.push(word);
+//     if (current.length > longest.length) longest = current;
+//     if (PUNCTUATION.includes(word[word.length - 1])) current = [];
+//   });
+
+//   console.log(`${longest.join(' ')}\n`);
+//   console.log(`The longest sentence has ${longest.length} words.\n`);
+// }
+
+// // based on theirs
+// function longestSentence(str) {
+//   let sentences = str.match(/\w.*?[.?!]/g);
+//   let longest = '';
+//   sentences.forEach(sentence => {
+//     if (sentence.split(/\s/).length > longest.split(/\s/).length) longest = sentence;
+//   });
+
+//   console.log(`${longest}\n`);
+//   console.log(`The longest sentence has ${longest.split(/\s/).length} words.\n`);
+// }
+
+// based on theirs
 function longestSentence(str) {
-  const PUNCTUATION = '.!?';
+  let sentences = str.match(/\w.*?[.?!]/g);
+  let longest = sentences.reduce((longest, sentence) => {
+    let sentenceLength = sentence.split(/\s/).length;
+    if (sentenceLength > longest['length']) {
+      return {content: sentence, length: sentenceLength};
+    } else {
+      return longest;
+    }
+  }
+  , {content: '', length: 0}
+  );
 
-  let words = str.split(' ');
-  let current = [];
-  let longest = [];
-
-  words.forEach(word => {
-    current.push(word);
-    if (current.length > longest.length) longest = current;
-    if (PUNCTUATION.includes(word[word.length - 1])) current = [];
-  });
-
-  console.log(`${longest.join(' ')}\n`);
-  console.log(`The longest sentence has ${longest.length} words.\n`);
+  console.log(`${longest['content']}\n`);
+  console.log(`The longest sentence has ${longest['length']} words.\n`);
 }
 
 let longText =

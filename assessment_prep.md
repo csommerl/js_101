@@ -33,6 +33,7 @@
 - [ ] [Fibonacci Numbers (Memoization)](https://launchschool.com/exercises/f3bfa787)
 - [ ] [Lettercase Percentage Ratio](https://launchschool.com/exercises/71983fb9)
 - [ ] [Bubble Sort](https://launchschool.com/exercises/b648e695)
+- [ ] [Longest Sentence](https://launchschool.com/exercises/a89915a7)
 
 # JS101 Exercises to Redo
 

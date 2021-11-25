@@ -37,3 +37,10 @@ Three qualities of a good recursive function; 1. calls itself at least once, 2. 
 memoization; approach that involves saving a computed answer for future reuse, instead of computing it from scratch every time it is needed; js101
 Lexical Scope; in a nested group of functions, the inner functions have access to the variables and other resources of their parent scope. This means that the child's functions are lexically bound to the execution context of their parents. Sometimes referred to as static scope; js101
 How to access a function in a file using node's terminal; in file: module.exports = { functionName }, and in node: const functionName = require('./filename').functionName; js101
+\w; Matches any alphanumeric character from the basic Latin alphabet, including the underscore. Equivalent to [A-Za-z0-9_].; js101
+Regex meaning of .; 1) Matches any single character except line terminators, 2) Inside a character class, the dot loses its special meaning and matches a literal dot.; js101
+Regex meaning of x*; Matches the preceding item "x" 0 or more times.; js101
+Regex meaning of x?; Matches the preceding item "x" 0 or 1 times. If used immediately after any of the quantifiers *, +, ?, or {}, makes the quantifier non-greedy (matching the minimum number of times), as opposed to the default, which is greedy (matching the maximum number of times).; js101
+Regex meaning of .*?; any number of characters (even zero characters); js101
+with Regex, how to get sentences of a text and put them in an array; let sentences = text.match(/\w.*?[.!?]/g); js101
+\s; Matches a single white space character, including space, tab, form feed, line feed, and other Unicode spaces.; js101

@@ -815,3 +815,11 @@ Lesson:
 https://launchschool.com/exercises/a89915a7
 
 What to do when there are two longest sentences?
+
+# Interpretive Problem Solving
+https://launchschool.com/exercise_sets/df57306a
+
+## 1000 Lights
+https://launchschool.com/exercises/4dfb6228
+
+Problem
