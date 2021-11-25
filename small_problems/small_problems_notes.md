@@ -839,3 +839,47 @@ Problem
 
 ## Diamonds
 https://launchschool.com/exercises/02297071
+
+Problem:
+- input: odd integer
+- output: four cornered diamond / **no return value**
+- requirements:
+  - the integer corresponds to the largest row length
+  - the integer also corresponds to the number of rows
+  - must ascend to length and descend
+  - must prepend spaces: equal to `(num - starsInRow) / 2`
+
+1. loop beginning with 1 and up to num, increment by 2
+2. create output: spaces `(num - starsInRow) / 2` + * = idx
+3. loop beginning with num up to num, decrement by 2
+4. create output: spaces `(num - starsInRow) / 2` + * = idx
+
+Lesson:
+- sometimes it's useful to use a while loop in order to modify the increment.
+
+hollow diamond
+- frontSpaces === `(num - idx) / 2`
+- diamondWidth === `idx`
+- middlesSpaces === `idx - 2` or `0`
+
+`num = 3`
+- (3 - 1) / 2 === 1
+- 
+- middleSpaces = 
+
+- (3 - 3) / 2 === 0
+- (idx - ) === (3 - )
+
+
+0
+1
+3
+5
+7
+5
+3
+1
+0
+
+## Now I Know My ABCs
+https://launchschool.com/exercises/d219156d
