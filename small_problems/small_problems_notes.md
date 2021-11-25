@@ -823,3 +823,19 @@ https://launchschool.com/exercise_sets/df57306a
 https://launchschool.com/exercises/4dfb6228
 
 Problem
+- input: count of switches
+- output: integer of total number of switches that are left on
+
+1. create array switches (with length equal to count?)
+2. create array of lightsOn
+3. for each num through count, perform the following
+  4. create count of lights on for the round
+  5. began at num and increment by num
+  6. for each switch at an idx of num, **toggle**
+    7. if switch is falsy, set to 1 and update count by 1
+    8. if switch is truthy, set to 0
+  7. push round lights on to array of lights on
+9. Return array of lights on
+
+## Diamonds
+https://launchschool.com/exercises/02297071
