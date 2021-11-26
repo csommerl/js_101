@@ -950,7 +950,7 @@ Algo
   - begin with index 0 and continue up to but not including the integer below num / 2
   - for each idx,
     - set firstPaddingLength = idx
-    - set secondPaddingLength === (num - firstPaddingLength - asterisks.length) / 2
+    - set secondPaddingLength === (num - (firstPaddingLength * 2) - asterisks.length) / 2
     - set thirdPaddingLength === (num - firstPaddingLength - asterisks.length) / 2
     - create paddings = ' ' repeated for appropriate length
   - Create string: firstPadding + 'asterisks[0]' + secondPadding + asterisks[1] + thirdPadding + asterisks[2]
@@ -959,4 +959,11 @@ Algo
   - create string of length num, with * in every position
   - log to console
 3. create second half
-  - begin with index 2
+  - begin with midpoint - 1
+
+
+*  *  *
+ * * *
+  * * *
+   ***
+*******
