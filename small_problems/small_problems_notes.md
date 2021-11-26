@@ -883,3 +883,35 @@ hollow diamond
 
 ## Now I Know My ABCs
 https://launchschool.com/exercises/d219156d
+
+Problem
+
+input: word-string
+output: boolean
+
+Requirements:
+1. each block can only be used once
+2. only one letter per block can be used
+3. letters are case-insensitive
+
+Algo
+1. create copy of spelling blocks, `blocks`
+2. for each char in string, search for block
+  - if block found, remove block and continue
+  - if block not found, return false
+3. return true
+
+Create copy
+1. creat blank array
+2. for each elem of spelling blocks, add [...elem] to blank array
+3. return array
+
+Find block algorithm
+for each subarray in blocks:
+1. if block includes char:
+  - remove block
+  - return true
+return false
+
+## Seeing Stars
+https://launchschool.com/exercises/e41ecf03

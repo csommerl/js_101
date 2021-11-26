@@ -7,6 +7,8 @@
 # Quizzes to Retake
 - [ ] [Lesson 1 Quiz 1](https://launchschool.com/lessons/c5707865/assignments/289bfa86)
 - [ ] [Lesson 2 Quiz 1](https://launchschool.com/lessons/64655364/assignments/358c288b)
+- [ ] [Lesson 4 Quiz 1](https://launchschool.com/lessons/60e10aa5/assignments/cb4e0a29)
+- [ ] [Lesson 5 Quiz 1](https://launchschool.com/lessons/778acada/assignments/96cdcf45)
 
 # JS100 Exercises to Redo
 - [ ] https://launchschool.com/exercises/aba8a530
@@ -31,6 +33,9 @@
 - [ ] [Stack Machine Interpretation](https://launchschool.com/exercises/026e99f0)
 - [ ] [Word to Digit](https://launchschool.com/exercises/9010f84f)
 - [ ] [Fibonacci Numbers (Memoization)](https://launchschool.com/exercises/f3bfa787)
+
+Optional:
+- [ ] [Now I Know My ABCs](https://launchschool.com/exercises/d219156d) 
 - [ ] [Lettercase Percentage Ratio](https://launchschool.com/exercises/71983fb9)
 - [ ] [Bubble Sort](https://launchschool.com/exercises/b648e695)
 - [ ] [Longest Sentence](https://launchschool.com/exercises/a89915a7)
