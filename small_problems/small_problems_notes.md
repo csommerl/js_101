@@ -915,3 +915,48 @@ return false
 
 ## Seeing Stars
 https://launchschool.com/exercises/e41ecf03
+
+Problem
+- input: odd integer, 7 or greater
+- output: 8-pointed star in NxN grid
+
+Requirements:
+- number of rows = `num`
+- each row has a length of `num`
+- midpoint = `Math.floor(num / 2)`
+- for each row up until row === midpoint
+  - first * at 0, then 0 + 1, etc.
+  - second * at num, then num - 1, etc.
+- padding:
+  - 0, 0 + 1, up until `(num - 3) / 2`
+  - `(num - 3) / 2`, then -1, etc.
+  - `(num - 3) / 2`, then -1, etc.
+
+```javascript
+['*', ' ', ' ', '*', ' ', ' ', '*']
+midpoint = arr[Math.floor(num / 2)]
+firstPadding = num - 3 - secondPadding - thirdPadding
+secondPadding = (num - 3) / 2 // -= 1
+thirdPadding = (num - 3) / 2 // -= 1
+
+firstPadding = idx // += 1
+secondPadding = (num - firstPadding - 3) / 2
+thirdPadding = (num - firstPadding - 3) / 2
+```
+
+Algo
+0. asterisks = '***'
+1. create first half
+  - begin with index 0 and continue up to but not including the integer below num / 2
+  - for each idx,
+    - set firstPaddingLength = idx
+    - set secondPaddingLength === (num - firstPaddingLength - asterisks.length) / 2
+    - set thirdPaddingLength === (num - firstPaddingLength - asterisks.length) / 2
+    - create paddings = ' ' repeated for appropriate length
+  - Create string: firstPadding + 'asterisks[0]' + secondPadding + asterisks[1] + thirdPadding + asterisks[2]
+  - log string to console
+2. create middle row
+  - create string of length num, with * in every position
+  - log to console
+3. create second half
+  - begin with index 2
