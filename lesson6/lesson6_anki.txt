@@ -1,0 +1,7 @@
+in Node debugger, repl command; in Node debugger, command that provides a repl that without using exec, you can access variables that are in scope at the point where program execution was paused, and you can evaluate expressions or execute functions; js101
+in Node debugger, setBreakpoint() / sb(); in Node debugger, command that can be used without an argument to set a breakpoint on the current line, or with a line number passed as an argument in order to set a breakpoint on the line specified.; js101
+in Node debugger, clearBreakpoint() / cb(); in Node debugger, command that takes two arguments, the name of the file and the line number.; js101
+in Node debugger, list() command; in Node debugger, command that by default will show 5 lines above & below, and with an argument will show a specified number of lines above & below; js101
+in Node debugger, step/s command; in Node debugger, command that lets you go inside a function and see how the function is executing line by line till it returns and you go back to the next line right after the function call.; js101
+in Node debugger, out/o; in Node debugger, command that, if you have stepped in a function and now you want to skip seeing how the rest of the function is going to execute, you Step out and the function returns. Then, you go back to the next line, that is the line right after the function call.; js101
+in Node debugger, help command; in Node debugger, command that lists all of the commands that are available; js101
