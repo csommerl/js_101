@@ -76,3 +76,66 @@ Lessons:
 
 # 6.8 Assignment: TTT Bonus Features
 https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
+
+## Improved Join
+
+input:
+  - arr,
+  - optional delimiter, with default ', '
+  - optional final connector, with default 'or '
+output:
+  - delimited list, separated by delimiter and final connector
+
+Implicit Requirements:
+  - when arr is empty, ''
+  - when arr has one element, just that element
+  - when array has two elements, no delimiter
+
+Data Structure:
+  - create a new array with map, join with ('')
+
+### Pseudocode
+
+START
+
+Given arr, delimiter, finalConnector
+
+SET delimitedArr;
+
+IF arr length === 0
+  delimitedArr = []
+ELSE IF arr length === 1
+  delimitedArr = arr
+ELSE IF arr length === 2
+  add first element of arr to delimited Arr with ' ' + finalConnector + ' ' after it
+  add second element of arr to delimited Arr
+ELSE
+  FOR each elem in arr
+    IF elem is last
+      add finalConnector + ' ' to the front of it, and add to delimitedArr
+    ELSE
+      add delimiter to the end of it and add to delimitedArr
+
+SET strWithDelimiters = joined delimitedArr
+
+END
+
+## Keep Score
+
+## Computer AI: Defense
+
+## Computer AI: Offense
+
+## Computer Turn Refinements
+
+## Improve Play-Again Handling
+
+### Improve the game loop
+
+## On Your Own Ideas
+
+### Minimax algorithm
+
+### Bigger Board
+
+### More players

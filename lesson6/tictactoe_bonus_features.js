@@ -8,6 +8,17 @@ function prompt(msg) {
   console.log(`=> ${msg}`);
 }
 
+function joinOr(arr, delimiter = ', ', finalConnector = 'or') {
+  if (arr.length <= 1) {
+    return arr.join('');
+  } else if (arr.length === 2) {
+    return `${arr[0]} ${finalConnector} ${arr[1]}`;
+  } else {
+    return arr.slice(0, arr.length - 1).join(delimiter) +
+      `${delimiter}${finalConnector} ${arr[arr.length - 1]}`;
+  }
+}
+
 function displayBoard(board) {
   console.clear();
 
@@ -46,8 +57,8 @@ function playerChoosesSquare(board) {
   let square;
 
   while (true) {
-    prompt(`Choose a square from (${emptySquares(board).join(', ')}):`);
-    square = readline.question();
+    prompt(`Choose a square from (${joinOr(emptySquares(board))}):`);
+    square = readline.question().trim();
 
     if (emptySquares(board).includes(square)) break;
 
