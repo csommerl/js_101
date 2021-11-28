@@ -1,4 +1,12 @@
-// tictactoe.js
+const readline = require('readline-sync');
+
+const INITIAL_MARKER = ' ';
+const HUMAN_MARKER = 'X';
+const COMPUTER_MARKER = 'O';
+
+function prompt(msg) {
+  console.log(`=> ${msg}`);
+}
 
 function displayBoard(board) {
   console.log('');
@@ -18,12 +26,46 @@ function displayBoard(board) {
 
 function initializeBoard() {
   let board = {};
+
   for (let square = 1; square <= 9; square += 1) {
-    board[square] = ' ';
+    board[String(square)] = INITIAL_MARKER;
   }
+
   return board;
 }
 
+function emptySquares(board) {
+  return Object.keys(board).filter(key => board[key] === INITIAL_MARKER);
+}
+
+function playerChoosesSquare(board) {
+  let square;
+
+  while (true) {
+    prompt(`Choose a square from (${emptySquares(board).join(', ')}):`);
+    square = readline.question();
+
+    if (emptySquares(board).includes(square)) break;
+
+    prompt('Sorry, that isn\'t a valid choice.');
+  }
+
+  board[square] = HUMAN_MARKER;
+}
+
+function computerChoosesSquare(board) {
+  let randomIndex = Math.floor(Math.random() * emptySquares(board).length);
+
+  let square = emptySquares(board)[randomIndex];
+
+  board[square] = COMPUTER_MARKER;
+}
+
+// Main Program
 let board = initializeBoard();
+displayBoard(board);
+
+playerChoosesSquare(board);
+computerChoosesSquare(board);
 
 displayBoard(board);

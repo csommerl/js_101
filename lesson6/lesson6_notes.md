@@ -58,3 +58,12 @@ let testBoard = {
 
 # 6.5 Tic Tac Toe - Step 2 - Player and Computer Turn
 https://launchschool.com/lessons/fb4809a8/assignments/5bf3c690
+
+Lessons:
+  - extract and make separate functions anything that is duplicated
+  - if an if-else clause has a break, convert it to an if guard clause with the break, with the next statement after it for the other option
+  - Symbolic constants with well-chosen names remove the magical element and reveal the purpose of each value
+  - How to get a random index of an array?; Math.floor(Math.random() * array.length); js101
+
+# 6.6 Tic Tac Toe - Step 3 - The Main Game Loop
+https://launchschool.com/lessons/fb4809a8/assignments/79a4780e

@@ -5,3 +5,5 @@ in Node debugger, list() command; in Node debugger, command that by default will
 in Node debugger, step/s command; in Node debugger, command that lets you go inside a function and see how the function is executing line by line till it returns and you go back to the next line right after the function call.; js101
 in Node debugger, out/o; in Node debugger, command that, if you have stepped in a function and now you want to skip seeing how the rest of the function is going to execute, you Step out and the function returns. Then, you go back to the next line, that is the line right after the function call.; js101
 in Node debugger, help command; in Node debugger, command that lists all of the commands that are available; js101
+Symbolic constant; use these to avoid magic constants, and give them well-chosen names to reveal the purpose of each value, as well as to make it possible later to change the value; js101
+How to get a random index of an array?; Math.floor(Math.random() * array.length); js101
