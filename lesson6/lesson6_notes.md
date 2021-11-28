@@ -67,3 +67,12 @@ Lessons:
 
 # 6.6 Tic Tac Toe - Step 3 - The Main Game Loop
 https://launchschool.com/lessons/fb4809a8/assignments/79a4780e
+
+# 6.7 Tic Tac Toe - Step 4 - Determining the Winner
+https://launchschool.com/lessons/fb4809a8/assignments/2dd785c1
+
+Lessons: 
+  - append `!!` to guarantee that a truthy/falsy value is used when necessary
+
+# 6.8 Assignment: TTT Bonus Features
+https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
