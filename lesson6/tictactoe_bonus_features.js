@@ -143,7 +143,12 @@ function playMatch() {
     displayBoard(board);
     updateScore(board, score);
   }
-  // add match winner
+
+  if (score.Player === 5) {
+    prompt('You win the game!');
+  } else {
+    prompt('You lost to the computer. :-(');
+  }
 }
 
 while (true) {
