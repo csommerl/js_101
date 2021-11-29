@@ -3,9 +3,30 @@ const readline = require('readline-sync');
 const INITIAL_MARKER = ' ';
 const HUMAN_MARKER = 'X';
 const COMPUTER_MARKER = 'O';
+const GAMES_TO_WIN = 5;
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
+}
+
+function displayInstructions() {
+  prompt(`The first player to win ${GAMES_TO_WIN} games wins the overall match.`);
+  prompt('Press any key to continue.');
+  readline.keyIn();
+}
+
+function updateScore(board, score) {
+  if (someoneWon(board)) {
+    prompt(`${detectWinner(board)} won!`);
+    score[detectWinner(board)] += 1;
+  } else {
+    prompt('It\'s a tie!');
+    score.Tied += 1;
+  }
+
+  prompt(`You have won ${score.Player} games, lost ${score.Computer} games, and tied ${score.Tied} games.`);
+  prompt('Press any key to continue.');
+  readline.keyIn();
 }
 
 function joinOr(arr, delimiter = ', ', finalConnector = 'or') {
@@ -103,26 +124,31 @@ function boardFull(board) {
   return emptySquares(board).length === 0;
 }
 
-while (true) {
-  let board = initializeBoard();
+function playMatch() {
+  let score = {Player: 0, Computer: 0, Tied: 0};
 
-  while (true) {
+  while (score.Player < GAMES_TO_WIN && score.Computer < GAMES_TO_WIN) {
+    let board = initializeBoard();
+
+    while (true) {
+      displayBoard(board);
+
+      playerChoosesSquare(board);
+      if (someoneWon(board) || boardFull(board)) break;
+
+      computerChoosesSquare(board);
+      if (someoneWon(board) || boardFull(board)) break;
+    }
+
     displayBoard(board);
-
-    playerChoosesSquare(board);
-    if (someoneWon(board) || boardFull(board)) break;
-
-    computerChoosesSquare(board);
-    if (someoneWon(board) || boardFull(board)) break;
+    updateScore(board, score);
   }
+  // add match winner
+}
 
-  displayBoard(board);
-
-  if (someoneWon(board)) {
-    prompt(`${detectWinner(board)} won!`);
-  } else {
-    prompt('It\'s a tie!');
-  }
+while (true) {
+  displayInstructions();
+  playMatch();
 
   prompt('Play again? y/n');
   let answer = readline.question().toLowerCase()[0];

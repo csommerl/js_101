@@ -121,6 +121,8 @@ SET strWithDelimiters = joined delimitedArr
 END
 
 ## Keep Score
+https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
+// add match winner
 
 ## Computer AI: Defense
 
