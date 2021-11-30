@@ -162,6 +162,9 @@ Option 1:
 
 ## Computer Turn Refinements
 https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
+1. [x] offense first
+2. [x] middle square
+3. [ ] choose turns
 
 ## Improve Play-Again Handling
 

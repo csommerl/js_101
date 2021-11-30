@@ -9,6 +9,7 @@ const winningLines = [
   [1, 4, 7], [2, 5, 8], [3, 6, 9],  // columns
   [1, 5, 9], [3, 5, 7]              // diagonals
 ];
+const MIDDLE_SQUARE = '5';
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -109,8 +110,11 @@ function detectVulnerableSquare(board, marker) {
 function computerChoosesSquare(board) {
   let square;
 
+  // attempt to play middle square
+  if (emptySquares(board).includes(MIDDLE_SQUARE)) square = MIDDLE_SQUARE;
+
   // attempt to play offense
-  square = detectVulnerableSquare(board, COMPUTER_MARKER);
+  if (!square) square = detectVulnerableSquare(board, COMPUTER_MARKER);
 
   // attempt to play defense
   if (!square) square = detectVulnerableSquare(board, HUMAN_MARKER);
