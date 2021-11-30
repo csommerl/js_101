@@ -157,9 +157,11 @@ Option 1:
   - if someoneWon, then threat = empty square and break (cannot break if using forEach, but can go through all the empty squares just fine)
 3. return threat
 
-// Something is amiss when there isn't a valid choice
+// Something is amiss when there isn't a valid choice?
 
 ## Computer AI: Offense
+
+consolidate ai function into one computerChoosesSquare
 
 ## Computer Turn Refinements
 

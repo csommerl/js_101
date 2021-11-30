@@ -102,25 +102,40 @@ function computerChoosesRandomSquare(board) {
   board[square] = COMPUTER_MARKER;
 }
 
-function detectThreat(board) {
-  let threat = 0;
+function detectVulnerableSquare(board, marker) {
+  let vulnerableSquare = 0;
 
-  emptySquares(board).forEach(emptySquare => {  // returns the last threat
+  emptySquares(board).forEach(emptySquare => {  // returns the last threat, since there is no break statement
     let testBoard = Object.assign({}, board);
-    testBoard[emptySquare] = HUMAN_MARKER;
-    if (detectWinner(testBoard) === 'Player') threat = emptySquare;
+    testBoard[emptySquare] = marker;
+    if (marker === HUMAN_MARKER && detectWinner(testBoard) === 'Player') {  // could this be done better? e.g., avoid hard-coding?
+      vulnerableSquare = emptySquare;
+    }
+    if (marker === COMPUTER_MARKER && detectWinner(testBoard) === 'Computer') { // could this be done better? e.g., avoid hard-coding?
+      vulnerableSquare = emptySquare;
+    }
   });
 
-  return threat;
+  return vulnerableSquare;
 }
 
 function computerPlaysDefense(board) {
-  let threat = detectThreat(board);
+  let threat = detectVulnerableSquare(board, HUMAN_MARKER);
 
   if (threat) {
     board[threat] = COMPUTER_MARKER;
   } else {
     computerChoosesRandomSquare(board);
+  }
+}
+
+function computerPlaysOffense(board) {
+  let opportunity = detectVulnerableSquare(board, COMPUTER_MARKER);
+
+  if (opportunity) {
+    board[opportunity] = COMPUTER_MARKER;
+  } else {
+    computerPlaysDefense(board);
   }
 }
 
@@ -159,7 +174,8 @@ function playMatch() {
       if (someoneWon(board) || boardFull(board)) break;
 
       // computerChoosesSquare(board);
-      computerPlaysDefense(board);
+      // computerPlaysDefense(board);
+      computerPlaysOffense(board);
       if (someoneWon(board) || boardFull(board)) break;
     }
 
