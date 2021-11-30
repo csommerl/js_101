@@ -4,6 +4,11 @@ const INITIAL_MARKER = ' ';
 const HUMAN_MARKER = 'X';
 const COMPUTER_MARKER = 'O';
 const GAMES_TO_WIN = 5;
+const winningLines = [
+  [1, 2, 3], [4, 5, 6], [7, 8, 9],  // rows
+  [1, 4, 7], [2, 5, 8], [3, 6, 9],  // columns
+  [1, 5, 9], [3, 5, 7]              // diagonals
+];
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -89,7 +94,7 @@ function playerChoosesSquare(board) {
   board[square] = HUMAN_MARKER;
 }
 
-function computerChoosesSquare(board) {
+function computerChoosesRandomSquare(board) {
   let randomIndex = Math.floor(Math.random() * emptySquares(board).length);
 
   let square = emptySquares(board)[randomIndex];
@@ -97,16 +102,33 @@ function computerChoosesSquare(board) {
   board[square] = COMPUTER_MARKER;
 }
 
+function detectThreat(board) {
+  let threat = 0;
+
+  emptySquares(board).forEach(emptySquare => {  // returns the last threat
+    let testBoard = Object.assign({}, board);
+    testBoard[emptySquare] = HUMAN_MARKER;
+    if (detectWinner(testBoard) === 'Player') threat = emptySquare;
+  });
+
+  return threat;
+}
+
+function computerPlaysDefense(board) {
+  let threat = detectThreat(board);
+
+  if (threat) {
+    board[threat] = COMPUTER_MARKER;
+  } else {
+    computerChoosesRandomSquare(board);
+  }
+}
+
 function someoneWon(board) {
   return !!detectWinner(board);
 }
 
 function detectWinner(board) {
-  let winningLines = [
-    [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7],
-    [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]
-  ];
-
   for (let line = 0; line < winningLines.length; line++) {
     let [ sq1, sq2, sq3 ] = winningLines[line];
 
@@ -136,7 +158,8 @@ function playMatch() {
       playerChoosesSquare(board);
       if (someoneWon(board) || boardFull(board)) break;
 
-      computerChoosesSquare(board);
+      // computerChoosesSquare(board);
+      computerPlaysDefense(board);
       if (someoneWon(board) || boardFull(board)) break;
     }
 
@@ -151,6 +174,7 @@ function playMatch() {
   }
 }
 
+// Main Program
 while (true) {
   displayInstructions();
   playMatch();

@@ -130,6 +130,35 @@ Lesson from Pete Hanson:
 ## Computer AI: Defense
 https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
 
+input: board
+output: no return value, but add a computer marker to an immediately threatened square or a random square
+
+Definitions:
+- An immediate threat occurs when the human player has 2 squares in a row with the 3rd square unoccupied
+
+Use winningLines
+
+Algorithm
+1. Detect whether there's an immediate threat.
+  - input: board
+  - output: if there's an immediate threat, return square to play; if not, return 0
+2. If there's an immediate threat, pick defensive square
+3. If there's not an immediate threat, pick a random square.
+
+detectThreat algorithms
+option 1: loop over emptySquares
+option 2: loop over winningLines
+
+Option 1:
+1. let threat = 0
+2. for each square in emptySquares:
+  - create test board (assign)
+  - add human player move to empty square
+  - if someoneWon, then threat = empty square and break (cannot break if using forEach, but can go through all the empty squares just fine)
+3. return threat
+
+// Something is amiss when there isn't a valid choice
+
 ## Computer AI: Offense
 
 ## Computer Turn Refinements
