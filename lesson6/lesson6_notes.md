@@ -121,10 +121,14 @@ SET strWithDelimiters = joined delimitedArr
 END
 
 ## Keep Score
-https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
-add match winner
+Lesson from Pete Hanson:
+1. Programs are easier to understand when variables are defined locally.
+2. Globals can be read or modified anywhere in a program, which makes them difficult to reason about - you never know what's going on elsewhere.
+3. The use of globals leads to tightly coupled code -- functions like your displayBoard, displayNumbers, and emptySquares (among others) are tightly coupled with the global variable. You can't extract these methods to a separate file, for instance, because of that coupling. Also, it's a lot harder to test those functions since you don't know what is going on elsewhere.
+4. Globals "pollute" the name space, meaning that other functions that try to use the same names can lead to confusion and errors. As an example of confusion, consider your newBoard method: it shadows the board global by declaring its own local board variable. In a short function like newBoard, that may not be too much of a concern, but if this function were even just a few lines longer, there would be potential to forget that you're working with a local variable.
 
 ## Computer AI: Defense
+https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
 
 ## Computer AI: Offense
 
