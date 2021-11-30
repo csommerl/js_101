@@ -10,6 +10,7 @@ const winningLines = [
   [1, 5, 9], [3, 5, 7]              // diagonals
 ];
 const MIDDLE_SQUARE = '5';
+const FIRST_MOVER = 'Player';
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -156,15 +157,7 @@ function playMatch() {
   while (score.Player < GAMES_TO_WIN && score.Computer < GAMES_TO_WIN) {
     let board = initializeBoard();
 
-    while (true) {
-      displayBoard(board);
-
-      playerChoosesSquare(board);
-      if (someoneWon(board) || boardFull(board)) break;
-
-      computerChoosesSquare(board);
-      if (someoneWon(board) || boardFull(board)) break;
-    }
+    board = playGame(board);
 
     displayBoard(board);
     updateScore(board, score);
@@ -175,6 +168,28 @@ function playMatch() {
   } else {
     prompt('You lost to the computer. :-(');
   }
+}
+
+function playGame(board) {
+  while (true) {
+    displayBoard(board);
+    if (FIRST_MOVER === 'Player') {
+      playerChoosesSquare(board);
+    } else {
+      computerChoosesSquare(board);
+    }
+    if (someoneWon(board) || boardFull(board)) break;
+
+    displayBoard(board);
+    if (FIRST_MOVER === 'Player') {
+      computerChoosesSquare(board);
+    } else {
+      playerChoosesSquare(board);
+    }
+    if (someoneWon(board) || boardFull(board)) break;
+  }
+
+  return board;
 }
 
 // Main Program
