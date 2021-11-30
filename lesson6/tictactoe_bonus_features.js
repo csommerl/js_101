@@ -94,49 +94,34 @@ function playerChoosesSquare(board) {
   board[square] = HUMAN_MARKER;
 }
 
-function computerChoosesRandomSquare(board) {
-  let randomIndex = Math.floor(Math.random() * emptySquares(board).length);
-
-  let square = emptySquares(board)[randomIndex];
-
-  board[square] = COMPUTER_MARKER;
-}
-
 function detectVulnerableSquare(board, marker) {
   let vulnerableSquare = 0;
 
-  emptySquares(board).forEach(emptySquare => {  // returns the last threat, since there is no break statement
+  emptySquares(board).forEach(emptySquare => {  // returns the last vulnerable square, since there is no break statement
     let testBoard = Object.assign({}, board);
     testBoard[emptySquare] = marker;
-    if (marker === HUMAN_MARKER && detectWinner(testBoard) === 'Player') {  // could this be done better? e.g., avoid hard-coding?
-      vulnerableSquare = emptySquare;
-    }
-    if (marker === COMPUTER_MARKER && detectWinner(testBoard) === 'Computer') { // could this be done better? e.g., avoid hard-coding?
-      vulnerableSquare = emptySquare;
-    }
+    if (someoneWon(testBoard)) vulnerableSquare = emptySquare;
   });
 
   return vulnerableSquare;
 }
 
-function computerPlaysDefense(board) {
-  let threat = detectVulnerableSquare(board, HUMAN_MARKER);
+function computerChoosesSquare(board) {
+  let square;
 
-  if (threat) {
-    board[threat] = COMPUTER_MARKER;
-  } else {
-    computerChoosesRandomSquare(board);
+  // attempt to play offense
+  square = detectVulnerableSquare(board, COMPUTER_MARKER);
+
+  // attempt to play defense
+  if (!square) square = detectVulnerableSquare(board, HUMAN_MARKER);
+
+  // play random square
+  if (!square) {
+    let randomIndex = Math.floor(Math.random() * emptySquares(board).length);
+    square = emptySquares(board)[randomIndex];
   }
-}
 
-function computerPlaysOffense(board) {
-  let opportunity = detectVulnerableSquare(board, COMPUTER_MARKER);
-
-  if (opportunity) {
-    board[opportunity] = COMPUTER_MARKER;
-  } else {
-    computerPlaysDefense(board);
-  }
+  board[square] = COMPUTER_MARKER;
 }
 
 function someoneWon(board) {
@@ -173,9 +158,7 @@ function playMatch() {
       playerChoosesSquare(board);
       if (someoneWon(board) || boardFull(board)) break;
 
-      // computerChoosesSquare(board);
-      // computerPlaysDefense(board);
-      computerPlaysOffense(board);
+      computerChoosesSquare(board);
       if (someoneWon(board) || boardFull(board)) break;
     }
 
