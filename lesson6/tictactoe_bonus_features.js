@@ -173,19 +173,23 @@ function playMatch() {
 function playGame(board) {
   while (true) {
     displayBoard(board);
+
     if (FIRST_MOVER === 'Player') {
       playerChoosesSquare(board);
     } else {
       computerChoosesSquare(board);
     }
+
     if (someoneWon(board) || boardFull(board)) break;
 
     displayBoard(board);
+
     if (FIRST_MOVER === 'Player') {
       computerChoosesSquare(board);
     } else {
       playerChoosesSquare(board);
     }
+
     if (someoneWon(board) || boardFull(board)) break;
   }
 
