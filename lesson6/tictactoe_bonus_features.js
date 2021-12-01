@@ -10,7 +10,7 @@ const winningLines = [
   [1, 5, 9], [3, 5, 7]              // diagonals
 ];
 const MIDDLE_SQUARE = '5';
-const FIRST_MOVER = 'Player';
+const FIRST_MOVER = 'Computer';
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -171,29 +171,28 @@ function playMatch() {
 }
 
 function playGame(board) {
+  let currentPlayer = FIRST_MOVER;
+
   while (true) {
     displayBoard(board);
-
-    if (FIRST_MOVER === 'Player') {
-      playerChoosesSquare(board);
-    } else {
-      computerChoosesSquare(board);
-    }
-
-    if (someoneWon(board) || boardFull(board)) break;
-
-    displayBoard(board);
-
-    if (FIRST_MOVER === 'Player') {
-      computerChoosesSquare(board);
-    } else {
-      playerChoosesSquare(board);
-    }
-
+    chooseSquare(board, currentPlayer);
+    currentPlayer = alternatePlayer(currentPlayer);
     if (someoneWon(board) || boardFull(board)) break;
   }
 
   return board;
+}
+
+function chooseSquare(board, currentPlayer) {
+  if (currentPlayer === 'Player') {
+    playerChoosesSquare(board);
+  } else if (currentPlayer === 'Computer') {
+    computerChoosesSquare(board);
+  }
+}
+
+function alternatePlayer(currentPlayer) {
+  return currentPlayer === 'Player' ? 'Computer' : 'Player';
 }
 
 // Main Program
