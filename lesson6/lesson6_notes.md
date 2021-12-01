@@ -159,16 +159,18 @@ Option 1:
 // Something is amiss when there isn't a valid choice?
 
 ## Computer AI: Offense
+[x]
 
 ## Computer Turn Refinements
-https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
 1. [x] offense first
 2. [x] middle square
-3. [ ] choose turns
+3. [x] choose turns
 
 ## Improve Play-Again Handling
+https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
 
 ### Improve the game loop
+[x]
 
 ## On Your Own Ideas
 

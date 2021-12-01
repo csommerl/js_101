@@ -10,7 +10,7 @@ const winningLines = [
   [1, 5, 9], [3, 5, 7]              // diagonals
 ];
 const MIDDLE_SQUARE = '5';
-const FIRST_MOVER = 'Computer';
+const PLAYS_FIRST = 'choose';
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -151,13 +151,31 @@ function boardFull(board) {
   return emptySquares(board).length === 0;
 }
 
+function getFirstPlayer() {
+  let firstPlayer;
+  while (true) {
+    prompt('Choose who plays first: \'Player\' or \'Computer\'.');
+    firstPlayer = readline.question().trim();
+
+    if (firstPlayer === 'Computer' || firstPlayer === 'Player') break;
+
+    prompt('Sorry, that isn\'t a valid choice.');
+  }
+  return firstPlayer;
+}
+
 function playMatch() {
   let score = {Player: 0, Computer: 0, Tied: 0};
+
+  let firstPlayer = PLAYS_FIRST;
+  if (firstPlayer === 'choose') {
+    firstPlayer = getFirstPlayer();
+  }
 
   while (score.Player < GAMES_TO_WIN && score.Computer < GAMES_TO_WIN) {
     let board = initializeBoard();
 
-    board = playGame(board);
+    board = playGame(board, firstPlayer);
 
     displayBoard(board);
     updateScore(board, score);
@@ -170,8 +188,8 @@ function playMatch() {
   }
 }
 
-function playGame(board) {
-  let currentPlayer = FIRST_MOVER;
+function playGame(board, firstPlayer) {
+  let currentPlayer = firstPlayer;
 
   while (true) {
     displayBoard(board);
