@@ -218,9 +218,14 @@ while (true) {
   displayInstructions();
   playMatch();
 
-  prompt('Play again? y/n');
-  let answer = readline.question().toLowerCase()[0];
-  if (answer !== 'y') break;
+  let playAgain;
+  while (true) {
+    prompt('Play again? y/n');
+    let playAgain = readline.question().toLowerCase();
+    if (['y', 'n'].includes(playAgain)) break;
+    prompt('Invalid input. Enter one of: "y" or "n".');
+  }
+  if (playAgain === 'n') break;
 }
 
 prompt('Thanks for playing Tic Tac Toe!');

@@ -168,6 +168,7 @@ Option 1:
 
 ## Improve Play-Again Handling
 https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
+[ ]
 
 ### Improve the game loop
 [x]
