@@ -10,7 +10,7 @@ const winningLines = [
   [1, 5, 9], [3, 5, 7]              // diagonals
 ];
 const MIDDLE_SQUARE = '5';
-const PLAYS_FIRST = 'Computer';
+const PLAYS_FIRST = 'choose';
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -18,8 +18,6 @@ function prompt(msg) {
 
 function displayInstructions() {
   prompt(`The first player to win ${GAMES_TO_WIN} games wins the overall match.`);
-  prompt('Press any key to continue.');
-  readline.keyIn();
 }
 
 function updateScore(board, score) {
@@ -86,7 +84,7 @@ function playerChoosesSquare(board) {
 
   while (true) {
     prompt(`Choose a square from (${joinOr(emptySquares(board))}):`);
-    square = readline.question().trim();
+    square = readline.question();
 
     if (emptySquares(board).includes(square)) break;
 
@@ -155,7 +153,7 @@ function getFirstPlayer() {
   let firstPlayer;
   while (true) {
     prompt('Choose who plays first: \'Player\' or \'Computer\'.');
-    firstPlayer = readline.question().trim();
+    firstPlayer = readline.question();
 
     if (firstPlayer === 'Computer' || firstPlayer === 'Player') break;
 
@@ -180,8 +178,8 @@ function playMatch() {
     displayBoard(board);
     updateScore(board, score);
   }
-
-  if (score.Player === 5) {
+  console.clear();
+  if (score.Player === GAMES_TO_WIN) {
     prompt('You win the game!');
   } else {
     prompt('You lost to the computer. :-(');
@@ -226,6 +224,8 @@ while (true) {
     prompt('Invalid input. Enter one of: "y" or "n".');
   }
   if (playAgain === 'n') break;
+
+  console.clear();
 }
 
 prompt('Thanks for playing Tic Tac Toe!');
