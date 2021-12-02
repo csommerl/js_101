@@ -10,7 +10,7 @@ const winningLines = [
   [1, 5, 9], [3, 5, 7]              // diagonals
 ];
 const MIDDLE_SQUARE = '5';
-const PLAYS_FIRST = 'choose';
+const PLAYS_FIRST = 'Computer';
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -221,7 +221,7 @@ while (true) {
   let playAgain;
   while (true) {
     prompt('Play again? y/n');
-    let playAgain = readline.question().toLowerCase();
+    playAgain = readline.question().toLowerCase();
     if (['y', 'n'].includes(playAgain)) break;
     prompt('Invalid input. Enter one of: "y" or "n".');
   }
