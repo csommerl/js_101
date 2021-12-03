@@ -1,4 +1,3 @@
-# Small Problems
 Math.abs(); function that returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.; js101
 how to create package.json; npm init -y; js101
 readlineSync.prompt([options]); basic way to have JS command line prompt for user input; js101

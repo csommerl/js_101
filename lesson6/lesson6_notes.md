@@ -180,3 +180,18 @@ https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
 ### Bigger Board
 
 ### More players
+
+# 6.9 Assignment: Twenty-One
+https://launchschool.com/lessons/fb4809a8/assignments/62238c60
+
+
+
+1. Initialize deck
+2. Deal cards to player and dealer
+3. Player turn: hit or stay
+   - repeat until bust or stay
+4. If player bust, dealer wins.
+5. Dealer turn: hit or stay
+   - repeat until total >= 17
+6. If dealer busts, player wins.
+7. Compare cards and declare winner.
