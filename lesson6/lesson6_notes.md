@@ -195,3 +195,12 @@ https://launchschool.com/lessons/fb4809a8/assignments/62238c60
    - repeat until total >= 17
 6. If dealer busts, player wins.
 7. Compare cards and declare winner.
+
+
+```javascript
+let randomIndex = Math.floor(Math.random() * deck.length);
+let card = deck.splice(randomIndex, 1)[0];
+```
+
+To do:
+- [ ] how to get rid of hard-coding of next to Deal?

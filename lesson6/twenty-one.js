@@ -6,7 +6,13 @@ const SUITS = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const PIP_CARDS = [...Array(9).keys()].map(idx => String(idx + 2));
 const FACE_CARDS = ['Jack', 'Queen', 'King', 'Ace'];
 const VALUES = PIP_CARDS.concat(FACE_CARDS);
-const DEALT_FIRST = 'H';
+const PLAYERS = ['Dealer', 'You'];
+const DEAL_FIRST = PLAYERS[1];
+const INITIAL_HAND_SIZE = 2;
+
+function prompt(msg) {
+  console.log(`=> ${msg}`);
+}
 
 function initializeDeck() {
   let deck = [];
@@ -20,33 +26,75 @@ function initializeDeck() {
   return deck;
 }
 
-function dealCards(deck) {  // has both side effect and return value
-  let humanHand = [];
-  let computerHand = [];
-  let nextToDeal = DEALT_FIRST;
+function drawCard(deck) {
+  return deck.shift();
+}
 
-  for (let idx = 0; idx < 4; idx += 1) {  // how to get rid of magic number?
-    let randomIndex = Math.floor(Math.random() * deck.length);
-    let card = deck.splice(randomIndex, 1)[0];
+function dealHands(deck, players) {  // has both side effect (changes deck) and return value (hands)
+  let hands = {};
 
-    if (nextToDeal === 'H') {
-      humanHand.push(card);
-      nextToDeal = 'C';
-    } else {
-      computerHand.push(card);
-      nextToDeal = 'H';
-    }
+  players.forEach(function(player) {
+    hands[player] = [];
+  });
+
+  let dealNext = DEAL_FIRST;
+
+  for (let idx = 0; idx < players.length * INITIAL_HAND_SIZE; idx += 1) {
+    let card = drawCard(deck);
+    hands[dealNext].push(card);
+    dealNext = dealNext === PLAYERS[1] ? PLAYERS[0] : PLAYERS[1]; // how to get rid of hard-coding?
   }
 
-  return [humanHand, computerHand];
+  return hands;
+}
+
+function shuffle(array) {
+  for (let index = array.length - 1; index > 0; index--) {
+    let otherIndex = Math.floor(Math.random() * (index + 1)); // 0 to index
+    [array[index], array[otherIndex]] = [array[otherIndex], array[index]]; // swap elements
+  }
+}
+
+function getValue(value) {
+  return VALUES.find(elem => elem[0] === value[0]);
+}
+
+function joinAnd(arr, delimiter = ', ', finalConnector = 'and') {
+  if (arr.length <= 1) {
+    return arr.join('');
+  } else if (arr.length === 2) {
+    return `${arr[0]} ${finalConnector} ${arr[1]}`;
+  } else {
+    return arr.slice(0, arr.length - 1).join(delimiter) +
+      `${delimiter}${finalConnector} ${arr[arr.length - 1]}`;
+  }
+}
+
+function formatHandDisplay(hands, player) {
+  let values = [];
+
+  hands[player].forEach((card, idx) => {
+    if (player === PLAYERS[0] && idx > 0) {
+      values.push('unknown card');
+    } else {
+      let value = getValue(card[1]);
+      values.push(value);
+    }
+  });
+
+  return joinAnd(values);
 }
 
 function playTwentyOne() {
+  prompt('Welcome to Twenty-One!');
   let deck = initializeDeck();
-  let [humanHand, computerHand] = dealCards(deck);
-  console.log(humanHand);
-  console.log(computerHand);
-  console.log(deck.length);
+  shuffle(deck);
+
+  let hands = dealHands(deck, PLAYERS);
+
+  prompt(`${PLAYERS[0]} has: ${formatHandDisplay(hands, PLAYERS[0])}`);
+  prompt(`${PLAYERS[1]} have: ${formatHandDisplay(hands, PLAYERS[1])}`);
+
 }
 
 // Main Program
