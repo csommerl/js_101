@@ -7,7 +7,7 @@ const PIP_CARDS = [...Array(9).keys()].map(idx => String(idx + 2));
 const FACE_CARDS = ['Jack', 'Queen', 'King', 'Ace'];
 const VALUES = PIP_CARDS.concat(FACE_CARDS);
 const PLAYERS = ['Dealer', 'You'];
-const DEAL_FIRST = PLAYERS[1];
+const DEAL_FIRST_IDX = 1;
 const INITIAL_HAND_SIZE = 2;
 
 function prompt(msg) {
@@ -37,12 +37,14 @@ function dealHands(deck, players) {  // has both side effect (changes deck) and 
     hands[player] = [];
   });
 
-  let dealNext = DEAL_FIRST;
+  let dealNextIdx = DEAL_FIRST_IDX;
 
   for (let idx = 0; idx < players.length * INITIAL_HAND_SIZE; idx += 1) {
+    let player = PLAYERS[dealNextIdx];
+    let playerHand = hands[player];
     let card = drawCard(deck);
-    hands[dealNext].push(card);
-    dealNext = dealNext === PLAYERS[1] ? PLAYERS[0] : PLAYERS[1]; // how to get rid of hard-coding?
+    playerHand.push(card);
+    dealNextIdx = dealNextIdx === players.length - 1 ? 0 : dealNextIdx + 1; // generalized for more than two players
   }
 
   return hands;
@@ -86,7 +88,6 @@ function formatHandDisplay(hands, player) {
 }
 
 function playTwentyOne() {
-  prompt('Welcome to Twenty-One!');
   let deck = initializeDeck();
   shuffle(deck);
 
@@ -94,8 +95,8 @@ function playTwentyOne() {
 
   prompt(`${PLAYERS[0]} has: ${formatHandDisplay(hands, PLAYERS[0])}`);
   prompt(`${PLAYERS[1]} have: ${formatHandDisplay(hands, PLAYERS[1])}`);
-
 }
 
 // Main Program
+prompt('Welcome to Twenty-One!');
 playTwentyOne();
