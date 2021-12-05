@@ -202,5 +202,13 @@ let randomIndex = Math.floor(Math.random() * deck.length);
 let card = deck.splice(randomIndex, 1)[0];
 ```
 
-To do:
-- [ ] how to get rid of hard-coding of next to Deal?
+getWinner algo
+
+1. filter players so that only those scores 21 & below are included
+2. get the max score of the filtered players
+3. get the players who have the max score
+4. return array of those players
+
+displayWinner
+1. if there is only one player with the max score, display that they are the winner
+2. else state that there is a tie between those with the max score

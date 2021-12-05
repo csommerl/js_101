@@ -6,7 +6,7 @@ const SUITS = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const PIP_CARDS = [...Array(9).keys()].map(idx => String(idx + 2));
 const FACE_CARDS = ['Jack', 'Queen', 'King', 'Ace'];
 const VALUES = PIP_CARDS.concat(FACE_CARDS);
-const PLAYERS = ['Dealer', 'You'];
+const PLAYERS = ['Dealer', 'You'];  // this and how data is stored is designed to add potentially other computer players
 const DEAL_FIRST_IDX = 1;
 const INITIAL_HAND_SIZE = 2;
 
@@ -113,13 +113,19 @@ function calculateScore(hand) {
   return score;
 }
 
-function getWinner(cards, players) {
-  let scores = [];
+function getMaxScore(cards, players) {
+  let validScores = players
+    .map(player => calculateScore(cards[player]))
+    .filter(score => score <= 21);
 
-  players.forEach(player => {
-    let playerScore = calculateScore(cards[player]);
-    scores.push([player, playerScore]);
-  });
+  return Math.max(...validScores);
+}
+
+function getWinners(cards, players, winningScore) {
+  return players.filter(player => calculateScore(cards[player]) === winningScore);
+}
+
+function displayWinner(winners, winningScore) {
 
 }
 
@@ -131,9 +137,16 @@ function playTwentyOne() {
   dealHands(cards, PLAYERS);
 
   displayHands(cards, PLAYERS);
+  
+  // take out after finishing
+  console.log(`Dealer score is ${calculateScore(cards['Dealer'])}`);
+  console.log(`Your score is ${calculateScore(cards['You'])}`);
+  //
 
-  // let winner = getWinner(cards, PLAYERS);
-  // console.log(winner);
+  let maxScore = getMaxScore(cards, PLAYERS);
+  let winners = getWinners(cards, PLAYERS, maxScore)
+  
+  displayWinner(winners, maxScore);
 }
 
 // Main Program
