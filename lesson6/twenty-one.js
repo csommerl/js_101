@@ -53,8 +53,8 @@ function drawCard(deck) {
   return deck.shift();
 }
 
-function getValue(value) {
-  return VALUES.find(elem => elem[0] === value[0]);
+function getValue(card) {  // needed function since values of face cards are stored with only the first letter
+  return VALUES.find(elem => elem[0] === card[1]);
 }
 
 function joinAnd(arr, delimiter = ', ', finalConnector = 'and') {
@@ -68,14 +68,14 @@ function joinAnd(arr, delimiter = ', ', finalConnector = 'and') {
   }
 }
 
-function formatHandDisplay(cards, player) {
+function formatHandDisplay(hand, player) {
   let values = [];
 
-  cards[player].forEach((card, idx) => {
+  hand.forEach((card, idx) => {
     if (player === 'Dealer' && idx > 0) {
       values.push('unknown card');
     } else {
-      let value = getValue(card[1]);
+      let value = getValue(card);
       values.push(value);
     }
   });
@@ -86,8 +86,41 @@ function formatHandDisplay(cards, player) {
 function displayHands(cards, players) {
   players.forEach(player => {
     let haveConjugation = player === 'You' ? 'have' : 'has';
-    prompt(`${player} ${haveConjugation}: ${formatHandDisplay(cards, player)}`);
+    let hand = formatHandDisplay(cards[player], player);
+    prompt(`${player} ${haveConjugation}: ${hand}`);
   });
+}
+
+function calculateScore(hand) {
+  let score = 0;
+
+  hand.forEach(card => {
+    let cardValue = getValue(card);
+    if (FACE_CARDS.slice(0, 3).includes(cardValue)) {
+      score += 10;
+    } else if (cardValue === FACE_CARDS[3]) {
+      score += 11;
+    } else {
+      score += Number(cardValue);
+    }
+  });
+
+  hand.filter(card => getValue(card) === FACE_CARDS[3])
+    .forEach(_ => {
+      if (score > 21) score -= 10;
+    });
+
+  return score;
+}
+
+function getWinner(cards, players) {
+  let scores = [];
+
+  players.forEach(player => {
+    let playerScore = calculateScore(cards[player]);
+    scores.push([player, playerScore]);
+  });
+
 }
 
 function playTwentyOne() {
@@ -98,8 +131,11 @@ function playTwentyOne() {
   dealHands(cards, PLAYERS);
 
   displayHands(cards, PLAYERS);
+
+  // let winner = getWinner(cards, PLAYERS);
+  // console.log(winner);
 }
 
 // Main Program
-prompt('Welcome to Twenty-One!');
+prompt('Welcome to Twenty-One!\n');
 playTwentyOne();
