@@ -26,35 +26,31 @@ function initializeDeck() {
   return deck;
 }
 
-function drawCard(deck) {
-  return deck.shift();
+function shuffle(array) {
+  for (let index = array.length - 1; index > 0; index--) {
+    let otherIndex = Math.floor(Math.random() * (index + 1)); // 0 to index
+    [array[index], array[otherIndex]] = [array[otherIndex], array[index]]; // swap elements
+  }
 }
 
-function dealHands(deck, players) {  // has both side effect (changes deck) and return value (hands)
-  let hands = {};
-
+function dealHands(cards, players) {
   players.forEach(function(player) {
-    hands[player] = [];
+    cards[player] = [];
   });
 
   let dealNextIdx = DEAL_FIRST_IDX;
 
   for (let idx = 0; idx < players.length * INITIAL_HAND_SIZE; idx += 1) {
     let player = PLAYERS[dealNextIdx];
-    let playerHand = hands[player];
-    let card = drawCard(deck);
+    let playerHand = cards[player];
+    let card = drawCard(cards.deck);
     playerHand.push(card);
     dealNextIdx = dealNextIdx === players.length - 1 ? 0 : dealNextIdx + 1; // generalized for more than two players
   }
-
-  return hands;
 }
 
-function shuffle(array) {
-  for (let index = array.length - 1; index > 0; index--) {
-    let otherIndex = Math.floor(Math.random() * (index + 1)); // 0 to index
-    [array[index], array[otherIndex]] = [array[otherIndex], array[index]]; // swap elements
-  }
+function drawCard(deck) {
+  return deck.shift();
 }
 
 function getValue(value) {
@@ -72,11 +68,11 @@ function joinAnd(arr, delimiter = ', ', finalConnector = 'and') {
   }
 }
 
-function formatHandDisplay(hands, player) {
+function formatHandDisplay(cards, player) {
   let values = [];
 
-  hands[player].forEach((card, idx) => {
-    if (player === PLAYERS[0] && idx > 0) {
+  cards[player].forEach((card, idx) => {
+    if (player === 'Dealer' && idx > 0) {
       values.push('unknown card');
     } else {
       let value = getValue(card[1]);
@@ -87,14 +83,21 @@ function formatHandDisplay(hands, player) {
   return joinAnd(values);
 }
 
+function displayHands(cards, players) {
+  players.forEach(player => {
+    let haveConjugation = player === 'You' ? 'have' : 'has';
+    prompt(`${player} ${haveConjugation}: ${formatHandDisplay(cards, player)}`);
+  });
+}
+
 function playTwentyOne() {
-  let deck = initializeDeck();
-  shuffle(deck);
+  let cards = {};
+  cards.deck = initializeDeck();
+  shuffle(cards.deck);
 
-  let hands = dealHands(deck, PLAYERS);
+  dealHands(cards, PLAYERS);
 
-  prompt(`${PLAYERS[0]} has: ${formatHandDisplay(hands, PLAYERS[0])}`);
-  prompt(`${PLAYERS[1]} have: ${formatHandDisplay(hands, PLAYERS[1])}`);
+  displayHands(cards, PLAYERS);
 }
 
 // Main Program
