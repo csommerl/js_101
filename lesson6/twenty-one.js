@@ -125,7 +125,7 @@ function getWinners(cards, players, winningScore) {
   return players.filter(player => calculateScore(cards[player]) === winningScore);
 }
 
-function displayWinner(winners, winningScore) {
+function displayWinner(players, winningScore) {
 
 }
 
