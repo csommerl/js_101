@@ -33,19 +33,19 @@ function shuffle(array) {
   }
 }
 
-function dealHands(cards, players) {
-  players.forEach(function(player) {
-    cards[player] = [];
+function dealHands(cardsObj, playersArr) {
+  playersArr.forEach(function(player) {
+    cardsObj[player] = [];
   });
 
   let dealNextIdx = DEAL_FIRST_IDX;
 
-  for (let idx = 0; idx < players.length * INITIAL_HAND_SIZE; idx += 1) {
-    let player = PLAYERS[dealNextIdx];
-    let playerHand = cards[player];
-    let card = drawCard(cards.deck);
+  for (let idx = 0; idx < playersArr.length * INITIAL_HAND_SIZE; idx += 1) {
+    let player = playersArr[dealNextIdx];
+    let playerHand = cardsObj[player];
+    let card = drawCard(cardsObj.deck);
     playerHand.push(card);
-    dealNextIdx = dealNextIdx === players.length - 1 ? 0 : dealNextIdx + 1; // generalized for more than two players
+    dealNextIdx = dealNextIdx === playersArr.length - 1 ? 0 : dealNextIdx + 1; // generalized for more than two players
   }
 }
 
@@ -83,11 +83,11 @@ function formatHandDisplay(hand, player) {
   return joinAnd(values);
 }
 
-function displayHands(cards, players) {
+function displayHands(cardsObj, playersArr) {
   console.log('');
-  players.forEach(player => {
+  playersArr.forEach(player => {
     let haveConjugation = player === 'You' ? 'have' : 'has';
-    let hand = formatHandDisplay(cards[player], player);
+    let hand = formatHandDisplay(cardsObj[player], player);
     prompt(`${player} ${haveConjugation}: ${hand}`);
   });
 }
@@ -114,27 +114,27 @@ function calculateScore(hand) {
   return score;
 }
 
-function getMaxScore(cards, players) {
-  let validScores = players
-    .map(player => calculateScore(cards[player]))
+function getMaxScore(cardsObj, playersArr) {
+  let validScores = playersArr
+    .map(player => calculateScore(cardsObj[player]))
     .filter(score => score <= 21);
 
   return Math.max(...validScores);
 }
 
-function getWinners(cards, players, winningScore) {
-  return players.filter(player => {
-    return calculateScore(cards[player]) === winningScore;
+function getWinners(cardsObj, playersArr, winningScore) {
+  return playersArr.filter(player => {
+    return calculateScore(cardsObj[player]) === winningScore;
   });
 }
 
-function displayWinner(players, winningScore) {}
+function displayWinner(playersArr, winningScore) {}
 
 function busted(hand) {
   return calculateScore(hand) > 21;
 }
 
-function playerMove(cards, player) {
+function playerMove(cardsObj, player) {
   while (true) {
     prompt('hit or stay?');
     let answer = readline.question();
@@ -142,13 +142,13 @@ function playerMove(cards, player) {
     if (answer === 'stay') {
       break;
     } else if (answer === 'hit') {
-      cards[player].push(drawCard(cards.deck));
-      displayHands(cards, PLAYERS);
+      cardsObj[player].push(drawCard(cardsObj.deck));
+      displayHands(cardsObj, PLAYERS);
     } else {
       prompt('Invalid input. Enter hit or stay.');
     }
 
-    if (busted(cards[player])) {
+    if (busted(cardsObj[player])) {
       prompt('Busted!');
       break;
     }
