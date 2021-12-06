@@ -130,13 +130,23 @@ function getWinners(cardsObj, playersArr, winningScore) {
   });
 }
 
-function displayWinner(winnersArr) {
-  if (winnersArr.length === 1) {
-    let winner = winnersArr[0];
+function displayResults(cardsObj, playersArr) {
+  displayHands(cardsObj, playersArr);
+
+  playersArr.forEach(player => {
+    let playerName = player === 'You' ? 'Your' : player;
+    prompt(`${playerName} score is ${calculateScore(cardsObj[player])}`);
+  });
+
+  let maxScore = getMaxScore(cardsObj, playersArr);
+  let winners = getWinners(cardsObj, playersArr, maxScore);
+
+  if (winners.length === 1) {
+    let winner = winners[0];
     let verb = winner === 'You' ? 'win' : 'wins';
-    prompt(`${winnersArr[0]} ${verb}!\n`);
+    prompt(`${winners[0]} ${verb}!\n`);
   } else {
-    prompt(`${joinAnd(winnersArr)} tie!\n`);
+    prompt(`${joinAnd(winners)} tie!\n`); ///// fix capitalization
   }
 }
 
@@ -144,16 +154,9 @@ function busted(hand) {
   return calculateScore(hand) > 21;
 }
 
-function displayScores(cardsObj, playersArr) {
-  playersArr.forEach(player => {
-    let playerName = player === 'You' ? 'Your' : player;
-    prompt(`${playerName} score is ${calculateScore(cardsObj[player])}`);
-  });
-}
-
 function playerMove(cardsObj, player) {
   while (true) {
-    prompt('hit or stay?');
+    prompt('hit or stay?'); ///// add option to only enter 'h' or 's'
     let answer = readline.question();
 
     if (answer === 'hit') {
@@ -192,21 +195,13 @@ function playTwentyOne() {
   }
 
   dealerMove(cards, 'Dealer');
-
   if (busted(cards['Dealer'])) {
     displayHands(cards, PLAYERS);
     prompt('Dealer busted: you win!\n');
     return;
   }
 
-  displayHands(cards, PLAYERS);
-
-  displayScores(cards, PLAYERS);
-
-  let maxScore = getMaxScore(cards, PLAYERS);
-  let winners = getWinners(cards, PLAYERS, maxScore);
-
-  displayWinner(winners);
+  displayResults(cards, PLAYERS);
 }
 
 // Main Program
