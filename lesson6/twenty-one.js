@@ -23,6 +23,8 @@ function initializeDeck() {
     }
   }
 
+  shuffle(deck);
+
   return deck;
 }
 
@@ -68,11 +70,11 @@ function joinAnd(arr, delimiter = ', ', finalConnector = 'and') {
   }
 }
 
-function formatHandDisplay(hand, player) {
+function formatHandDisplay(hand, player, hidden) {
   let values = [];
 
   hand.forEach((card, idx) => {
-    if (player === 'Dealer' && idx > 0) {
+    if (player === 'Dealer' && idx > 0 && hidden) {
       values.push('unknown card');
     } else {
       let value = getValue(card);
@@ -83,11 +85,11 @@ function formatHandDisplay(hand, player) {
   return joinAnd(values);
 }
 
-function displayHands(cardsObj, playersArr) {
+function displayHands(cardsObj, playersArr, hidden) {
   console.log('');
   playersArr.forEach(player => {
     let haveConjugation = player === 'You' ? 'have' : 'has';
-    let hand = formatHandDisplay(cardsObj[player], player);
+    let hand = formatHandDisplay(cardsObj[player], player, hidden);
     prompt(`${player} ${haveConjugation}: ${hand}`);
   });
 }
@@ -128,10 +130,25 @@ function getWinners(cardsObj, playersArr, winningScore) {
   });
 }
 
-function displayWinner(playersArr, winningScore) {}
+function displayWinner(winnersArr) {
+  if (winnersArr.length === 1) {
+    let winner = winnersArr[0];
+    let verb = winner === 'You' ? 'win' : 'wins';
+    prompt(`${winnersArr[0]} ${verb}!\n`);
+  } else {
+    prompt(`${joinAnd(winnersArr)} tie!\n`);
+  }
+}
 
 function busted(hand) {
   return calculateScore(hand) > 21;
+}
+
+function displayScores(cardsObj, playersArr) {
+  playersArr.forEach(player => {
+    let playerName = player === 'You' ? 'Your' : player;
+    prompt(`${playerName} score is ${calculateScore(cardsObj[player])}`);
+  });
 }
 
 function playerMove(cardsObj, player) {
@@ -149,30 +166,47 @@ function playerMove(cardsObj, player) {
 
     if (answer === 'stay' || busted(cardsObj[player])) break;
 
-    displayHands(cardsObj, PLAYERS);
+    displayHands(cardsObj, PLAYERS, 'hidden');
+  }
+}
+
+function dealerMove(cardsObj, player) {
+  while (true) {
+    if (calculateScore(cardsObj[player]) >= 17) break;
+    cardsObj[player].push(drawCard(cardsObj.deck));
   }
 }
 
 function playTwentyOne() {
   let cards = {};
   cards.deck = initializeDeck();
-  shuffle(cards.deck);
 
   dealHands(cards, PLAYERS);
-  displayHands(cards, PLAYERS);
+  displayHands(cards, PLAYERS, 'hidden');
 
   playerMove(cards, 'You');
-  if (busted(cards['You'])) prompt('Busted! Dealer wins.');
+  if (busted(cards['You'])) {
+    displayHands(cards, PLAYERS);
+    prompt('You busted: dealer wins!\n');
+    return;
+  }
 
-  // // take out after finishing
-  // console.log(`Dealer score is ${calculateScore(cards['Dealer'])}`);
-  // console.log(`Your score is ${calculateScore(cards['You'])}`);
-  // //
+  dealerMove(cards, 'Dealer');
 
-  // let maxScore = getMaxScore(cards, PLAYERS);
-  // let winners = getWinners(cards, PLAYERS, maxScore)
+  if (busted(cards['Dealer'])) {
+    displayHands(cards, PLAYERS);
+    prompt('Dealer busted: you win!\n');
+    return;
+  }
 
-  // displayWinner(winners, maxScore);
+  displayHands(cards, PLAYERS);
+
+  displayScores(cards, PLAYERS);
+
+  let maxScore = getMaxScore(cards, PLAYERS);
+  let winners = getWinners(cards, PLAYERS, maxScore);
+
+  displayWinner(winners);
 }
 
 // Main Program
