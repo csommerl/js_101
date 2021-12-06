@@ -84,6 +84,7 @@ function formatHandDisplay(hand, player) {
 }
 
 function displayHands(cards, players) {
+  console.log('');
   players.forEach(player => {
     let haveConjugation = player === 'You' ? 'have' : 'has';
     let hand = formatHandDisplay(cards[player], player);
@@ -122,11 +123,36 @@ function getMaxScore(cards, players) {
 }
 
 function getWinners(cards, players, winningScore) {
-  return players.filter(player => calculateScore(cards[player]) === winningScore);
+  return players.filter(player => {
+    return calculateScore(cards[player]) === winningScore;
+  });
 }
 
-function displayWinner(players, winningScore) {
+function displayWinner(players, winningScore) {}
 
+function busted(hand) {
+  return calculateScore(hand) > 21;
+}
+
+function playerMove(cards, player) {
+  while (true) {
+    prompt('hit or stay?');
+    let answer = readline.question();
+
+    if (answer === 'stay') {
+      break;
+    } else if (answer === 'hit') {
+      cards[player].push(drawCard(cards.deck));
+      displayHands(cards, PLAYERS);
+    } else {
+      prompt('Invalid input. Enter hit or stay.');
+    }
+
+    if (busted(cards[player])) {
+      prompt('Busted!');
+      break;
+    }
+  }
 }
 
 function playTwentyOne() {
@@ -135,18 +161,19 @@ function playTwentyOne() {
   shuffle(cards.deck);
 
   dealHands(cards, PLAYERS);
-
   displayHands(cards, PLAYERS);
-  
-  // take out after finishing
-  console.log(`Dealer score is ${calculateScore(cards['Dealer'])}`);
-  console.log(`Your score is ${calculateScore(cards['You'])}`);
-  //
 
-  let maxScore = getMaxScore(cards, PLAYERS);
-  let winners = getWinners(cards, PLAYERS, maxScore)
-  
-  displayWinner(winners, maxScore);
+  playerMove(cards, 'You');
+
+  // // take out after finishing
+  // console.log(`Dealer score is ${calculateScore(cards['Dealer'])}`);
+  // console.log(`Your score is ${calculateScore(cards['You'])}`);
+  // //
+
+  // let maxScore = getMaxScore(cards, PLAYERS);
+  // let winners = getWinners(cards, PLAYERS, maxScore)
+
+  // displayWinner(winners, maxScore);
 }
 
 // Main Program
