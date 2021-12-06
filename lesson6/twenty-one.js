@@ -139,19 +139,17 @@ function playerMove(cardsObj, player) {
     prompt('hit or stay?');
     let answer = readline.question();
 
-    if (answer === 'stay') {
-      break;
-    } else if (answer === 'hit') {
+    if (answer === 'hit') {
       cardsObj[player].push(drawCard(cardsObj.deck));
-      displayHands(cardsObj, PLAYERS);
-    } else {
+    }
+
+    if (answer !== 'hit' && answer !== 'stay') {
       prompt('Invalid input. Enter hit or stay.');
     }
 
-    if (busted(cardsObj[player])) {
-      prompt('Busted!');
-      break;
-    }
+    if (answer === 'stay' || busted(cardsObj[player])) break;
+
+    displayHands(cardsObj, PLAYERS);
   }
 }
 
@@ -164,6 +162,7 @@ function playTwentyOne() {
   displayHands(cards, PLAYERS);
 
   playerMove(cards, 'You');
+  if (busted(cards['You'])) prompt('Busted! Dealer wins.');
 
   // // take out after finishing
   // console.log(`Dealer score is ${calculateScore(cards['Dealer'])}`);
@@ -177,5 +176,20 @@ function playTwentyOne() {
 }
 
 // Main Program
-prompt('Welcome to Twenty-One!\n');
-playTwentyOne();
+while (true) {
+  prompt('Welcome to Twenty-One!\n');
+  playTwentyOne();
+
+  let playAgain;
+  while (true) {
+    prompt('Play again? y/n');
+    playAgain = readline.question().toLowerCase();
+    if (['y', 'n'].includes(playAgain)) break;
+    prompt('Invalid input. Enter one of: "y" or "n".');
+  }
+  if (playAgain === 'n') break;
+
+  console.clear();
+}
+
+prompt('Thanks for playing Twenty-One!');
