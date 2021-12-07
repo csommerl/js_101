@@ -71,7 +71,7 @@ function formatHandDisplay(hand, player, hidden) {
   let values = [];
 
   hand.forEach((card, idx) => {
-    if (player === 'Dealer' && idx > 0 && hidden) {
+    if (player !== 'You' && idx > 0 && hidden) {
       values.push('unknown card');
     } else {
       let value = card[1];
@@ -138,16 +138,18 @@ function displayWinners(cardsObj, playersArr) {
     let verb = winner === 'You' ? 'win' : 'wins';
     prompt(`${winners[0]} ${verb}!\n--------------------`);
   } else {
-    prompt(`It was a tie between ${joinAnd(winners)}!\n--------------------`); ///// fix capitalization
+    prompt(`It was a tie between ${joinAnd(winners).toLowerCase()}!\n--------------------`);
   }
 }
 
-function displayResults(cardsObj, playersArr) { ///// use players array to identify busted, instead of hard-coding?
+function displayResults(cardsObj, playersArr) {
   displayHands(cardsObj, PLAYERS);
-  if (busted(cardsObj['You'])) {  ///// remove hard-coding
-    prompt('You busted: dealer wins!\n--------------------');
-  } else if (busted(cardsObj['Dealer'])) {  ///// remove hard-coding
-    prompt('Dealer busted: you win!\n--------------------');
+
+  if (playersArr.some(player => busted(cardsObj[player]))) {
+    let bustedPlayer = playersArr.find(player => busted(cardsObj[player]));
+    let nonBustedPlayer = playersArr.find(player => !busted(cardsObj[player])); // this wouldn't work for more than two players
+    let verb = nonBustedPlayer === 'You' ? 'win' : 'wins';
+    prompt(`${bustedPlayer} busted: ${nonBustedPlayer.toLowerCase()} ${verb}!\n--------------------`);
   } else {
     displayWinners(cardsObj, playersArr);
   }
@@ -196,9 +198,9 @@ function playTwentyOne() {
 
   dealHands(cards, PLAYERS);
 
-  playerMove(cards, 'You'); ///// remove hard-coding
+  playerMove(cards, 'You'); /// remove hard-coding
 
-  if (!busted(cards['You'])) {  /////// remove hard-coding
+  if (!busted(cards['You'])) {  /// remove hard-coding
     dealerMove(cards, 'Dealer');
   }
 
