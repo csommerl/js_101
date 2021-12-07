@@ -147,7 +147,7 @@ function displayResults(cardsObj, playersArr) {
 
   if (playersArr.some(player => busted(cardsObj[player]))) {
     let bustedPlayer = playersArr.find(player => busted(cardsObj[player]));
-    let nonBustedPlayer = playersArr.find(player => !busted(cardsObj[player])); // this wouldn't work for more than two players
+    let nonBustedPlayer = playersArr.find(player => !busted(cardsObj[player])); // this would *not* work for more than two players!
     let verb = nonBustedPlayer === 'You' ? 'win' : 'wins';
     prompt(`${bustedPlayer} busted: ${nonBustedPlayer.toLowerCase()} ${verb}!\n--------------------`);
   } else {
@@ -198,9 +198,9 @@ function playTwentyOne() {
 
   dealHands(cards, PLAYERS);
 
-  playerMove(cards, 'You'); /// remove hard-coding
+  playerMove(cards, 'You'); // if there were additional computer players, this would have to be revised
 
-  if (!busted(cards['You'])) {  /// remove hard-coding
+  if (!busted(cards['You'])) {  // if there were additional computer players, this would have to be revised
     dealerMove(cards, 'Dealer');
   }
 
