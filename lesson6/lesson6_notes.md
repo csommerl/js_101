@@ -221,3 +221,12 @@ https://launchschool.com/lessons/fb4809a8/assignments/2aff069a
 
 # 6.12 Assignment: Twenty-One Bonus Features and Questions
 https://launchschool.com/lessons/fb4809a8/assignments/92d3d220
+
+- [ ] For my version:
+  - [ ] Best of Five
+  - [X] More Constants
+- [ ] For their version:
+  - [ ] Minimizing calls to total
+  - [ ] The last playAgain call
+  - [ ] Ending the round
+  - [ ] Improve Input Handling
