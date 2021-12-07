@@ -6,13 +6,22 @@ const SUITS = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const PIP_CARDS = [...Array(9).keys()].map(idx => String(idx + 2));
 const FACE_CARDS = ['Jack', 'Queen', 'King', 'Ace'];
 const VALUES = PIP_CARDS.concat(FACE_CARDS);
-const PLAYERS = ['Dealer', 'You'];  // this and how data is stored is designed to add potentially other computer players
+const PLAYERS = ['Dealer', 'You'];  // this and how data is stored is designed to add potentially other computer players, perhaps adding needless complexity for two players!
 const DEAL_FIRST_IDX = 1;
 const INITIAL_HAND_SIZE = 2;
 const AI_BREAKING_POINT = 17;
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
+}
+
+function shuffle(array) {
+  for (let index = array.length - 1; index > 0; index--) {
+    let otherIndex = Math.floor(Math.random() * (index + 1)); // 0 to index
+    [array[index], array[otherIndex]] = [array[otherIndex], array[index]]; // swap elements
+  }
+
+  return array;
 }
 
 function initializeDeck() {
@@ -27,21 +36,12 @@ function initializeDeck() {
   return shuffle(deck);
 }
 
-function shuffle(array) {
-  for (let index = array.length - 1; index > 0; index--) {
-    let otherIndex = Math.floor(Math.random() * (index + 1)); // 0 to index
-    [array[index], array[otherIndex]] = [array[otherIndex], array[index]]; // swap elements
-  }
-
-  return array;
-}
-
 function dealHands(cardsObj, playersArr) {
   playersArr.forEach(function(player) {
     cardsObj[player] = [];
   });
 
-  let dealNextIdx = DEAL_FIRST_IDX;
+  let dealNextIdx = DEAL_FIRST_IDX; // this and the following simulate how cards are dealt one at a time back-and-forth
 
   for (let idx = 0; idx < playersArr.length * INITIAL_HAND_SIZE; idx += 1) {
     let player = playersArr[dealNextIdx];
@@ -53,7 +53,7 @@ function dealHands(cardsObj, playersArr) {
 }
 
 function drawCard(deck) {
-  return deck.shift();
+  return deck.pop();
 }
 
 function joinAnd(arr, delimiter = ', ', finalConnector = 'and') {
@@ -97,7 +97,7 @@ function calculateScore(hand) {
   let score = 0;
 
   hand.forEach(card => {
-    let cardValue = card[1];
+    let cardValue = card[1];  // second card element is the value
     if (FACE_CARDS.slice(0, 3).includes(cardValue)) { // what to do with face cards besides aces
       score += 10;
     } else if (cardValue === FACE_CARDS[3]) { // what do initially with aces
@@ -107,10 +107,9 @@ function calculateScore(hand) {
     }
   });
 
-  hand.filter(card => card[1] === FACE_CARDS[3]) // what to do with aces
-    .forEach(_ => {
-      if (score > 21) score -= 10;
-    });
+  hand.filter(card => card[1] === FACE_CARDS[3]).forEach(_ => { // what to do with aces
+    if (score > 21) score -= 10;
+  });
 
   return score;
 }
@@ -166,7 +165,7 @@ function playerMove(cardsObj, player) {
     displayHands(cardsObj, PLAYERS, 'hidden');
 
     prompt('(h)it or (s)tay?');
-    let answer = readline.question();
+    let answer = readline.question().toLowerCase();
 
     if (answer === 'hit' || answer === 'h') {
       cardsObj[player].push(drawCard(cardsObj.deck));

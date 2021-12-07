@@ -215,3 +215,9 @@ displayWinner
 
 # 6.10 Possible Solution: Twenty-One
 https://launchschool.com/lessons/fb4809a8/assignments/2b1f136c
+
+# 6.11 ESLint Twenty-One
+https://launchschool.com/lessons/fb4809a8/assignments/2aff069a
+
+# 6.12 Assignment: Twenty-One Bonus Features and Questions
+https://launchschool.com/lessons/fb4809a8/assignments/92d3d220
