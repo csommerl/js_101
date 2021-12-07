@@ -212,3 +212,6 @@ getWinner algo
 displayWinner
 1. if there is only one player with the max score, display that they are the winner
 2. else state that there is a tie between those with the max score
+
+# 6.10 Possible Solution: Twenty-One
+https://launchschool.com/lessons/fb4809a8/assignments/2b1f136c

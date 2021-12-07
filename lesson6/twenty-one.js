@@ -20,13 +20,11 @@ function initializeDeck() {
 
   for (let suit of SUITS) {
     for (let value of VALUES) {
-      deck.push([suit[0], value[0]]);
+      deck.push([suit, value]);
     }
   }
 
-  shuffle(deck);
-
-  return deck;
+  return shuffle(deck);
 }
 
 function shuffle(array) {
@@ -34,6 +32,8 @@ function shuffle(array) {
     let otherIndex = Math.floor(Math.random() * (index + 1)); // 0 to index
     [array[index], array[otherIndex]] = [array[otherIndex], array[index]]; // swap elements
   }
+
+  return array;
 }
 
 function dealHands(cardsObj, playersArr) {
@@ -56,10 +56,6 @@ function drawCard(deck) {
   return deck.shift();
 }
 
-function getValue(card) {  // this function is needed because values of face cards are stored with only the first letter
-  return VALUES.find(elem => elem[0] === card[1]);
-}
-
 function joinAnd(arr, delimiter = ', ', finalConnector = 'and') {
   if (arr.length <= 1) {
     return arr.join('');
@@ -78,8 +74,9 @@ function formatHandDisplay(hand, player, hidden) {
     if (player === 'Dealer' && idx > 0 && hidden) {
       values.push('unknown card');
     } else {
-      let value = getValue(card); ///// add display of suit
-      values.push(value);
+      let value = card[1];
+      let suit = card[0];
+      values.push(`${value} of ${suit}`);
     }
   });
 
@@ -100,7 +97,7 @@ function calculateScore(hand) {
   let score = 0;
 
   hand.forEach(card => {
-    let cardValue = getValue(card);
+    let cardValue = card[1];
     if (FACE_CARDS.slice(0, 3).includes(cardValue)) { // what to do with face cards besides aces
       score += 10;
     } else if (cardValue === FACE_CARDS[3]) { // what do initially with aces
@@ -110,7 +107,7 @@ function calculateScore(hand) {
     }
   });
 
-  hand.filter(card => getValue(card) === FACE_CARDS[3]) // what to do with aces
+  hand.filter(card => card[1] === FACE_CARDS[3]) // what to do with aces
     .forEach(_ => {
       if (score > 21) score -= 10;
     });
@@ -193,6 +190,7 @@ function dealerMove(cardsObj, player) {
 }
 
 function playTwentyOne() {
+  debugger;
   let cards = {};
   cards.deck = initializeDeck();
 
