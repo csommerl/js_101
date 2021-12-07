@@ -9,6 +9,7 @@ const VALUES = PIP_CARDS.concat(FACE_CARDS);
 const PLAYERS = ['Dealer', 'You'];  // this and how data is stored is designed to add potentially other computer players
 const DEAL_FIRST_IDX = 1;
 const INITIAL_HAND_SIZE = 2;
+const AI_BREAKING_POINT = 17;
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
@@ -55,7 +56,7 @@ function drawCard(deck) {
   return deck.shift();
 }
 
-function getValue(card) {  // needed function since values of face cards are stored with only the first letter
+function getValue(card) {  // this function is needed because values of face cards are stored with only the first letter
   return VALUES.find(elem => elem[0] === card[1]);
 }
 
@@ -77,7 +78,7 @@ function formatHandDisplay(hand, player, hidden) {
     if (player === 'Dealer' && idx > 0 && hidden) {
       values.push('unknown card');
     } else {
-      let value = getValue(card);
+      let value = getValue(card); ///// add display of suit
       values.push(value);
     }
   });
@@ -86,11 +87,12 @@ function formatHandDisplay(hand, player, hidden) {
 }
 
 function displayHands(cardsObj, playersArr, hidden) {
-  console.log('');
+  console.log('--------------------');
   playersArr.forEach(player => {
     let haveConjugation = player === 'You' ? 'have' : 'has';
     let hand = formatHandDisplay(cardsObj[player], player, hidden);
-    prompt(`${player} ${haveConjugation}: ${hand}`);
+    let score = hidden && player === 'Dealer' ? '?????' : calculateScore(cardsObj[player]);
+    prompt(`${player} ${haveConjugation}: ${hand}, for a score of ${score}`);
   });
 }
 
@@ -99,16 +101,16 @@ function calculateScore(hand) {
 
   hand.forEach(card => {
     let cardValue = getValue(card);
-    if (FACE_CARDS.slice(0, 3).includes(cardValue)) {
+    if (FACE_CARDS.slice(0, 3).includes(cardValue)) { // what to do with face cards besides aces
       score += 10;
-    } else if (cardValue === FACE_CARDS[3]) {
+    } else if (cardValue === FACE_CARDS[3]) { // what do initially with aces
       score += 11;
     } else {
       score += Number(cardValue);
     }
   });
 
-  hand.filter(card => getValue(card) === FACE_CARDS[3])
+  hand.filter(card => getValue(card) === FACE_CARDS[3]) // what to do with aces
     .forEach(_ => {
       if (score > 21) score -= 10;
     });
@@ -130,23 +132,27 @@ function getWinners(cardsObj, playersArr, winningScore) {
   });
 }
 
-function displayResults(cardsObj, playersArr) {
-  displayHands(cardsObj, playersArr);
-
-  playersArr.forEach(player => {
-    let playerName = player === 'You' ? 'Your' : player;
-    prompt(`${playerName} score is ${calculateScore(cardsObj[player])}`);
-  });
-
+function displayWinners(cardsObj, playersArr) {
   let maxScore = getMaxScore(cardsObj, playersArr);
   let winners = getWinners(cardsObj, playersArr, maxScore);
 
   if (winners.length === 1) {
     let winner = winners[0];
     let verb = winner === 'You' ? 'win' : 'wins';
-    prompt(`${winners[0]} ${verb}!\n`);
+    prompt(`${winners[0]} ${verb}!\n--------------------`);
   } else {
-    prompt(`${joinAnd(winners)} tie!\n`); ///// fix capitalization
+    prompt(`It was a tie between ${joinAnd(winners)}!\n--------------------`); ///// fix capitalization
+  }
+}
+
+function displayResults(cardsObj, playersArr) { ///// use players array to identify busted, instead of hard-coding?
+  displayHands(cardsObj, PLAYERS);
+  if (busted(cardsObj['You'])) {  ///// remove hard-coding
+    prompt('You busted: dealer wins!\n--------------------');
+  } else if (busted(cardsObj['Dealer'])) {  ///// remove hard-coding
+    prompt('Dealer busted: you win!\n--------------------');
+  } else {
+    displayWinners(cardsObj, playersArr);
   }
 }
 
@@ -156,26 +162,32 @@ function busted(hand) {
 
 function playerMove(cardsObj, player) {
   while (true) {
-    prompt('hit or stay?'); ///// add option to only enter 'h' or 's'
-    let answer = readline.question();
-
-    if (answer === 'hit') {
-      cardsObj[player].push(drawCard(cardsObj.deck));
-    }
-
-    if (answer !== 'hit' && answer !== 'stay') {
-      prompt('Invalid input. Enter hit or stay.');
-    }
-
-    if (answer === 'stay' || busted(cardsObj[player])) break;
+    if (busted(cardsObj[player])) break;
 
     displayHands(cardsObj, PLAYERS, 'hidden');
+
+    prompt('(h)it or (s)tay?');
+    let answer = readline.question();
+
+    if (answer === 'hit' || answer === 'h') {
+      cardsObj[player].push(drawCard(cardsObj.deck));
+      console.log('--------------------');
+      prompt(`${player} hit!`);
+    } else if (answer === 'stay' || answer === 's') {
+      break;
+    } else {
+      prompt('Invalid input.');
+    }
   }
 }
 
 function dealerMove(cardsObj, player) {
+  console.log('--------------------');
+  prompt('Dealer turn...');
+
   while (true) {
-    if (calculateScore(cardsObj[player]) >= 17) break;
+    if (calculateScore(cardsObj[player]) >= AI_BREAKING_POINT) break;
+    prompt('Dealer hits!');
     cardsObj[player].push(drawCard(cardsObj.deck));
   }
 }
@@ -185,28 +197,19 @@ function playTwentyOne() {
   cards.deck = initializeDeck();
 
   dealHands(cards, PLAYERS);
-  displayHands(cards, PLAYERS, 'hidden');
 
-  playerMove(cards, 'You');
-  if (busted(cards['You'])) {
-    displayHands(cards, PLAYERS);
-    prompt('You busted: dealer wins!\n');
-    return;
-  }
+  playerMove(cards, 'You'); ///// remove hard-coding
 
-  dealerMove(cards, 'Dealer');
-  if (busted(cards['Dealer'])) {
-    displayHands(cards, PLAYERS);
-    prompt('Dealer busted: you win!\n');
-    return;
+  if (!busted(cards['You'])) {  /////// remove hard-coding
+    dealerMove(cards, 'Dealer');
   }
 
   displayResults(cards, PLAYERS);
 }
 
 // Main Program
+prompt('Welcome to Twenty-One!\n');
 while (true) {
-  prompt('Welcome to Twenty-One!\n');
   playTwentyOne();
 
   let playAgain;
@@ -220,5 +223,5 @@ while (true) {
 
   console.clear();
 }
-
+console.log('--------------------');
 prompt('Thanks for playing Twenty-One!');
