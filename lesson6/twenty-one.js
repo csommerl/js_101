@@ -9,10 +9,17 @@ const VALUES = PIP_CARDS.concat(FACE_CARDS);
 const PLAYERS = ['Dealer', 'You'];  // this and how data is stored is designed to add potentially other computer players, perhaps adding needless complexity for two players!
 const DEAL_FIRST_IDX = 1;
 const INITIAL_HAND_SIZE = 2;
-const AI_BREAKING_POINT = 17;
+const DEALER_MINIMUM_PLAY = 17;
+const DIVIDER = '--------------------';
+const MAX_VALID_SCORE = 21;
+const GAME_NAME = 'Twenty-One';
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
+}
+
+function divider() {
+  console.log(DIVIDER);
 }
 
 function shuffle(array) {
@@ -84,7 +91,7 @@ function formatHandDisplay(hand, player, hidden) {
 }
 
 function displayHands(cardsObj, playersArr, hidden) {
-  console.log('--------------------');
+  divider();
   playersArr.forEach(player => {
     let haveConjugation = player === 'You' ? 'have' : 'has';
     let hand = formatHandDisplay(cardsObj[player], player, hidden);
@@ -108,16 +115,16 @@ function calculateScore(hand) {
   });
 
   hand.filter(card => card[1] === FACE_CARDS[3]).forEach(_ => { // what to do with aces
-    if (score > 21) score -= 10;
+    if (score > MAX_VALID_SCORE) score -= 10;
   });
 
   return score;
 }
 
-function getMaxScore(cardsObj, playersArr) {
+function getHighestScore(cardsObj, playersArr) {
   let validScores = playersArr
     .map(player => calculateScore(cardsObj[player]))
-    .filter(score => score <= 21);
+    .filter(score => score <= MAX_VALID_SCORE);
 
   return Math.max(...validScores);
 }
@@ -129,15 +136,15 @@ function getWinners(cardsObj, playersArr, winningScore) {
 }
 
 function displayWinners(cardsObj, playersArr) {
-  let maxScore = getMaxScore(cardsObj, playersArr);
-  let winners = getWinners(cardsObj, playersArr, maxScore);
+  let highestScore = getHighestScore(cardsObj, playersArr);
+  let winners = getWinners(cardsObj, playersArr, highestScore);
 
   if (winners.length === 1) {
     let winner = winners[0];
     let verb = winner === 'You' ? 'win' : 'wins';
-    prompt(`${winners[0]} ${verb}!\n--------------------`);
+    prompt(`${winners[0]} ${verb}!`);
   } else {
-    prompt(`It was a tie between ${joinAnd(winners).toLowerCase()}!\n--------------------`);
+    prompt(`It was a tie between ${joinAnd(winners).toLowerCase()}!`);
   }
 }
 
@@ -148,14 +155,15 @@ function displayResults(cardsObj, playersArr) {
     let bustedPlayer = playersArr.find(player => busted(cardsObj[player]));
     let nonBustedPlayer = playersArr.find(player => !busted(cardsObj[player])); // this would *not* work for more than two players!
     let verb = nonBustedPlayer === 'You' ? 'win' : 'wins';
-    prompt(`${bustedPlayer} busted: ${nonBustedPlayer.toLowerCase()} ${verb}!\n--------------------`);
+    prompt(`${bustedPlayer} busted: ${nonBustedPlayer.toLowerCase()} ${verb}!`);
   } else {
     displayWinners(cardsObj, playersArr);
   }
+  divider();
 }
 
 function busted(hand) {
-  return calculateScore(hand) > 21;
+  return calculateScore(hand) > MAX_VALID_SCORE;
 }
 
 function playerMove(cardsObj, player) {
@@ -169,7 +177,7 @@ function playerMove(cardsObj, player) {
 
     if (answer === 'hit' || answer === 'h') {
       cardsObj[player].push(drawCard(cardsObj.deck));
-      console.log('--------------------');
+      divider();
       prompt(`${player} hit!`);
     } else if (answer === 'stay' || answer === 's') {
       break;
@@ -180,18 +188,17 @@ function playerMove(cardsObj, player) {
 }
 
 function dealerMove(cardsObj, player) {
-  console.log('--------------------');
+  divider();
   prompt('Dealer turn...');
 
   while (true) {
-    if (calculateScore(cardsObj[player]) >= AI_BREAKING_POINT) break;
+    if (calculateScore(cardsObj[player]) >= DEALER_MINIMUM_PLAY) break;
     prompt('Dealer hits!');
     cardsObj[player].push(drawCard(cardsObj.deck));
   }
 }
 
-function playTwentyOne() {
-  debugger;
+function playRound() {
   let cards = {};
   cards.deck = initializeDeck();
 
@@ -207,9 +214,9 @@ function playTwentyOne() {
 }
 
 // Main Program
-prompt('Welcome to Twenty-One!\n');
+prompt(`Welcome to ${GAME_NAME}!`);
 while (true) {
-  playTwentyOne();
+  playRound();
 
   let playAgain;
   while (true) {
@@ -222,5 +229,5 @@ while (true) {
 
   console.clear();
 }
-console.log('--------------------');
-prompt('Thanks for playing Twenty-One!');
+divider();
+prompt(`Thanks for playing ${GAME_NAME}!`);
