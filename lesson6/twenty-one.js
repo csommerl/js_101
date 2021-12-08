@@ -159,7 +159,7 @@ function displayRoundResult(winnerArr, bustedArr) {
   divider();
   if (bustedArr.length > 0) {
     bustedArr.forEach(bustedPlayer => {
-      prompt(`${bustedPlayer} busted!`);
+      prompt(`${bustedPlayer} busted.`);
     });
   }
 
@@ -233,13 +233,14 @@ function playMatch() {  // do I need to pass PLAYERS?
     playRound(wins);
     divider();
     PLAYERS.forEach(player => {
-      prompt(`${player} has won ${wins[player]} so far.`);  /// fix verb
+      let verb = player === 'You' ? 'have' : 'has';
+      prompt(`${player} ${verb} won ${wins[player]} rounds so far.`);  /// fix verb
     });
   }
 
   let matchWinner = PLAYERS.find(player => wins[player] === GAMES_TO_WIN);
   divider();
-  prompt(`${matchWinner} won the match`);
+  prompt(`${matchWinner} won the match!`);
 }
 
 function playRound(wins) {
@@ -248,9 +249,9 @@ function playRound(wins) {
 
   dealHands(cards, PLAYERS);  /// Question: when should global constants be passed or not to arguments?
 
-  playerMove(cards, 'You'); // if there were additional computer players, this would have to be revised
+  playerMove(cards, 'You'); // if there were additional computer players, they should be looped through and executed with something like the dealerMove function
 
-  if (!busted(cards['You'])) {  // if there were additional computer players, this would have to be revised
+  if (!busted(cards['You'])) {  // see previous comment
     dealerMove(cards, 'Dealer');
   }
 
