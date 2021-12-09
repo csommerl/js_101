@@ -4,15 +4,18 @@
 ** Question 1
 ** I have lots of functions dependent on other functions,
 ** which are in turn dependent on still other functions.
+** E.g., playerMove, dealerMove, playRound, & playMatch
 ** I worry that it becomes difficult to track the program's logic.
 ** Should I not try to create so many functions?
 ** Maybe instead I should have one main game loop, as in the sample solution?
 
 ** Question 2
 ** Another worry: functions have multiple side effects, since they are nested.
+** E.g., playerMove, dealerMove, playRound, & playMatch
+** Is this a problem anywhere?
 
 ** Question 3
-** another question: Question: should I just make this a global constant?
+** another question: Question: should I make cards a global constant?
 */
 
 const readline = require('readline-sync');
@@ -145,7 +148,7 @@ function getHighestScore(cardsObj) {
   return Math.max(...validScores);
 }
 
-function detectWinnersAndBusted(cardsObj) { // note that in either case, it returns an array
+function detectWinnersAndBusted(cardsObj) {
   let winnerArr;
   let bustedArr = PLAYERS.filter(player => busted(cardsObj[player]));
 
@@ -232,7 +235,7 @@ function updateWinsTally(wins, winnerArr) {
   return wins;
 }
 
-function playMatch() {  // do I need to pass PLAYERS?
+function playMatch() {
   let wins = initializeWinsTally();
 
   while (PLAYERS.every(player => wins[player] < GAMES_TO_WIN)) {
