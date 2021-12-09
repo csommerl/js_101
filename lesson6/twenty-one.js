@@ -1,12 +1,18 @@
 // Twenty-One https://launchschool.com/lessons/fb4809a8/assignments/62238c60
 
 /*
-** I have lots of functiond dependent on other functions,
+** Question 1
+** I have lots of functions dependent on other functions,
 ** which are in turn dependent on still other functions.
 ** I worry that it becomes difficult to track the program's logic.
 ** Should I not try to create so many functions?
 ** Maybe instead I should have one main game loop, as in the sample solution?
+
+** Question 2
 ** Another worry: functions have multiple side effects, since they are nested.
+
+** Question 3
+** another question: Question: should I just make this a global constant?
 */
 
 const readline = require('readline-sync');
@@ -28,7 +34,7 @@ function prompt(msg) {
   console.log(`=> ${msg}`);
 }
 
-function divider() {  /// Question: when should global constants be passed or not to arguments?
+function divider() {
   console.log(DIVIDER);
 }
 
@@ -53,19 +59,19 @@ function initializeDeck() {
   return shuffle(deck);
 }
 
-function dealHands(cardsObj, playersArr) {
-  playersArr.forEach(function(player) {
+function dealHands(cardsObj) {
+  PLAYERS.forEach(function(player) {
     cardsObj[player] = [];
   });
 
   let dealNextIdx = DEAL_FIRST_IDX; // this and the following simulate how cards are dealt one at a time back-and-forth
 
-  for (let idx = 0; idx < playersArr.length * INITIAL_HAND_SIZE; idx += 1) {
-    let player = playersArr[dealNextIdx];
+  for (let idx = 0; idx < PLAYERS.length * INITIAL_HAND_SIZE; idx += 1) {
+    let player = PLAYERS[dealNextIdx];
     let playerHand = cardsObj[player];
     let card = drawCard(cardsObj.deck);
     playerHand.push(card);
-    dealNextIdx = dealNextIdx === playersArr.length - 1 ? 0 : dealNextIdx + 1; // generalized for more than two players
+    dealNextIdx = dealNextIdx === PLAYERS.length - 1 ? 0 : dealNextIdx + 1; // generalized for more than two players
   }
 }
 
@@ -100,9 +106,9 @@ function formatHandDisplay(hand, player, hidden) {
   return joinAnd(values);
 }
 
-function displayHands(cardsObj, playersArr, hidden) {
+function displayHands(cardsObj, hidden) {
   divider();
-  playersArr.forEach(player => {
+  PLAYERS.forEach(player => {
     let haveConjugation = player === 'You' ? 'have' : 'has';
     let hand = formatHandDisplay(cardsObj[player], player, hidden);
     let score = hidden && player === 'Dealer' ? '?????' : calculateScore(cardsObj[player]);
@@ -131,23 +137,23 @@ function calculateScore(hand) {
   return score;
 }
 
-function getHighestScore(cardsObj, playersArr) {
-  let validScores = playersArr
+function getHighestScore(cardsObj) {
+  let validScores = PLAYERS
     .map(player => calculateScore(cardsObj[player]))
     .filter(score => score <= MAX_VALID_SCORE);
 
   return Math.max(...validScores);
 }
 
-function detectWinnersAndBusted(cardsObj, playersArr) { // note that in either case, it returns an array
+function detectWinnersAndBusted(cardsObj) { // note that in either case, it returns an array
   let winnerArr;
-  let bustedArr = playersArr.filter(player => busted(cardsObj[player]));
+  let bustedArr = PLAYERS.filter(player => busted(cardsObj[player]));
 
   if (bustedArr.length > 0) {
-    winnerArr = playersArr.filter(player => !busted(cardsObj[player])); // this would *not* work for more than two players!
+    winnerArr = PLAYERS.filter(player => !busted(cardsObj[player])); // this would *not* work for more than two players!
   } else {
-    let highestScore = getHighestScore(cardsObj, playersArr);
-    winnerArr = playersArr.filter(player => {
+    let highestScore = getHighestScore(cardsObj);
+    winnerArr = PLAYERS.filter(player => {
       return calculateScore(cardsObj[player]) === highestScore;
     });
   }
@@ -178,7 +184,7 @@ function playerMove(cardsObj, player) {
   while (true) {
     if (busted(cardsObj[player])) break;
 
-    displayHands(cardsObj, PLAYERS, 'hidden');
+    displayHands(cardsObj, 'hidden');
 
     prompt('(h)it or (s)tay?');
     let answer = readline.question().toLowerCase();
@@ -206,10 +212,10 @@ function dealerMove(cardsObj, player) {
   }
 }
 
-function initializeWinsTally(playersArr) {
+function initializeWinsTally() {
   let wins = {};
 
-  playersArr.forEach(function(player) {
+  PLAYERS.forEach(function(player) {
     wins[player] = 0;
   });
 
@@ -227,14 +233,14 @@ function updateWinsTally(wins, winnerArr) {
 }
 
 function playMatch() {  // do I need to pass PLAYERS?
-  let wins = initializeWinsTally(PLAYERS);
+  let wins = initializeWinsTally();
 
   while (PLAYERS.every(player => wins[player] < GAMES_TO_WIN)) {
     playRound(wins);
     divider();
     PLAYERS.forEach(player => {
       let verb = player === 'You' ? 'have' : 'has';
-      prompt(`${player} ${verb} won ${wins[player]} rounds so far.`);  /// fix verb
+      prompt(`${player} ${verb} won ${wins[player]} rounds so far.`);
     });
   }
 
@@ -244,10 +250,10 @@ function playMatch() {  // do I need to pass PLAYERS?
 }
 
 function playRound(wins) {
-  let cards = {}; /// Question: should I just make this a global constant?
+  let cards = {};
   cards.deck = initializeDeck();
 
-  dealHands(cards, PLAYERS);  /// Question: when should global constants be passed or not to arguments?
+  dealHands(cards);
 
   playerMove(cards, 'You'); // if there were additional computer players, they should be looped through and executed with something like the dealerMove function
 
@@ -255,10 +261,10 @@ function playRound(wins) {
     dealerMove(cards, 'Dealer');
   }
 
-  let [winnerArr, bustedArr] = detectWinnersAndBusted(cards, PLAYERS);
+  let [winnerArr, bustedArr] = detectWinnersAndBusted(cards);
   updateWinsTally(wins, winnerArr);
 
-  displayHands(cards, PLAYERS);
+  displayHands(cards);
   displayRoundResult(winnerArr, bustedArr);
 
   prompt('Press any key (besides enter) to continue.');
