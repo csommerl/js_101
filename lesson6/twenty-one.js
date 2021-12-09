@@ -15,7 +15,7 @@
 ** Is this a problem anywhere?
 
 ** Question 3
-** another question: Question: should I make cards a global constant?
+** Should I make cards a global constant?
 */
 
 const readline = require('readline-sync');
