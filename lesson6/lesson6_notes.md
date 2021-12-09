@@ -184,8 +184,6 @@ https://launchschool.com/lessons/fb4809a8/assignments/65e8c82a
 # 6.9 Assignment: Twenty-One
 https://launchschool.com/lessons/fb4809a8/assignments/62238c60
 
-
-
 1. Initialize deck
 2. Deal cards to player and dealer
 3. Player turn: hit or stay
@@ -225,8 +223,14 @@ https://launchschool.com/lessons/fb4809a8/assignments/92d3d220
 - [x] For my version:
   - [x] Best of Five
   - [X] More Constants
-- [ ] For their version:
-  - [ ] Minimizing calls to total
-  - [ ] The last playAgain call
-  - [ ] Ending the round
-  - [ ] Improve Input Handling
+- [x] For their version:
+  - [x] Minimizing calls to total
+  - [x] The last playAgain call
+  - [x] Ending the round
+  - [x] Improve Input Handling
+
+# 6.13 Start a Blog
+
+# 6.14 Summary
+
+# 6.15 Lesson 6 Quiz 1

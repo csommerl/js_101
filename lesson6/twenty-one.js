@@ -275,6 +275,19 @@ function playRound(wins) {
   console.clear();
 }
 
+function playAgain() {
+  let answer;
+
+  while (true) {
+    prompt('Play again? y/n');
+    answer = readline.question().toLowerCase();
+    if (['y', 'n'].includes(answer)) break;
+    prompt('Invalid input. Enter one of: "y" or "n".');
+  }
+
+  return answer === 'y';
+}
+
 // Main Program
 prompt(`Welcome to ${GAME_NAME}!`);
 
@@ -283,14 +296,7 @@ while (true) {
 
   playMatch();
 
-  let playAgain;
-  while (true) {
-    prompt('Play again? y/n');
-    playAgain = readline.question().toLowerCase();
-    if (['y', 'n'].includes(playAgain)) break;
-    prompt('Invalid input. Enter one of: "y" or "n".');
-  }
-  if (playAgain === 'n') break;
+  if (!playAgain()) break;
 
   console.clear();
 }

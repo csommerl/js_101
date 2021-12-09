@@ -9,6 +9,7 @@
 - [ ] [Lesson 2 Quiz 1](https://launchschool.com/lessons/64655364/assignments/358c288b)
 - [ ] [Lesson 4 Quiz 1](https://launchschool.com/lessons/60e10aa5/assignments/cb4e0a29)
 - [ ] [Lesson 5 Quiz 1](https://launchschool.com/lessons/778acada/assignments/96cdcf45)
+- [ ] [Lesson 6 Quiz 1](https://launchschool.com/quizzes/b7b7d8e9)
 
 # JS100 Exercises to Redo
 - [ ] https://launchschool.com/exercises/aba8a530

@@ -967,3 +967,9 @@ Algo
   * * *
    ***
 *******
+
+# Debugging JS
+https://launchschool.com/exercise_sets/c58f99e8
+
+## Word Ladder
+https://launchschool.com/exercises/681d8f05
