@@ -3,6 +3,7 @@
 - [ ] Practice PEDAC
 - [ ] Practice Flowcharts
 - [ ] Install ESLint VS Code Extension
+- [ ] Go through small problems "Lessons"
 
 # Sources for Practice Problems
 1. [Codewars](https://www.codewars.com/): be able to solve difficult 6 kyu and easier 5 kyu to be ready for the interview. Aim at 5 kyu with over 500 points
@@ -23,7 +24,9 @@
 - [ ] https://launchschool.com/exercises/0d29694b
 - [ ] https://launchschool.com/exercises/f9dd9171
 
-# JS101 Easy Small Problems to Redo
+# JS101 Small Problems
+
+## JS101 Easy Small Problems to Redo
 - [ ] [Short Long Short](https://launchschool.com/exercises/c55f9982)
 - [ ] [Convert a String to a Number!](https://launchschool.com/exercises/a5d2d50f)
 - [ ] [Convert a String to a Signed Number!](https://launchschool.com/exercises/6974d7f2)
@@ -37,16 +40,19 @@
 - [ ] [Leading Substrings, Further Exploration](https://launchschool.com/exercises/50f14ae3)
 - [ ] [Sum of Sums, Further Exploration](https://launchschool.com/exercises/6187c3ec)
 
-# JS101 Medium Small Problems to Redo
+## JS101 Medium Small Problems to Redo
 - [ ] [Stack Machine Interpretation](https://launchschool.com/exercises/026e99f0)
 - [ ] [Word to Digit](https://launchschool.com/exercises/9010f84f)
 - [ ] [Fibonacci Numbers (Memoization)](https://launchschool.com/exercises/f3bfa787)
 
-Optional:
+## Optional Medium
 - [ ] [Now I Know My ABCs](https://launchschool.com/exercises/d219156d) 
 - [ ] [Lettercase Percentage Ratio](https://launchschool.com/exercises/71983fb9)
 - [ ] [Bubble Sort](https://launchschool.com/exercises/b648e695)
 - [ ] [Longest Sentence](https://launchschool.com/exercises/a89915a7)
+
+## Debugging JS
+- [ ] [Word Ladder](https://launchschool.com/exercises/681d8f05)
 
 # JS101 Exercises to Redo
 

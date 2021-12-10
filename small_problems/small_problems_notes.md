@@ -973,3 +973,15 @@ https://launchschool.com/exercise_sets/c58f99e8
 
 ## Word Ladder
 https://launchschool.com/exercises/681d8f05
+
+Lesson:
+- what happens when a semi-colon is forgotten just before a bracket (as in an array); the bracket will be interpreted as an accessor of what comes before it, possibly raising an TypeError; js101
+
+## Reserved Keywords
+https://launchschool.com/exercises/f319b8bc
+
+Lesson:
+- what is the return value of forEach; the return value is always undefined, even if you have an explicit return of something else; js101
+
+## Random Recipe Generator
+https://launchschool.com/exercises/bb8f2935

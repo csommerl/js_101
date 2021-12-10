@@ -42,3 +42,5 @@ with Regex, how to get sentences of a text and put them in an array; let sentenc
 \s; Matches a single white space character, including space, tab, form feed, line feed, and other Unicode spaces.; js101
 
 ###
+what happens when a semi-colon is forgotten just before a bracket (as in an array); the bracket will be interpreted as an accessor of what comes before it, possibly raising an TypeError; js101
+what is the return value of forEach; the return value is always undefined, even if you have an explicit return of something else; js101
