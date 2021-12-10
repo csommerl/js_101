@@ -4,6 +4,13 @@
 - [ ] Practice Flowcharts
 - [ ] Install ESLint VS Code Extension
 
+# Sources for Practice Problems
+1. [Codewars](https://www.codewars.com/): be able to solve difficult 6 kyu and easier 5 kyu to be ready for the interview. Aim at 5 kyu with over 500 points
+2. https://edabit.com/
+3. https://exercism.org/
+4. https://adventofcode.com/
+5. https://leetcode.com/
+
 # Quizzes to Retake
 - [ ] [Lesson 1 Quiz 1](https://launchschool.com/lessons/c5707865/assignments/289bfa86)
 - [ ] [Lesson 2 Quiz 1](https://launchschool.com/lessons/64655364/assignments/358c288b)
