@@ -2,11 +2,7 @@
 
 // Picks n random elements from an array,
 // and returns a new array with those elements.
-function random(array, n) {
-  if (n === undefined) {
-    n = 1;
-  }
-
+function random(array, n = 1) {
   let elements = array.slice();
   let randomElements = [];
 
@@ -40,8 +36,12 @@ let secondNoun = ['Mix', 'Delight', 'Bowl', 'Chunk', 'Surprise', 'Bliss'];
 
 // Generate!
 
-let dishName = random(adjective) + random(firstNoun) + random(secondNoun);
-let dish = random(ingredients, 3) + random(spices, 2) + random(extras, 1);
+let dishName = random(adjective)
+  .concat(random(firstNoun))
+  .concat(random(secondNoun));
+let dish = random(ingredients, 3)
+  .concat(random(spices, 2))
+  .concat(random(extras, 1));
 
 console.log('How about: ' + dishName.join(' '));
 console.log('You need: ' + dish.join(', '));

@@ -985,3 +985,18 @@ Lesson:
 
 ## Random Recipe Generator
 https://launchschool.com/exercises/bb8f2935
+
+## Task List
+https://launchschool.com/exercises/ad7d2874
+
+Lesson:
+- Why using delete with an array can lead to unexpected results and should generally be avoided; When delete is used to remove an array element, an empty slot remains in its place in the array. The length of the array remains the same, and using bracket notation with the deleted item's index will return undefined.; js101
+
+## Range
+https://launchschool.com/exercises/ca783829
+
+Lesson:
+- function overloading; the ability to utilize multiple functions of the same name with different signatures, JavaScript *does not* support; js101
+
+## Member Directory
+https://launchschool.com/exercises/f6207bd4
