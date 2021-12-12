@@ -8,6 +8,7 @@ let memberDirectory = {
 };
 
 function isValidName(name) {
+  // return (/^[a-z]+ [a-z]+$/i).test(name);
   return (/^\w+ \w+$/).test(name);
 }
 
@@ -30,5 +31,9 @@ function addMember(name, phone) {
 addMember('Laura Carlisle', '444-2223');
 addMember('Rachel Garcia', '232-1191');
 addMember('Earl 5mith', '331-9191');
+
+addMember('A@ron Carl', 'a34-3333');
+addMember('Curtis Sommerlatte', '9934-32233');
+addMember('0pie Bear', '542-9044');
 
 console.log(memberDirectory);

@@ -1000,3 +1000,12 @@ Lesson:
 
 ## Member Directory
 https://launchschool.com/exercises/f6207bd4
+
+## Glory!
+https://launchschool.com/exercises/59187001
+
+## Grade Analysis
+https://launchschool.com/exercises/860af5ab
+
+## Weekday Classes
+https://launchschool.com/exercises/28cb5e8c

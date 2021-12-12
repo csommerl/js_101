@@ -12,6 +12,9 @@
 4. https://adventofcode.com/
 5. https://leetcode.com/
 
+# Other Resources
+- [Scriptular](https://scriptular.com/)
+
 # Quizzes to Retake
 - [ ] [Lesson 1 Quiz 1](https://launchschool.com/lessons/c5707865/assignments/289bfa86)
 - [ ] [Lesson 2 Quiz 1](https://launchschool.com/lessons/64655364/assignments/358c288b)
