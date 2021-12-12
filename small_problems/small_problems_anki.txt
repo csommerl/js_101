@@ -40,9 +40,9 @@ Regex meaning of x?; Matches the preceding item "x" 0 or 1 times. If used immedi
 Regex meaning of .*?; any number of characters (even zero characters); js101
 with Regex, how to get sentences of a text and put them in an array; let sentences = text.match(/\w.*?[.!?]/g); js101
 \s; Matches a single white space character, including space, tab, form feed, line feed, and other Unicode spaces.; js101
-
-###
 what happens when a semi-colon is forgotten just before a bracket (as in an array); the bracket will be interpreted as an accessor of what comes before it, possibly raising an TypeError; js101
 what is the return value of forEach; the return value is always undefined, even if you have an explicit return of something else; js101
 Why using delete with an array can lead to unexpected results and should generally be avoided; When delete is used to remove an array element, an empty slot remains in its place in the array. The length of the array remains the same, and using bracket notation with the deleted item's index will return undefined.; js101
 function overloading; the ability to utilize multiple functions of the same name with different signatures, JavaScript *does not* support; js101
+
+###

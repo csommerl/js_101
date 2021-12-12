@@ -7,7 +7,12 @@ function toDate(string) {
 const TODAY = toDate("2018-08-05");
 
 function toString(date) {
-  return `${date.getYear()}-${date.getMonth()}-${date.getDay()}`;
+  let year = date.getFullYear();
+  let month = String(date.getMonth() + 1)
+    .padStart(2, 0);
+  let day = String(date.getDate())
+    .padStart(2, 0);
+  return `${year}-${month}-${day}`;
 }
 
 function isInThePast(date) {

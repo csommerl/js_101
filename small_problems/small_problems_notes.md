@@ -1009,3 +1009,12 @@ https://launchschool.com/exercises/860af5ab
 
 ## Weekday Classes
 https://launchschool.com/exercises/28cb5e8c
+
+## Neutralizer
+https://launchschool.com/exercises/5d853595
+
+# Advanced 1
+https://launchschool.com/exercise_sets/714347b0
+
+## Madlibs Revisited
+https://launchschool.com/exercises/55f51106
