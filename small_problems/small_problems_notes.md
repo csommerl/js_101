@@ -1020,3 +1020,6 @@ https://launchschool.com/exercise_sets/714347b0
 https://launchschool.com/exercises/55f51106
 
 Lesson: replace's second argument can be a replacer function
+
+## Transpose 3x3 Matrix
+https://launchschool.com/exercises/144fa402
