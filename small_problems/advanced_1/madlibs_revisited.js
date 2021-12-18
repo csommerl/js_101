@@ -1,33 +1,51 @@
 // Madlibs Revisited https://launchschool.com/exercises/55f51106
 
-const REPLACEMENT_TEXTS = {
-  adjective: ['quick', 'lazy', 'sleepy', 'noisy', 'hungry'],
-  noun: ['fox', 'dog', 'head', 'leg', 'tail', 'cat'],
-  verb: ['jumps', 'lifts', 'bites', 'licks', 'pats'],
-  adverb: ['easily', 'lazily', 'noisily', 'excitedly'],
-};
+// // mine
+// const REPLACE_TEXTS = {
+//   adjective: ['quick', 'lazy', 'sleepy', 'noisy', 'hungry'],
+//   noun: ['fox', 'dog', 'head', 'leg', 'tail', 'cat'],
+//   verb: ['jumps', 'lifts', 'bites', 'licks', 'pats'],
+//   adverb: ['easily', 'lazily', 'noisily', 'excitedly'],
+// };
+
+// function madlibs(template) {
+//   let keys = Object.keys(REPLACE_TEXTS);
+//   keys.forEach(key => {
+//     let re = new RegExp(`\\b${key}\\b`);
+//     while (re.test(template)) {
+//       let randomIdx = Math.floor(Math.random() * REPLACE_TEXTS[key].length);
+//       let replacement = REPLACE_TEXTS[key][randomIdx];
+//       template = template.replace(re, replacement);
+//     }
+//   });
+
+//   return template;
+// }
 
 function madlibs(template) {
-  let keys = Object.keys(REPLACEMENT_TEXTS);
-  keys.forEach(key => {
-    let re = new RegExp(`\\b${key}\\b`);
-    while (re.test(template)) {
-      let randomIdx = Math.floor(Math.random() * REPLACEMENT_TEXTS[key].length);
-      let replacement = REPLACEMENT_TEXTS[key][randomIdx];
-      template = template.replace(re, replacement);
-    }
-  });
+  const REPLACEMENT_TEXTS = {
+    adjective: ['quick', 'lazy', 'sleepy', 'noisy', 'hungry'],
+    noun: ['fox', 'dog', 'head', 'leg', 'tail', 'cat'],
+    verb: ['jumps', 'lifts', 'bites', 'licks', 'pats'],
+    adverb: ['easily', 'lazily', 'noisily', 'excitedly'],
+  };
 
-  return template;
+  function replacer(match) {
+    let key = match.replace(/[^\w+]/g, '');
+    let randomIdx = Math.floor(Math.random() * REPLACEMENT_TEXTS[key].length);
+    return REPLACEMENT_TEXTS[key][randomIdx];
+  }
+
+  return template.replace(/%{\w+}/g, replacer);
 }
 
 let template1 =
-  'The adjective brown noun adverb ' +
-  'verb the adjective yellow ' +
-  'noun, who adverb verb his ' +
-  'noun and looks around.';
+  'The %{adjective} brown %{noun} %{adverb} ' +
+  '%{verb} the %{adjective} yellow ' +
+  '%{noun}, who %{adverb} %{verb} his ' +
+  '%{noun} and looks around.';
 
-let template2 = 'The noun verb the noun\'s noun.';
+let template2 = 'The %{noun} %{verb} the %{noun}\'s %{noun}.';
 
 // These examples use the following list of replacement texts:
 // adjectives: quick lazy sleepy noisy hungry

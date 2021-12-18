@@ -1018,3 +1018,5 @@ https://launchschool.com/exercise_sets/714347b0
 
 ## Madlibs Revisited
 https://launchschool.com/exercises/55f51106
+
+Lesson: replace's second argument can be a replacer function
