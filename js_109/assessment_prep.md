@@ -58,6 +58,9 @@
 ## Debugging JS
 - [ ] [Word Ladder](https://launchschool.com/exercises/681d8f05)
 
+## Advanced
+- [ ] [Madlibs Revisited](https://launchschool.com/exercises/55f51106)
+
 # JS101 Exercises to Redo
 
 ## Lesson 3.3
