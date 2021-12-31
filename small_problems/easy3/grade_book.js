@@ -41,11 +41,28 @@
 // }
 
 // my new one
+// const LETTER_GRADE_MIN_SCORES = {A: 90, B: 80, C: 70, D: 60};
+
+// function getAverage(...scores) {
+//   let sum = (num1, num2) => num1 + num2;
+//   return [...scores].reduce(sum) / [...scores].length;
+// }
+
+// function getGrade(...scores) {
+//   let avg = getAverage(...scores);
+//   if (avg >= LETTER_GRADE_MIN_SCORES['A']) return 'A';
+//   if (avg >= LETTER_GRADE_MIN_SCORES['B']) return 'B';
+//   if (avg >= LETTER_GRADE_MIN_SCORES['C']) return 'C';
+//   if (avg >= LETTER_GRADE_MIN_SCORES['D']) return 'D';
+//   return 'F';
+// }
+
+// fix from Samuel Harpaz
 const LETTER_GRADE_MIN_SCORES = {A: 90, B: 80, C: 70, D: 60};
 
 function getAverage(...scores) {
   let sum = (num1, num2) => num1 + num2;
-  return [...scores].reduce(sum) / [...scores].length;
+  return scores.reduce(sum) / scores.length;
 }
 
 function getGrade(...scores) {
@@ -57,5 +74,5 @@ function getGrade(...scores) {
   return 'F';
 }
 
-getGrade(95, 90, 93);    // "A"
-getGrade(50, 50, 95);    // "D"
+console.log(getGrade(95, 90, 93));    // "A"
+console.log(getGrade(50, 50, 95));    // "D"
