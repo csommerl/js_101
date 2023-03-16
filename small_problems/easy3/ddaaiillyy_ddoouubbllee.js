@@ -33,19 +33,19 @@
 // with regex
 function crunch(str) {
   let result = '';
-  for (let i = 0; i < str.length; i++) {
-    let regexOfI = new RegExp(str[i]);
+  for (let idx = 0; idx < str.length; idx++) {
+    let regexOfI = new RegExp(str[idx]);
     if (result.length === 0) {
       result += str[0];
     } else if (!regexOfI.test(result[result.length - 1])) {
-      result += str[i];
+      result += str[idx];
     }
   }
   return result;
 }
 
-crunch('ddaaiillyy ddoouubbllee');    // "daily double"
-crunch('4444abcabccba');              // "4abcabcba"
-crunch('ggggggggggggggg');            // "g"
-crunch('a');                          // "a"
-crunch('');                           // ""
+console.log(crunch('ddaaiillyy ddoouubbllee'));    // "daily double"
+console.log(crunch('4444abcabccba'));              // "4abcabcba"
+console.log(crunch('ggggggggggggggg'));            // "g"
+console.log(crunch('a'));                          // "a"
+console.log(crunch(''));                           // ""

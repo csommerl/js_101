@@ -1,4 +1,4 @@
-/* 
+/*
 ** Fibonacci Number Location By Length
 ** https://launchschool.com/exercises/6ec7341d
 */
@@ -20,11 +20,7 @@
 // }
 
 function numIsLength(num, length) {
-  if (BigInt(String(num).length) === length) {
-    return true;
-  } else {
-    return false;
-  }
+  return BigInt(String(num).length) === length;
 }
 
 function findFibonacciIndexByLength(length) {
@@ -42,10 +38,10 @@ function findFibonacciIndexByLength(length) {
   return index;
 }
 
-findFibonacciIndexByLength(2n) === 7n;    // 1 1 2 3 5 8 13
-findFibonacciIndexByLength(3n) === 12n;   // 1 1 2 3 5 8 13 21 34 55 89 144
-findFibonacciIndexByLength(10n) === 45n;
-findFibonacciIndexByLength(16n) === 74n;
-findFibonacciIndexByLength(100n) === 476n;
-findFibonacciIndexByLength(1000n) === 4782n;
-findFibonacciIndexByLength(10000n) === 47847n;  // The last example may take a minute or so to run.
+console.log(console.log(findFibonacciIndexByLength(2n) === 7n));    // 1 1 2 3 5 8 13
+console.log(console.log(findFibonacciIndexByLength(3n) === 12n));   // 1 1 2 3 5 8 13 21 34 55 89 144
+console.log(console.log(findFibonacciIndexByLength(10n) === 45n));
+console.log(console.log(findFibonacciIndexByLength(16n) === 74n));
+console.log(console.log(findFibonacciIndexByLength(100n) === 476n));
+console.log(console.log(findFibonacciIndexByLength(1000n) === 4782n));
+console.log(console.log(findFibonacciIndexByLength(10000n) === 47847n));  // The last example may take a minute or so to run.
