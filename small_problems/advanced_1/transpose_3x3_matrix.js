@@ -1,4 +1,6 @@
 /*
+https://launchschool.com/exercises/144fa402
+
 input: nested array
 output: transposed array
         - such that rowr and columns are swapped
@@ -23,7 +25,10 @@ Algo
 */
 
 function transpose(nestedArr) {
-  const newArr = Array(nestedArr.length).fill(true).map(_ => []);
+  let originalNumOfRows = nestedArr.length;
+  let originalNumOfColumns = nestedArr[0].length;
+
+  const newArr = Array(originalNumOfColumns).fill(true).map(_ => []);
 
   for (let idx = 0; idx < newArr.length; ++idx) {
     let newRow = newArr[idx];
