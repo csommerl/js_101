@@ -11,15 +11,20 @@ rules:
 */
 
 function merge(arr1, arr2) {
-  let iterations = Math.max(arr1.length, arr2.length);
+  const result = [];
 
-  let result = [];
+  let [arr1Idx, arr2Idx] = [0, 0];
 
-  for (let idx = 0; idx < iterations; ++idx) {
-    let elements = [arr1[idx], arr2[idx]]
-      .filter(elem => elem !== undefined)
-      .sort((a, b) => a - b);
-    result = result.concat(elements);
+  while (arr1Idx < arr1.length || arr2Idx < arr2.length) {
+    let [arr1Elem, arr2Elem] = [arr1[arr1Idx], arr2[arr2Idx]];
+
+    if (arr2Idx >= arr2.length || arr1Elem <= arr2Elem) {
+      result.push(arr1Elem);
+      ++arr1Idx;
+    } else {
+      result.push(arr2Elem);
+      ++arr2Idx;
+    }
   }
 
   return result;
